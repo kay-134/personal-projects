@@ -595,6 +595,211 @@
             color: #DC2626;
         }
 
+        /* Reply Styles */
+        .replies-container {
+            margin-top: 16px;
+            padding-left: 20px;
+            border-left: 2px solid var(--primary-light);
+        }
+
+        .reply-card {
+            background: #FAFAFA;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 10px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .reply-card.reported {
+            opacity: 0.5;
+            background: #FEE2E2;
+        }
+
+        .reply-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .reply-avatar {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .reply-author-name {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 12px;
+            color: var(--primary-dark);
+        }
+
+        .reply-date {
+            font-size: 11px;
+            color: var(--text-light);
+        }
+
+        .reply-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .reply-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .reply-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 14px;
+            font-size: 11px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .reply-action-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .reply-action-btn.liked {
+            background: var(--user-bubble);
+            border-color: var(--primary);
+            color: var(--primary-dark);
+        }
+
+        .reply-action-btn.reported {
+            background: #FEE2E2;
+            border-color: #EF4444;
+            color: #DC2626;
+        }
+
+        /* Reply Form */
+        .reply-form {
+            background: var(--user-bubble);
+            border-radius: 12px;
+            padding: 14px;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .reply-form.active {
+            display: block;
+        }
+
+        .reply-form-header {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 12px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .reply-name-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 13px;
+            margin-bottom: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .reply-name-input:focus {
+            border-color: var(--primary-light);
+        }
+
+        .reply-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 13px;
+            resize: vertical;
+            min-height: 60px;
+            margin-bottom: 10px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .reply-input:focus {
+            border-color: var(--primary-light);
+        }
+
+        .reply-form-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .reply-submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 16px;
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .reply-submit-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .reply-submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .reply-cancel-btn {
+            background: white;
+            color: var(--text-light);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 16px;
+            font-family: inherit;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .reply-cancel-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .view-replies-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 13px;
+            cursor: pointer;
+            padding: 8px 0;
+            font-family: inherit;
+        }
+
+        .view-replies-btn:hover {
+            text-decoration: underline;
+        }
+
         .tips-empty {
             text-align: center;
             padding: 40px;
@@ -1074,6 +1279,7 @@ const PCOSChatbot = (function() {
                 const isLiked = this.likedTips.includes(id);
                 const isReported = this.reportedTips.includes(id);
                 const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
+                const replyCount = data.replyCount || 0;
 
                 const tipCard = document.createElement('div');
                 tipCard.className = `tip-card ${isReported ? 'reported' : ''}`;
@@ -1090,15 +1296,44 @@ const PCOSChatbot = (function() {
                         <button class="tip-action-btn ${isLiked ? 'liked' : ''}" data-action="like" data-id="${id}">
                             ${isLiked ? '💜' : '🤍'} <span>${data.likes || 0}</span> Helpful
                         </button>
+                        <button class="tip-action-btn" data-action="reply" data-id="${id}">
+                            💬 Reply
+                        </button>
                         <button class="tip-action-btn ${isReported ? 'reported' : ''}" data-action="report" data-id="${id}">
                             🚩 ${isReported ? 'Reported' : 'Report'}
                         </button>
                     </div>
+
+                    <!-- Reply Form (hidden by default) -->
+                    <div class="reply-form" id="reply-form-${id}">
+                        <div class="reply-form-header">💬 Add a reply</div>
+                        <input type="text" class="reply-name-input" id="reply-name-${id}" placeholder="Your name" maxlength="30">
+                        <textarea class="reply-input" id="reply-content-${id}" placeholder="Share your thoughts..." maxlength="300"></textarea>
+                        <div class="reply-form-actions">
+                            <button class="reply-submit-btn" data-tip-id="${id}">Reply 💜</button>
+                            <button class="reply-cancel-btn" data-tip-id="${id}">Cancel</button>
+                        </div>
+                    </div>
+
+                    <!-- Replies Section -->
+                    ${replyCount > 0 ? `<button class="view-replies-btn" data-tip-id="${id}">View ${replyCount} ${replyCount === 1 ? 'reply' : 'replies'} 💬</button>` : ''}
+                    <div class="replies-container" id="replies-${id}" style="display: none;"></div>
                 `;
 
                 // Add event listeners
                 tipCard.querySelector('[data-action="like"]').addEventListener('click', () => this.likeTip(id, isLiked));
+                tipCard.querySelector('[data-action="reply"]').addEventListener('click', () => this.toggleReplyForm(id));
                 tipCard.querySelector('[data-action="report"]').addEventListener('click', () => this.reportTip(id, isReported));
+
+                // Reply form listeners
+                tipCard.querySelector('.reply-submit-btn').addEventListener('click', () => this.submitReply(id));
+                tipCard.querySelector('.reply-cancel-btn').addEventListener('click', () => this.toggleReplyForm(id, false));
+
+                // View replies button
+                const viewRepliesBtn = tipCard.querySelector('.view-replies-btn');
+                if (viewRepliesBtn) {
+                    viewRepliesBtn.addEventListener('click', () => this.loadReplies(id));
+                }
 
                 this.tipsContainer.appendChild(tipCard);
             },
@@ -1185,6 +1420,193 @@ const PCOSChatbot = (function() {
                     this.showMessage("Thank you for helping keep our community safe. 💜");
                     this.loadTips();
                 }
+            },
+
+            // Toggle reply form visibility
+            toggleReplyForm(tipId, show = null) {
+                const form = document.getElementById(`reply-form-${tipId}`);
+                if (!form) return;
+
+                if (show === null) {
+                    form.classList.toggle('active');
+                } else {
+                    form.classList.toggle('active', show);
+                }
+
+                // Focus on name input when opening
+                if (form.classList.contains('active')) {
+                    document.getElementById(`reply-name-${tipId}`).focus();
+                }
+            },
+
+            // Submit a reply
+            async submitReply(tipId) {
+                const nameInput = document.getElementById(`reply-name-${tipId}`);
+                const contentInput = document.getElementById(`reply-content-${tipId}`);
+                const name = nameInput.value.trim() || 'Anonymous';
+                const content = contentInput.value.trim();
+
+                // Validate name
+                if (ContentFilter.containsBadWords(name)) {
+                    this.showMessage("Please use a respectful name. 💜", true);
+                    return;
+                }
+
+                // Validate content (shorter minimum for replies)
+                if (!content || content.length < 5) {
+                    this.showMessage("Please write at least 5 characters.", true);
+                    return;
+                }
+                if (content.length > 300) {
+                    this.showMessage("Please keep your reply under 300 characters.", true);
+                    return;
+                }
+                if (ContentFilter.containsBadWords(content)) {
+                    this.showMessage("Please keep the language respectful and supportive. 💜", true);
+                    return;
+                }
+
+                const submitBtn = document.querySelector(`.reply-submit-btn[data-tip-id="${tipId}"]`);
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                try {
+                    // Add reply to subcollection
+                    await db.collection('tips').doc(tipId).collection('replies').add({
+                        name: name,
+                        content: content,
+                        likes: 0,
+                        reported: 0,
+                        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+
+                    // Increment reply count on parent tip
+                    await db.collection('tips').doc(tipId).update({
+                        replyCount: firebase.firestore.FieldValue.increment(1)
+                    });
+
+                    nameInput.value = '';
+                    contentInput.value = '';
+                    this.toggleReplyForm(tipId, false);
+                    this.showMessage("Reply added! 💜");
+                    this.loadTips(); // Refresh to show updated count
+                } catch (error) {
+                    console.error('Error submitting reply:', error);
+                    this.showMessage("Couldn't submit your reply. Please try again.", true);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Reply 💜';
+                }
+            },
+
+            // Load replies for a tip
+            async loadReplies(tipId) {
+                const container = document.getElementById(`replies-${tipId}`);
+                const viewBtn = document.querySelector(`.view-replies-btn[data-tip-id="${tipId}"]`);
+
+                if (!container) return;
+
+                // Toggle visibility
+                if (container.style.display === 'block') {
+                    container.style.display = 'none';
+                    if (viewBtn) viewBtn.textContent = viewBtn.textContent.replace('Hide', 'View');
+                    return;
+                }
+
+                container.style.display = 'block';
+                container.innerHTML = '<div style="padding: 10px; color: var(--text-light); font-size: 13px;">Loading replies...</div>';
+                if (viewBtn) viewBtn.textContent = viewBtn.textContent.replace('View', 'Hide');
+
+                try {
+                    const snapshot = await db.collection('tips').doc(tipId).collection('replies')
+                        .where('reported', '<', 3)
+                        .orderBy('reported')
+                        .orderBy('createdAt', 'asc')
+                        .limit(20)
+                        .get();
+
+                    container.innerHTML = '';
+
+                    if (snapshot.empty) {
+                        container.innerHTML = '<div style="padding: 10px; color: var(--text-light); font-size: 13px;">No replies yet.</div>';
+                        return;
+                    }
+
+                    snapshot.forEach(doc => {
+                        this.renderReply(container, tipId, doc.id, doc.data());
+                    });
+                } catch (error) {
+                    console.error('Error loading replies:', error);
+                    container.innerHTML = '<div style="padding: 10px; color: #DC2626; font-size: 13px;">Error loading replies.</div>';
+                }
+            },
+
+            // Render a single reply
+            renderReply(container, tipId, replyId, data) {
+                const isLiked = this.likedTips.includes(`reply-${replyId}`);
+                const isReported = this.reportedTips.includes(`reply-${replyId}`);
+                const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
+
+                const replyCard = document.createElement('div');
+                replyCard.className = `reply-card ${isReported ? 'reported' : ''}`;
+                replyCard.innerHTML = `
+                    <div class="reply-author">
+                        <div class="reply-avatar">💬</div>
+                        <div class="reply-author-info">
+                            <span class="reply-author-name">${this.escapeHtml(data.name || 'Anonymous')}</span>
+                            <span class="reply-date"> · ${date}</span>
+                        </div>
+                    </div>
+                    <div class="reply-content">${this.escapeHtml(data.content)}</div>
+                    <div class="reply-actions">
+                        <button class="reply-action-btn ${isLiked ? 'liked' : ''}" data-action="like-reply">
+                            ${isLiked ? '💜' : '🤍'} ${data.likes || 0}
+                        </button>
+                        <button class="reply-action-btn ${isReported ? 'reported' : ''}" data-action="report-reply">
+                            🚩
+                        </button>
+                    </div>
+                `;
+
+                // Like reply
+                replyCard.querySelector('[data-action="like-reply"]').addEventListener('click', async () => {
+                    const key = `reply-${replyId}`;
+                    if (this.likedTips.includes(key)) {
+                        await db.collection('tips').doc(tipId).collection('replies').doc(replyId).update({
+                            likes: firebase.firestore.FieldValue.increment(-1)
+                        });
+                        this.likedTips = this.likedTips.filter(t => t !== key);
+                    } else {
+                        await db.collection('tips').doc(tipId).collection('replies').doc(replyId).update({
+                            likes: firebase.firestore.FieldValue.increment(1)
+                        });
+                        this.likedTips.push(key);
+                    }
+                    localStorage.setItem('likedTips', JSON.stringify(this.likedTips));
+                    this.loadReplies(tipId);
+                    this.loadReplies(tipId); // Toggle twice to refresh
+                });
+
+                // Report reply
+                replyCard.querySelector('[data-action="report-reply"]').addEventListener('click', async () => {
+                    const key = `reply-${replyId}`;
+                    if (this.reportedTips.includes(key)) {
+                        this.showMessage("You've already reported this reply.", true);
+                        return;
+                    }
+                    if (confirm("Report this reply as inappropriate?")) {
+                        await db.collection('tips').doc(tipId).collection('replies').doc(replyId).update({
+                            reported: firebase.firestore.FieldValue.increment(1)
+                        });
+                        this.reportedTips.push(key);
+                        localStorage.setItem('reportedTips', JSON.stringify(this.reportedTips));
+                        this.showMessage("Reply reported. Thank you! 💜");
+                        this.loadReplies(tipId);
+                        this.loadReplies(tipId); // Toggle twice to refresh
+                    }
+                });
+
+                container.appendChild(replyCard);
             }
         };
 
