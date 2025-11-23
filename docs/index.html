@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <style>
         :root {
             --primary: #8B5CF6;
@@ -417,8 +420,211 @@
             color: #B45309;
         }
 
-        .giscus-wrapper {
-            min-height: 400px;
+        /* Tip Form */
+        .tip-form {
+            background: var(--user-bubble);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .tip-form-header {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 14px;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .tip-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 80px;
+            margin-bottom: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .tip-input:focus {
+            border-color: var(--primary-light);
+        }
+
+        .tip-name-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 14px;
+            margin-bottom: 12px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .tip-name-input:focus {
+            border-color: var(--primary-light);
+        }
+
+        .tip-submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .tip-submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow);
+        }
+
+        .tip-submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Tips List */
+        .tips-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .tip-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            transition: box-shadow 0.2s;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tip-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .tip-card.reported {
+            opacity: 0.5;
+            background: #FEE2E2;
+        }
+
+        .tip-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .tip-avatar {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .tip-author-info {
+            flex: 1;
+        }
+
+        .tip-author-name {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 14px;
+            color: var(--primary-dark);
+        }
+
+        .tip-date {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .tip-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .tip-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .tip-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .tip-action-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .tip-action-btn.liked {
+            background: var(--user-bubble);
+            border-color: var(--primary);
+            color: var(--primary-dark);
+        }
+
+        .tip-action-btn.reported {
+            background: #FEE2E2;
+            border-color: #EF4444;
+            color: #DC2626;
+        }
+
+        .tips-empty {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+        }
+
+        .tips-loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+        }
+
+        .tip-error {
+            background: #FEE2E2;
+            border: 1px solid #EF4444;
+            color: #DC2626;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .tip-success {
+            background: #D1FAE5;
+            border: 1px solid #10B981;
+            color: #047857;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 14px;
         }
 
         /* Container height adjustment for tabs */
@@ -496,41 +702,18 @@
                         Remember: Tips shared here are personal experiences, not medical advice. Always consult your doctor!
                     </div>
 
-                    <div class="giscus-wrapper">
-                        <!--
-                        ============================================
-                        GISCUS SETUP INSTRUCTIONS:
-                        ============================================
-                        1. Go to your GitHub repo Settings → General → Features → Enable "Discussions"
-                        2. Go to https://github.com/apps/giscus and install on your repo
-                        3. Go to https://giscus.app and configure:
-                           - Repository: kay-134/personal-projects
-                           - Discussion Category: Create one called "PCOS Community Tips"
-                           - Features: Enable reactions
-                        4. Replace the script below with your generated config
-                        ============================================
-                        -->
-                        <script src="https://giscus.app/client.js"
-                            data-repo="kay-134/personal-projects"
-                            data-repo-id="R_kgDOQbK2Yw"
-                            data-category="PCOS Community Tips"
-                            data-category-id="DIC_kwDOQbK2Y84CyGqC"
-                            data-mapping="pathname"
-                            data-strict="0"
-                            data-reactions-enabled="1"
-                            data-emit-metadata="0"
-                            data-input-position="bottom"
-                            data-theme="preferred_color_scheme"
-                            data-lang="en"
-                            crossorigin="anonymous"
-                            async>
-                        </script>
+                    <!-- Tip Submission Form -->
+                    <div class="tip-form">
+                        <div class="tip-form-header">💡 Share a tip that's helped you</div>
+                        <input type="text" class="tip-name-input" id="tip-name" placeholder="Your name (or nickname)" maxlength="30">
+                        <textarea class="tip-input" id="tip-content" placeholder="What's worked for you? Share your experience with diet, exercise, supplements, medications, or anything that's helped your PCOS journey..." maxlength="500"></textarea>
+                        <button class="tip-submit-btn" id="submit-tip">Share My Tip 💜</button>
+                        <div id="tip-message"></div>
+                    </div>
 
-                        <noscript>
-                            <p style="text-align: center; color: var(--text-light); padding: 40px;">
-                                Please enable JavaScript to view the community discussions.
-                            </p>
-                        </noscript>
+                    <!-- Tips List -->
+                    <div class="tips-list" id="tips-list">
+                        <div class="tips-loading">Loading community tips... 💜</div>
                     </div>
                 </div>
             </div>
@@ -766,6 +949,247 @@ const PCOSChatbot = (function() {
                 });
             });
         });
+
+        // ===== FIREBASE COMMUNITY TIPS =====
+        const firebaseConfig = {
+            apiKey: "AIzaSyDkoZ2mg7-5g942h5cb0vSLsOHdDWnGcYI",
+            authDomain: "pcos-buddy-community.firebaseapp.com",
+            projectId: "pcos-buddy-community",
+            storageBucket: "pcos-buddy-community.firebasestorage.app",
+            messagingSenderId: "774724869340",
+            appId: "1:774724869340:web:dfcd6b466412f766b1a819"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Content filter - blocks profanity, slurs, hate speech
+        const ContentFilter = {
+            // Bad words list (partial - add more as needed)
+            badWords: [
+                // Profanity
+                'fuck', 'shit', 'ass', 'bitch', 'damn', 'crap', 'piss', 'dick', 'cock', 'pussy',
+                'bastard', 'slut', 'whore', 'cunt', 'twat', 'wanker', 'bollocks',
+                // Slurs and hate speech
+                'nigger', 'nigga', 'faggot', 'fag', 'dyke', 'tranny', 'retard', 'retarded',
+                'spic', 'chink', 'gook', 'kike', 'wetback', 'beaner', 'cracker',
+                // Homophobic terms
+                'homo', 'queer', 'sodomite', 'lesbo',
+                // Other offensive
+                'nazi', 'hitler', 'kill yourself', 'kys', 'die'
+            ],
+
+            // Check if text contains bad words
+            containsBadWords(text) {
+                const lowerText = text.toLowerCase();
+                // Check for exact matches and common obfuscations
+                for (const word of this.badWords) {
+                    // Check plain word
+                    if (lowerText.includes(word)) return true;
+                    // Check with common substitutions (1=i, 0=o, @=a, 3=e, $=s)
+                    const obfuscated = word
+                        .replace(/i/g, '[i1!]')
+                        .replace(/o/g, '[o0]')
+                        .replace(/a/g, '[a@4]')
+                        .replace(/e/g, '[e3]')
+                        .replace(/s/g, '[s$5]');
+                    const regex = new RegExp(obfuscated, 'i');
+                    if (regex.test(lowerText)) return true;
+                }
+                return false;
+            },
+
+            // Validate content
+            validate(text) {
+                if (!text || text.trim().length < 10) {
+                    return { valid: false, reason: "Please write at least 10 characters." };
+                }
+                if (text.length > 500) {
+                    return { valid: false, reason: "Please keep your tip under 500 characters." };
+                }
+                if (this.containsBadWords(text)) {
+                    return { valid: false, reason: "Please keep the language respectful and supportive. 💜" };
+                }
+                return { valid: true };
+            }
+        };
+
+        // Community Tips Manager
+        const CommunityTips = {
+            tipsContainer: document.getElementById('tips-list'),
+            tipNameInput: document.getElementById('tip-name'),
+            tipContentInput: document.getElementById('tip-content'),
+            submitBtn: document.getElementById('submit-tip'),
+            messageContainer: document.getElementById('tip-message'),
+            likedTips: JSON.parse(localStorage.getItem('likedTips') || '[]'),
+            reportedTips: JSON.parse(localStorage.getItem('reportedTips') || '[]'),
+
+            init() {
+                this.loadTips();
+                this.submitBtn.addEventListener('click', () => this.submitTip());
+                this.tipContentInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && e.ctrlKey) this.submitTip();
+                });
+            },
+
+            showMessage(message, isError = false) {
+                this.messageContainer.innerHTML = `<div class="${isError ? 'tip-error' : 'tip-success'}">${message}</div>`;
+                setTimeout(() => { this.messageContainer.innerHTML = ''; }, 5000);
+            },
+
+            async loadTips() {
+                try {
+                    const snapshot = await db.collection('tips')
+                        .where('reported', '<', 3) // Hide tips with 3+ reports
+                        .orderBy('reported')
+                        .orderBy('createdAt', 'desc')
+                        .limit(50)
+                        .get();
+
+                    if (snapshot.empty) {
+                        this.tipsContainer.innerHTML = `
+                            <div class="tips-empty">
+                                <p>No tips yet! Be the first to share what's helped you. 💜</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    this.tipsContainer.innerHTML = '';
+                    snapshot.forEach(doc => {
+                        this.renderTip(doc.id, doc.data());
+                    });
+                } catch (error) {
+                    console.error('Error loading tips:', error);
+                    this.tipsContainer.innerHTML = `
+                        <div class="tips-empty">
+                            <p>Having trouble loading tips. Please refresh the page. 💜</p>
+                        </div>
+                    `;
+                }
+            },
+
+            renderTip(id, data) {
+                const isLiked = this.likedTips.includes(id);
+                const isReported = this.reportedTips.includes(id);
+                const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
+
+                const tipCard = document.createElement('div');
+                tipCard.className = `tip-card ${isReported ? 'reported' : ''}`;
+                tipCard.innerHTML = `
+                    <div class="tip-author">
+                        <div class="tip-avatar">💜</div>
+                        <div class="tip-author-info">
+                            <div class="tip-author-name">${this.escapeHtml(data.name || 'Anonymous')}</div>
+                            <div class="tip-date">${date}</div>
+                        </div>
+                    </div>
+                    <div class="tip-content">${this.escapeHtml(data.content)}</div>
+                    <div class="tip-actions">
+                        <button class="tip-action-btn ${isLiked ? 'liked' : ''}" data-action="like" data-id="${id}">
+                            ${isLiked ? '💜' : '🤍'} <span>${data.likes || 0}</span> Helpful
+                        </button>
+                        <button class="tip-action-btn ${isReported ? 'reported' : ''}" data-action="report" data-id="${id}">
+                            🚩 ${isReported ? 'Reported' : 'Report'}
+                        </button>
+                    </div>
+                `;
+
+                // Add event listeners
+                tipCard.querySelector('[data-action="like"]').addEventListener('click', () => this.likeTip(id, isLiked));
+                tipCard.querySelector('[data-action="report"]').addEventListener('click', () => this.reportTip(id, isReported));
+
+                this.tipsContainer.appendChild(tipCard);
+            },
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            },
+
+            async submitTip() {
+                const name = this.tipNameInput.value.trim() || 'Anonymous';
+                const content = this.tipContentInput.value.trim();
+
+                // Validate name
+                const nameCheck = ContentFilter.validate(name.length > 0 ? name : 'Anonymous');
+                if (ContentFilter.containsBadWords(name)) {
+                    this.showMessage("Please use a respectful name. 💜", true);
+                    return;
+                }
+
+                // Validate content
+                const contentCheck = ContentFilter.validate(content);
+                if (!contentCheck.valid) {
+                    this.showMessage(contentCheck.reason, true);
+                    return;
+                }
+
+                this.submitBtn.disabled = true;
+                this.submitBtn.textContent = 'Sharing...';
+
+                try {
+                    await db.collection('tips').add({
+                        name: name,
+                        content: content,
+                        likes: 0,
+                        reported: 0,
+                        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+
+                    this.tipNameInput.value = '';
+                    this.tipContentInput.value = '';
+                    this.showMessage("Thank you for sharing! Your tip has been added. 💜");
+                    this.loadTips();
+                } catch (error) {
+                    console.error('Error submitting tip:', error);
+                    this.showMessage("Couldn't submit your tip. Please try again.", true);
+                } finally {
+                    this.submitBtn.disabled = false;
+                    this.submitBtn.textContent = 'Share My Tip 💜';
+                }
+            },
+
+            async likeTip(id, alreadyLiked) {
+                if (alreadyLiked) {
+                    // Unlike
+                    await db.collection('tips').doc(id).update({
+                        likes: firebase.firestore.FieldValue.increment(-1)
+                    });
+                    this.likedTips = this.likedTips.filter(t => t !== id);
+                } else {
+                    // Like
+                    await db.collection('tips').doc(id).update({
+                        likes: firebase.firestore.FieldValue.increment(1)
+                    });
+                    this.likedTips.push(id);
+                }
+                localStorage.setItem('likedTips', JSON.stringify(this.likedTips));
+                this.loadTips();
+            },
+
+            async reportTip(id, alreadyReported) {
+                if (alreadyReported) {
+                    this.showMessage("You've already reported this tip.", true);
+                    return;
+                }
+
+                if (confirm("Report this tip as inappropriate? Tips with multiple reports will be hidden.")) {
+                    await db.collection('tips').doc(id).update({
+                        reported: firebase.firestore.FieldValue.increment(1)
+                    });
+                    this.reportedTips.push(id);
+                    localStorage.setItem('reportedTips', JSON.stringify(this.reportedTips));
+                    this.showMessage("Thank you for helping keep our community safe. 💜");
+                    this.loadTips();
+                }
+            }
+        };
+
+        // Initialize when DOM is ready
+        CommunityTips.init();
     </script>
 </body>
 </html>
