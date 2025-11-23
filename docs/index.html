@@ -320,6 +320,117 @@
         .messages::-webkit-scrollbar { width: 6px; }
         .messages::-webkit-scrollbar-track { background: transparent; }
         .messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        /* Tab Navigation */
+        .tab-nav {
+            display: flex;
+            gap: 0;
+            margin-bottom: 16px;
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 4px;
+            box-shadow: var(--shadow);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 14px;
+            color: var(--text-light);
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main content wrapper */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        /* Community Section */
+        .community-container {
+            flex: 1;
+            background: var(--surface);
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .community-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .community-header h2 {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 20px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .community-header p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .community-warning {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 1px solid #F59E0B;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #92400E;
+        }
+
+        .community-warning strong {
+            color: #B45309;
+        }
+
+        .giscus-wrapper {
+            min-height: 400px;
+        }
+
+        /* Container height adjustment for tabs */
+        .container {
+            height: auto;
+            min-height: 100vh;
+        }
+
+        @media (max-width: 640px) {
+            .tab-btn { font-size: 12px; padding: 10px 12px; }
+            .community-container { padding: 16px; }
+        }
     </style>
 </head>
 <body>
@@ -332,32 +443,97 @@
             <p class="tagline">Your friendly guide to understanding PCOS</p>
         </header>
 
-        <div class="chat-container">
-            <div class="messages" id="messages">
-                <div class="typing-indicator" id="typing">
-                    <div class="avatar">💜</div>
-                    <div class="typing-dots">
-                        <div class="typing-dot"></div>
-                        <div class="typing-dot"></div>
-                        <div class="typing-dot"></div>
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" data-tab="chatbot">💬 Chat with PCOS Buddy</button>
+            <button class="tab-btn" data-tab="community">👥 Community Tips</button>
+        </div>
+
+        <div class="main-content">
+            <!-- Chatbot Tab -->
+            <div class="tab-content active" id="chatbot-tab">
+                <div class="chat-container">
+                    <div class="messages" id="messages">
+                        <div class="typing-indicator" id="typing">
+                            <div class="avatar">💜</div>
+                            <div class="typing-dots">
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button class="quick-btn" data-message="What is PCOS?">What is PCOS?</button>
+                        <button class="quick-btn" data-message="What are the symptoms?">Symptoms</button>
+                        <button class="quick-btn" data-message="Tell me about medications">Medications</button>
+                        <button class="quick-btn" data-message="Natural treatments">Natural Treatments</button>
+                        <button class="quick-btn" data-message="What doctors can help with PCOS?">Find a Doctor</button>
+                        <button class="quick-btn" data-message="What is anovulatory bleeding?">Anovulatory Bleeding</button>
+                    </div>
+
+                    <div class="input-area">
+                        <div class="input-wrapper">
+                            <input type="text" id="message-input" placeholder="Ask me anything about PCOS..." autocomplete="off">
+                        </div>
+                        <button class="send-btn" id="send-btn" title="Send message">➤</button>
                     </div>
                 </div>
             </div>
 
-            <div class="quick-actions">
-                <button class="quick-btn" data-message="What is PCOS?">What is PCOS?</button>
-                <button class="quick-btn" data-message="What are the symptoms?">Symptoms</button>
-                <button class="quick-btn" data-message="Tell me about medications">Medications</button>
-                <button class="quick-btn" data-message="Natural treatments">Natural Treatments</button>
-                <button class="quick-btn" data-message="What doctors can help with PCOS?">Find a Doctor</button>
-                <button class="quick-btn" data-message="What is anovulatory bleeding?">Anovulatory Bleeding</button>
-            </div>
+            <!-- Community Tab -->
+            <div class="tab-content" id="community-tab">
+                <div class="community-container">
+                    <div class="community-header">
+                        <h2>💜 Community Tips & Support</h2>
+                        <p>Share what's helped you manage PCOS and learn from others in our community!</p>
+                    </div>
 
-            <div class="input-area">
-                <div class="input-wrapper">
-                    <input type="text" id="message-input" placeholder="Ask me anything about PCOS..." autocomplete="off">
+                    <div class="community-warning">
+                        <strong>⚠️ Community Guidelines:</strong> Be kind and supportive. This is a safe space.
+                        Harassment, hate speech, and inappropriate content will be removed.
+                        Remember: Tips shared here are personal experiences, not medical advice. Always consult your doctor!
+                    </div>
+
+                    <div class="giscus-wrapper">
+                        <!--
+                        ============================================
+                        GISCUS SETUP INSTRUCTIONS:
+                        ============================================
+                        1. Go to your GitHub repo Settings → General → Features → Enable "Discussions"
+                        2. Go to https://github.com/apps/giscus and install on your repo
+                        3. Go to https://giscus.app and configure:
+                           - Repository: kay-134/personal-projects
+                           - Discussion Category: Create one called "PCOS Community Tips"
+                           - Features: Enable reactions
+                        4. Replace the script below with your generated config
+                        ============================================
+                        -->
+                        <script src="https://giscus.app/client.js"
+                            data-repo="kay-134/personal-projects"
+                            data-repo-id="YOUR_REPO_ID"
+                            data-category="PCOS Community Tips"
+                            data-category-id="YOUR_CATEGORY_ID"
+                            data-mapping="pathname"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="top"
+                            data-theme="light_purple"
+                            data-lang="en"
+                            data-loading="lazy"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+
+                        <noscript>
+                            <p style="text-align: center; color: var(--text-light); padding: 40px;">
+                                Please enable JavaScript to view the community discussions.
+                            </p>
+                        </noscript>
+                    </div>
                 </div>
-                <button class="send-btn" id="send-btn" title="Send message">➤</button>
             </div>
         </div>
 
@@ -569,6 +745,28 @@ const PCOSChatbot = (function() {
             }
         }
         setTimeout(showGreeting, 300);
+
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.dataset.tab;
+
+                // Update active button
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update active content
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabId + '-tab') {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
