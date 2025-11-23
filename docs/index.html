@@ -12,19 +12,17 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <style>
         :root {
-            --primary: #8B5CF6;
-            --primary-dark: #7C3AED;
-            --primary-light: #A78BFA;
-            --secondary: #EC4899;
-            --background: #FAF5FF;
+            --primary: #A3A380;
+            --primary-dark: #8A8A6A;
+            --primary-light: #D7CE93;
+            --secondary: #BB8588;
+            --background: #EFEBCE;
             --surface: #FFFFFF;
-            --text: #1F2937;
-            --text-light: #6B7280;
-            --border: #E5E7EB;
-            --user-bubble: #EDE9FE;
+            --text: #4A4A3A;
+            --text-light: #6B6B5A;
+            --border: #D7CE93;
+            --user-bubble: #D8A48F;
             --bot-bubble: #FFFFFF;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
         * {
@@ -35,7 +33,7 @@
 
         body {
             font-family: 'Playfair Display', Georgia, serif;
-            background: linear-gradient(135deg, var(--background) 0%, #FDF4FF 100%);
+            background: var(--background);
             min-height: 100vh;
             color: var(--text);
         }
@@ -66,7 +64,7 @@
         .logo-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -78,10 +76,7 @@
             font-family: 'Boldonse', system-ui, sans-serif;
             font-size: 28px;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary-dark);
         }
 
         .tagline {
@@ -94,11 +89,10 @@
             flex: 1;
             background: var(--surface);
             border-radius: 24px;
-            box-shadow: var(--shadow-lg);
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
         }
 
         .messages {
@@ -136,7 +130,7 @@
         }
 
         .message.bot .avatar {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
         }
 
         .message.user .avatar {
@@ -158,7 +152,7 @@
         }
 
         .message.user .bubble {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: var(--user-bubble);
             color: white;
             border-bottom-right-radius: 4px;
         }
@@ -249,13 +243,13 @@
         .send-btn {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
             border: none;
             border-radius: 50%;
             color: white;
             font-size: 20px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -263,7 +257,7 @@
 
         .send-btn:hover {
             transform: scale(1.05);
-            box-shadow: var(--shadow);
+            background: var(--primary-dark);
         }
 
         .typing-indicator {
@@ -332,7 +326,7 @@
             background: var(--surface);
             border-radius: 16px;
             padding: 4px;
-            box-shadow: var(--shadow);
+            border: 2px solid var(--border);
         }
 
         .tab-btn {
@@ -353,7 +347,7 @@
         }
 
         .tab-btn.active {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
             color: white;
         }
 
@@ -381,8 +375,7 @@
             flex: 1;
             background: var(--surface);
             border-radius: 24px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             padding: 24px;
             overflow-y: auto;
         }
@@ -470,7 +463,7 @@
         }
 
         .tip-submit-btn {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -478,12 +471,12 @@
             font-family: 'Boldonse', system-ui, sans-serif;
             font-size: 14px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s;
         }
 
         .tip-submit-btn:hover {
             transform: scale(1.02);
-            box-shadow: var(--shadow);
+            background: var(--primary-dark);
         }
 
         .tip-submit-btn:disabled {
@@ -501,15 +494,15 @@
 
         .tip-card {
             background: white;
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: 16px;
             padding: 20px;
-            transition: box-shadow 0.2s;
+            transition: border-color 0.2s;
             animation: fadeIn 0.3s ease;
         }
 
         .tip-card:hover {
-            box-shadow: var(--shadow);
+            border-color: var(--primary);
         }
 
         .tip-card.reported {
@@ -527,7 +520,7 @@
         .tip-avatar {
             width: 36px;
             height: 36px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -626,7 +619,7 @@
         .reply-avatar {
             width: 28px;
             height: 28px;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+            background: var(--secondary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -749,7 +742,7 @@
         }
 
         .reply-submit-btn {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: var(--primary);
             color: white;
             border: none;
             padding: 8px 16px;
@@ -762,6 +755,7 @@
 
         .reply-submit-btn:hover {
             transform: scale(1.02);
+            background: var(--primary-dark);
         }
 
         .reply-submit-btn:disabled {
