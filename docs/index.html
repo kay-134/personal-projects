@@ -12,17 +12,73 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <style>
         :root {
-            --primary: #A3A380;
-            --primary-dark: #8A8A6A;
-            --primary-light: #D7CE93;
-            --secondary: #BB8588;
+            /* AAA Compliant Colors - 7:1 contrast ratio for text */
+            --primary: #5C5C42;
+            --primary-dark: #3D3D2B;
+            --primary-light: #A3A380;
+            --secondary: #7A4A4D;
             --background: #EFEBCE;
             --surface: #FFFFFF;
-            --text: #4A4A3A;
-            --text-light: #6B6B5A;
-            --border: #D7CE93;
-            --user-bubble: #D8A48F;
+            --text: #2D2D1F;
+            --text-light: #4A4A3A;
+            --border: #A3A380;
+            --user-bubble: #7A4A4D;
             --bot-bubble: #FFFFFF;
+            --focus-ring: #2D2D1F;
+        }
+
+        /* Skip Link for keyboard navigation */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-dark);
+            color: white;
+            padding: 8px 16px;
+            z-index: 100;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Global focus styles for AAA compliance */
+        *:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        /* Visually hidden but accessible to screen readers */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
 
         * {
@@ -839,27 +895,34 @@
     </style>
 </head>
 <body>
+    <!-- Skip Link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <div class="container">
-        <header class="header">
+        <header class="header" role="banner">
             <div class="logo">
-                <div class="logo-icon">💜</div>
+                <div class="logo-icon" aria-hidden="true">💜</div>
                 <h1>PCOS Buddy</h1>
             </div>
             <p class="tagline">Your friendly guide to understanding PCOS</p>
         </header>
 
         <!-- Tab Navigation -->
-        <div class="tab-nav">
-            <button class="tab-btn active" data-tab="chatbot">💬 Chat with PCOS Buddy</button>
-            <button class="tab-btn" data-tab="community">👥 Community Tips</button>
-        </div>
+        <nav class="tab-nav" role="tablist" aria-label="Main navigation">
+            <button class="tab-btn active" data-tab="chatbot" role="tab" aria-selected="true" aria-controls="chatbot-tab" id="tab-chatbot">
+                <span aria-hidden="true">💬</span> Chat with PCOS Buddy
+            </button>
+            <button class="tab-btn" data-tab="community" role="tab" aria-selected="false" aria-controls="community-tab" id="tab-community">
+                <span aria-hidden="true">👥</span> Community Tips
+            </button>
+        </nav>
 
-        <div class="main-content">
+        <main class="main-content" id="main-content" role="main">
             <!-- Chatbot Tab -->
-            <div class="tab-content active" id="chatbot-tab">
-                <div class="chat-container">
-                    <div class="messages" id="messages">
-                        <div class="typing-indicator" id="typing">
+            <div class="tab-content active" id="chatbot-tab" role="tabpanel" aria-labelledby="tab-chatbot">
+                <div class="chat-container" role="region" aria-label="Chat with PCOS Buddy">
+                    <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Chat messages">
+                        <div class="typing-indicator" id="typing" aria-hidden="true">
                             <div class="avatar">💜</div>
                             <div class="typing-dots">
                                 <div class="typing-dot"></div>
@@ -869,57 +932,62 @@
                         </div>
                     </div>
 
-                    <div class="quick-actions">
-                        <button class="quick-btn" data-message="What is PCOS?">What is PCOS?</button>
-                        <button class="quick-btn" data-message="What are the symptoms?">Symptoms</button>
-                        <button class="quick-btn" data-message="Tell me about medications">Medications</button>
-                        <button class="quick-btn" data-message="Natural treatments">Natural Treatments</button>
-                        <button class="quick-btn" data-message="What doctors can help with PCOS?">Find a Doctor</button>
-                        <button class="quick-btn" data-message="What is anovulatory bleeding?">Anovulatory Bleeding</button>
+                    <div class="quick-actions" role="group" aria-label="Quick question buttons">
+                        <button class="quick-btn" data-message="What is PCOS?" aria-label="Ask: What is PCOS?">What is PCOS?</button>
+                        <button class="quick-btn" data-message="What are the symptoms?" aria-label="Ask about symptoms">Symptoms</button>
+                        <button class="quick-btn" data-message="Tell me about medications" aria-label="Ask about medications">Medications</button>
+                        <button class="quick-btn" data-message="Natural treatments" aria-label="Ask about natural treatments">Natural Treatments</button>
+                        <button class="quick-btn" data-message="What doctors can help with PCOS?" aria-label="Ask about finding a doctor">Find a Doctor</button>
+                        <button class="quick-btn" data-message="What is anovulatory bleeding?" aria-label="Ask about anovulatory bleeding">Anovulatory Bleeding</button>
                     </div>
 
-                    <div class="input-area">
+                    <div class="input-area" role="search">
                         <div class="input-wrapper">
-                            <input type="text" id="message-input" placeholder="Ask me anything about PCOS..." autocomplete="off">
+                            <label for="message-input" class="visually-hidden">Ask a question about PCOS</label>
+                            <input type="text" id="message-input" placeholder="Ask me anything about PCOS..." autocomplete="off" aria-label="Type your question about PCOS">
                         </div>
-                        <button class="send-btn" id="send-btn" title="Send message">➤</button>
+                        <button class="send-btn" id="send-btn" title="Send message" aria-label="Send message">
+                            <span aria-hidden="true">➤</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Community Tab -->
-            <div class="tab-content" id="community-tab">
-                <div class="community-container">
+            <div class="tab-content" id="community-tab" role="tabpanel" aria-labelledby="tab-community" hidden>
+                <div class="community-container" role="region" aria-label="Community Tips Section">
                     <div class="community-header">
-                        <h2>💜 Community Tips & Support</h2>
+                        <h2><span aria-hidden="true">💜</span> Community Tips & Support</h2>
                         <p>Share what's helped you manage PCOS and learn from others in our community!</p>
                     </div>
 
-                    <div class="community-warning">
-                        <strong>⚠️ Community Guidelines:</strong> Be kind and supportive. This is a safe space.
+                    <div class="community-warning" role="alert">
+                        <strong><span aria-hidden="true">⚠️</span> Community Guidelines:</strong> Be kind and supportive. This is a safe space.
                         Harassment, hate speech, and inappropriate content will be removed.
                         Remember: Tips shared here are personal experiences, not medical advice. Always consult your doctor!
                     </div>
 
                     <!-- Tip Submission Form -->
-                    <div class="tip-form">
-                        <div class="tip-form-header">💡 Share a tip that's helped you</div>
-                        <input type="text" class="tip-name-input" id="tip-name" placeholder="Your name (or nickname)" maxlength="30">
-                        <textarea class="tip-input" id="tip-content" placeholder="What's worked for you? Share your experience with diet, exercise, supplements, medications, or anything that's helped your PCOS journey..." maxlength="500"></textarea>
-                        <button class="tip-submit-btn" id="submit-tip">Share My Tip 💜</button>
-                        <div id="tip-message"></div>
-                    </div>
+                    <form class="tip-form" role="form" aria-label="Share a tip form">
+                        <div class="tip-form-header" id="tip-form-label"><span aria-hidden="true">💡</span> Share a tip that's helped you</div>
+                        <label for="tip-name" class="visually-hidden">Your name or nickname</label>
+                        <input type="text" class="tip-name-input" id="tip-name" placeholder="Your name (or nickname)" maxlength="30" aria-describedby="tip-form-label">
+                        <label for="tip-content" class="visually-hidden">Your PCOS tip</label>
+                        <textarea class="tip-input" id="tip-content" placeholder="What's worked for you? Share your experience with diet, exercise, supplements, medications, or anything that's helped your PCOS journey..." maxlength="500" aria-describedby="tip-form-label"></textarea>
+                        <button type="button" class="tip-submit-btn" id="submit-tip" aria-label="Share your tip">Share My Tip <span aria-hidden="true">💜</span></button>
+                        <div id="tip-message" role="status" aria-live="polite"></div>
+                    </form>
 
                     <!-- Tips List -->
-                    <div class="tips-list" id="tips-list">
-                        <div class="tips-loading">Loading community tips... 💜</div>
+                    <div class="tips-list" id="tips-list" role="feed" aria-label="Community tips">
+                        <div class="tips-loading" aria-live="polite">Loading community tips... <span aria-hidden="true">💜</span></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
-        <footer class="footer">
-            <p>💜 Remember: This is for information only, not medical advice. Always consult your healthcare provider.</p>
+        <footer class="footer" role="contentinfo">
+            <p><span aria-hidden="true">💜</span> Remember: This is for information only, not medical advice. Always consult your healthcare provider.</p>
         </footer>
     </div>
 
@@ -1127,7 +1195,7 @@ const PCOSChatbot = (function() {
         }
         setTimeout(showGreeting, 300);
 
-        // Tab switching functionality
+        // Tab switching functionality with ARIA support
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
 
@@ -1135,17 +1203,47 @@ const PCOSChatbot = (function() {
             btn.addEventListener('click', () => {
                 const tabId = btn.dataset.tab;
 
-                // Update active button
-                tabBtns.forEach(b => b.classList.remove('active'));
+                // Update active button and ARIA states
+                tabBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
                 btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
 
-                // Update active content
+                // Update active content and hidden state
                 tabContents.forEach(content => {
                     content.classList.remove('active');
+                    content.setAttribute('hidden', '');
                     if (content.id === tabId + '-tab') {
                         content.classList.add('active');
+                        content.removeAttribute('hidden');
                     }
                 });
+            });
+
+            // Keyboard navigation for tabs
+            btn.addEventListener('keydown', (e) => {
+                let targetBtn = null;
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const nextBtn = btn.nextElementSibling || tabBtns[0];
+                    targetBtn = nextBtn;
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prevBtn = btn.previousElementSibling || tabBtns[tabBtns.length - 1];
+                    targetBtn = prevBtn;
+                } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    targetBtn = tabBtns[0];
+                } else if (e.key === 'End') {
+                    e.preventDefault();
+                    targetBtn = tabBtns[tabBtns.length - 1];
+                }
+                if (targetBtn) {
+                    targetBtn.focus();
+                    targetBtn.click();
+                }
             });
         });
 
