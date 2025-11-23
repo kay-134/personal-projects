@@ -369,662 +369,125 @@
     <script>
 /**
  * PCOS Buddy - Client-side Chatbot
+ * Loads knowledge from external JSON file for easy updates
  */
 const PCOSChatbot = (function() {
-    const KNOWLEDGE = {
-        what_is: `PCOS stands for Polycystic Ovary Syndrome. I know it sounds super complicated, but let me break it down for you like we're chatting over lunch! 🍕
-
-Basically, PCOS is when your hormones (the chemical messengers in your body) get a little out of whack. It's one of the most common hormone conditions - about 1 in 10 women have it! So you're definitely not alone.
-
-Here's what's happening: Your ovaries (those small organs that hold eggs) might make too much of certain hormones called androgens. Think of androgens as the "boy hormones" - everyone has them, but with PCOS, you might have a bit more than usual.
-
-This can cause a few things:
-- Your periods might be irregular or skip around
-- You might get small fluid-filled sacs (they call them "cysts" but they're really just follicles) on your ovaries
-- You might notice extra hair growth or acne
-
-But here's the important thing - PCOS is super manageable! Lots of people live totally normal, happy lives with it. It just means you need to pay a bit more attention to your body and maybe make some tweaks to how you take care of yourself.`,
-
-        diagnosis: `So, how do doctors figure out if you have PCOS? They use something called the "Rotterdam Criteria" - fancy name, I know!
-
-To get diagnosed, you usually need to have at least 2 out of these 3 things:
-
-**1. IRREGULAR PERIODS** 📅
-- Your periods are super unpredictable
-- They come more than 35 days apart (or less than 21 days)
-- Or sometimes you skip them entirely
-
-**2. HIGH ANDROGENS (those "boy hormones")** 💪
-This can show up as:
-- Extra hair on your face, chest, or back (called hirsutism)
-- Acne that won't quit
-- Hair thinning on your head
-- Or it might just show up in a blood test
-
-**3. POLYCYSTIC OVARIES** 🔬
-- An ultrasound might show lots of small follicles on your ovaries
-- Or you might have high AMH levels (a hormone test)
-- Fun fact: You can have PCOS without having "polycystic ovaries" - confusing, right?
-
-The doctor will also want to rule out other conditions that can look similar, like thyroid problems or other hormone issues.`,
-
-        symptoms: `Okay, let's talk about what PCOS can actually feel like. Everyone's experience is different - you might have some of these, all of these, or just a few!
-
-**PERIOD STUFF** 🩸
-- Irregular periods (they come whenever they want, basically)
-- Heavy periods when they do show up
-- Sometimes no periods for months
-- Painful cramps
-
-**SKIN & HAIR CHANGES** 💇‍♀️
-- Acne (especially along your jawline and chin)
-- Extra hair growth on face, chest, belly, or back
-- Hair thinning or loss on your head (usually at the crown)
-- Skin tags (little skin bumps)
-- Dark, velvety patches of skin (usually in skin folds)
-
-**WEIGHT & ENERGY** 💪
-- Weight gain, especially around your belly
-- Difficulty losing weight even when you try hard
-- Feeling tired a lot
-- Cravings, especially for carbs and sweets
-
-**MOOD STUFF** 🧠
-- Anxiety or feeling worried a lot
-- Depression or feeling down
-- Mood swings
-- Brain fog (trouble concentrating)
-
-**OTHER THINGS** 🌙
-- Trouble sleeping or sleep apnea
-- Headaches
-- Pelvic pain
-
-Remember: Having PCOS doesn't mean you'll have ALL of these symptoms. And many of these can be managed with the right approach!`,
-
-        medications: `Let me walk you through the main medications doctors might suggest for PCOS. Think of these as tools in your toolbox!
-
-**1. METFORMIN** 💊
-- Actually a diabetes medication, but works great for PCOS
-- Helps your body use insulin better
-- Can help with weight and make periods more regular
-- Might upset your tummy at first (start low, go slow!)
-
-**2. BIRTH CONTROL PILLS** 💜
-- Often the first thing doctors suggest
-- Regulates your periods (finally, predictability!)
-- Lowers androgen levels
-- Clears up acne and reduces unwanted hair growth
-
-**3. SPIRONOLACTONE (Spiro)** 🌟
-- Blocks androgens really well
-- Reduces facial and body hair growth
-- Helps with acne and hair loss on your head
-- Takes 3-6 months to see results
-- MUST use birth control with it
-
-**OTHER OPTIONS:**
-- **Letrozole/Clomid** - For fertility help
-- **Ozempic/Wegovy** - Newer options for weight and insulin
-
-Which one would you like to know more about?`,
-
-        metformin: `**METFORMIN - The Insulin Helper** 💊
-
-**What is it?**
-Metformin is actually a diabetes medication, but it works really well for PCOS too! It helps your body use insulin better.
-
-**Why might it help you?**
-- Makes your body more sensitive to insulin
-- Can help with weight management
-- Might make your periods more regular
-- Can lower androgen levels
-- May reduce your risk of type 2 diabetes
-
-**The real talk:**
-- It might upset your tummy at first (start low, go slow!)
-- Take it with food to help with side effects
-- Extended-release version is usually gentler on your stomach
-
-**Typical dose:** Usually starts at 500mg and works up to 1500-2000mg daily
-
-**Side effects:** Nausea, stomach upset, diarrhea (usually gets better), metallic taste`,
-
-        birth_control: `**BIRTH CONTROL PILLS - The Hormone Balancers** 💜
-
-**What are they?**
-Combined birth control pills have estrogen and progestin. They're often the first thing doctors suggest for PCOS symptoms.
-
-**Why might they help you?**
-- Regulate your periods (finally, some predictability!)
-- Lower androgen levels
-- Clear up acne
-- Reduce unwanted hair growth
-- Protect your uterine lining
-
-**The real talk:**
-- There are TONS of different pills - if one doesn't work, try another!
-- Some pills are better for PCOS than others
-- They don't fix the underlying issue, but they manage symptoms well
-
-**Good options for PCOS often contain:**
-- Drospirenone (like Yaz or Yasmin)
-- Norgestimate
-- Desogestrel`,
-
-        spironolactone: `**SPIRONOLACTONE (Spiro) - The Anti-Androgen** 🌟
-
-**What is it?**
-Spironolactone is actually a blood pressure medication, but it blocks androgens really well!
-
-**Why might it help you?**
-- Reduces facial and body hair growth
-- Helps with acne
-- Can help with hair loss on your head
-- Blocks those excess "boy hormones"
-
-**The real talk:**
-- Takes 3-6 months to see results (patience, friend!)
-- You MUST use birth control with it (it can affect a male baby)
-- Makes you pee more (it's a diuretic)
-- Often prescribed with birth control pills for best results
-
-**Typical dose:** Usually 50-200mg daily`,
-
-        natural: `Not everyone wants to take prescription meds, and that's totally okay! Here are natural approaches that research supports:
-
-**INOSITOL** ⭐ (The Star Supplement!)
-- Research shows it actually works!
-- Improves insulin sensitivity and helps with ovulation
-- Usually 2-4 grams of myo-inositol daily
-- Look for Ovasitol or similar quality brands
-
-**VITAMIN D** ☀️
-- Many with PCOS are low in vitamin D
-- Helps with insulin sensitivity and mood
-- Usually 1000-4000 IU daily
-
-**OMEGA-3s** 🐟
-- Found in fish oil, reduces inflammation
-- 1-3 grams EPA/DHA daily
-
-**NAC (N-Acetylcysteine)** 🛡️
-- Antioxidant that may help with ovulation
-- 600-1800mg daily
-
-**BERBERINE** 🌿
-- Works similarly to metformin
-- Don't take WITH metformin without doctor approval!
-
-**SPEARMINT TEA** 🍵
-- 2 cups daily may help reduce facial hair
-- Plus it tastes good!
-
-Always talk to your doctor before starting supplements!`,
-
-        inositol: `**INOSITOL - The Star Supplement** ⭐
-
-**What is it?**
-Inositol is a type of sugar that your body makes naturally. It comes in two main forms:
-- Myo-inositol (the more common one)
-- D-chiro-inositol
-
-**Why the hype?**
-Research actually shows this stuff works! It can:
-- Improve how your body uses insulin
-- Help with ovulation
-- Balance hormones
-- May help with weight management
-- Could reduce anxiety (bonus!)
-
-**How to take it:**
-- Myo-inositol: Usually 2-4 grams per day
-- Or a combo of Myo + D-chiro in a 40:1 ratio
-- Usually taken as a powder mixed in water
-- Best split into 2 doses (morning and evening)
-
-**Real talk:**
-- It's generally safe with few side effects
-- Takes about 3 months to see results
-- Look for quality brands (Ovasitol is popular)
-- Way cheaper than prescription meds!
-
-Many people in the PCOS community swear by this one!`,
-
-        diet: `**EATING FOR PCOS** 🥗
-
-Diet is HUGE for PCOS. Here's what actually helps:
-
-**Focus on LOW-GLYCEMIC foods:**
-- These don't spike your blood sugar as much
-- Think: whole grains, vegetables, legumes, most fruits
-- Swap white bread for whole grain
-
-**Eat enough PROTEIN:**
-- Helps you feel full longer
-- Keeps blood sugar stable
-- Aim for protein at every meal
-
-**Healthy FATS are your friend:**
-- Avocados, olive oil, nuts, fatty fish
-- Help with hormone production
-
-**What to limit:**
-- Sugary drinks (this is a BIG one!)
-- White bread, pasta, rice
-- Processed snacks and fast food
-- Too much dairy (for some people)
-
-**Popular approaches that work:**
-- Mediterranean diet
-- Low-carb (not necessarily keto)
-- Anti-inflammatory diet
-
-**Pro tips from the community:**
-- Focus on blood sugar, not just calories
-- Meal prep to stay consistent
-- Don't stress about being perfect
-
-The key: Find what works for YOUR body!`,
-
-        exercise: `**MOVEMENT & EXERCISE** 🏃‍♀️
-
-Exercise is like medicine for PCOS - seriously!
-
-**What works best:**
-- Mix of cardio AND strength training
-- Strength training is especially good (builds muscle, improves insulin sensitivity)
-- HIIT can be great
-- But honestly? Any movement you'll actually DO is the best exercise
-
-**How much:**
-- Aim for 150 minutes per week (30 min, 5 days)
-- Even 10-minute walks help!
-- Strength training 2-3 times per week
-
-**Why it helps:**
-- Improves insulin sensitivity (huge for PCOS!)
-- Helps with weight management
-- Reduces inflammation
-- Improves mood and energy
-- Can help regulate periods
-
-**Great options:**
-- Walking (seriously underrated!)
-- Weight lifting or resistance bands
-- Swimming, Yoga, Dancing, Cycling
-
-**Real talk:**
-- Start where you are
-- Don't overdo it (too much exercise can stress your body)
-- Rest days are important
-- Find something you enjoy!
-
-The community says: "Strength training changed my life"!`,
-
-        fertility: `**PCOS AND FERTILITY** 👶
-
-Let's talk about fertility and PCOS.
-
-**THE GOOD NEWS FIRST:**
-Many people with PCOS get pregnant - with or without help! PCOS doesn't mean you can't have kids.
-
-**WHY PCOS AFFECTS FERTILITY:**
-- Irregular ovulation = unpredictable egg release
-- Sometimes you don't ovulate at all
-- Higher androgens can affect egg quality
-
-**WHAT HELPS:**
-
-**1. Lifestyle changes (they really work!)**
-- Losing 5-10% of body weight can restore ovulation
-- Low-glycemic diet
-- Regular exercise
-
-**2. Medications for ovulation:**
-- Letrozole (often first choice now)
-- Clomiphene (Clomid)
-- Metformin can help too
-
-**3. If those don't work:**
-- Injectable hormones
-- IUI (intrauterine insemination)
-- IVF (in vitro fertilization)
-
-**4. Supplements that may help:**
-- Inositol, CoQ10, Vitamin D
-
-**IMPORTANT:**
-- Work with a reproductive endocrinologist if struggling
-- Track your cycles
-- Be patient but advocate for yourself
-
-You can absolutely have a family with PCOS. 💜`,
-
-        mental_health: `**MENTAL HEALTH & PCOS** 🧠
-
-PCOS isn't just physical. It affects your mental health too, and that's completely valid.
-
-**Many people with PCOS deal with:**
-- Anxiety (more common than in general population)
-- Depression
-- Body image struggles
-- Frustration with symptoms
-- Feeling misunderstood
-
-**This is NOT your fault.**
-PCOS affects brain chemistry and hormones that influence mood.
-
-**What helps:**
-
-**Talk about it:**
-- Therapy or counseling
-- Support groups
-- The r/PCOS subreddit is super supportive
-
-**Physical things that help mood:**
-- Exercise (proven to help!)
-- Getting enough sleep
-- Reducing stress
-- Treating the physical symptoms
-
-**Self-compassion:**
-- Be nice to yourself, friend
-- Progress isn't linear
-- Celebrate small wins
-
-You're not alone in this. 💜`,
-
-        community: `**FROM THE PCOS COMMUNITY** 💬
-
-Here's what people with PCOS say actually helps:
-
-**ON DOCTORS:**
-- "Find a doctor who actually listens."
-- "Endocrinologists often get PCOS better than OBGYNs."
-- "Write down your questions before appointments!"
-
-**ON DIET:**
-- "I focused on blood sugar, not calories. Game changer."
-- "Going dairy-free helped my acne SO much."
-- "Meal prepping is the only way I stay consistent."
-
-**ON EXERCISE:**
-- "Strength training did more for me than endless cardio."
-- "Walking is underrated. 10K steps helps so much."
-- "Yoga helped my stress AND my symptoms."
-
-**ON SUPPLEMENTS:**
-- "Inositol changed my life. Wish I'd started it sooner."
-- "Spearmint tea is surprisingly effective for facial hair."
-
-**ON MENTAL HEALTH:**
-- "Be patient with yourself. This is a marathon, not a sprint."
-- "Finding a community of people who get it made such a difference."
-- "Therapy helped me accept my body."
-
-**ON DAILY LIFE:**
-- "Track your symptoms - you'll notice patterns."
-- "Good sleep is non-negotiable for me now."
-
-You've got this! 💜`,
-
-        stress: `**STRESS & SLEEP** 😴
-
-These are super important for PCOS!
-
-**STRESS raises cortisol, which can:**
-- Worsen insulin resistance
-- Mess with your hormones
-- Make symptoms worse
-- Cause weight gain, especially belly fat
-
-**Stress busters that help:**
-- Deep breathing exercises
-- Meditation (try apps like Calm or Headspace)
-- Yoga
-- Time in nature
-- Journaling
-- Setting boundaries
-- Therapy if you need it!
-
-**SLEEP is when your body repairs itself:**
-- Aim for 7-9 hours
-- Keep a consistent sleep schedule
-- Watch for sleep apnea (common with PCOS!)
-- Poor sleep = worse insulin resistance
-
-These "soft" things are just as important as diet and exercise!`,
-
-        long_term: `**LONG-TERM HEALTH & PCOS** ❤️
-
-PCOS is a lifelong condition, so let's talk about future you!
-
-**THINGS TO BE AWARE OF:**
-- Type 2 diabetes risk (get tested regularly)
-- Heart disease risk
-- High blood pressure and cholesterol
-- Sleep apnea
-- Endometrial concerns (if you don't have regular periods)
-
-**SOUNDS SCARY BUT:**
-- These are RISKS, not guarantees
-- You can absolutely reduce these risks
-- Lifestyle changes make a HUGE difference
-- Regular check-ups catch things early
-- Many people with PCOS live long, healthy lives!
-
-**WHAT TO DO:**
-- Regular check-ups (at least yearly)
-- Monitor blood sugar (A1C test yearly)
-- Check cholesterol and blood pressure
-- Have at least 4 periods per year
-- Stay active, don't smoke, limit alcohol
-
-Taking care of PCOS now is an investment in your future health! 💜`,
-
-        doctors: `**DOCTORS WHO CAN HELP WITH PCOS** 👩‍⚕️
-
-Finding the right doctor makes a HUGE difference! Here's who can help:
-
-**GYNECOLOGIST (OB/GYN)** 🏥
-- Often the first doctor to diagnose PCOS
-- Good for birth control, period issues, basic management
-- Can refer you to specialists if needed
-- Best for: general PCOS care, contraception, annual exams
-
-**ENDOCRINOLOGIST** ⭐ (Often the MVP!)
-- Hormone specialists - they REALLY understand PCOS
-- Great for complex cases or when basic treatment isn't working
-- Expert in insulin resistance and metabolic issues
-- Best for: hormone imbalances, insulin resistance, comprehensive treatment plans
-- *Many people say endocrinologists "get" PCOS better than anyone*
-
-**REPRODUCTIVE ENDOCRINOLOGIST (RE)** 👶
-- Fertility specialists with deep hormone knowledge
-- If you're trying to get pregnant, this is your person
-- Can do fertility treatments (Clomid, letrozole, IUI, IVF)
-- Best for: fertility issues, trouble conceiving, ovulation problems
-
-**DERMATOLOGIST** 💆‍♀️
-- Skin and hair specialists
-- Can help with acne, hirsutism (unwanted hair), hair loss
-- May prescribe spironolactone or topical treatments
-- Best for: stubborn acne, excessive hair growth, hair thinning
-
-**PRIMARY CARE DOCTOR / INTERNIST** 🩺
-- Can manage PCOS if they're knowledgeable
-- Good for coordinating care between specialists
-- Monitors metabolic health (blood sugar, cholesterol)
-- Best for: routine monitoring, medication refills, overall health
-
-**REGISTERED DIETITIAN (RD)** 🥗
-- Not a doctor, but incredibly helpful!
-- Creates personalized eating plans for PCOS
-- Helps with insulin resistance through diet
-- Best for: nutrition guidance, meal planning, weight management
-
-**THERAPIST / PSYCHOLOGIST** 🧠
-- Mental health support
-- Helps with anxiety, depression, body image
-- Best for: emotional support, coping strategies
-
-**TIPS FOR FINDING THE RIGHT DOCTOR:**
-- Ask "Do you specialize in or frequently treat PCOS?"
-- Look for doctors who take your concerns seriously
-- It's okay to switch doctors if you feel dismissed
-- Ask for referrals in PCOS support groups
-- Write down your questions before appointments
-
-Don't be afraid to build a care team! Many people see multiple specialists. 💜`,
-
-        anovulatory_bleeding: `**ANOVULATORY BLEEDING & PCOS** 🩸
-
-Let's talk about something confusing - bleeding that ISN'T really a period!
-
-**WHAT IS ANOVULATORY BLEEDING?**
-Anovulatory bleeding is when you bleed but you DIDN'T ovulate (release an egg). It looks like a period, feels like a period, but it's technically not a true menstrual period.
-
-Think of it this way:
-- **True period** = You ovulated → egg wasn't fertilized → uterine lining sheds in an organized way
-- **Anovulatory bleeding** = No ovulation → hormones get wonky → lining sheds irregularly
-
-**WHY DOES THIS HAPPEN WITH PCOS?**
-With PCOS, you often don't ovulate regularly (or at all). Without ovulation:
-- Estrogen keeps building up the uterine lining
-- No progesterone comes to balance it out
-- Eventually the lining gets too thick and starts shedding randomly
-- This causes unpredictable, often irregular bleeding
-
-**HOW TO TELL THE DIFFERENCE:**
-
-*Signs it might be anovulatory bleeding:*
-- Very irregular timing (not every 21-35 days)
-- Unpredictable - could be light spotting or very heavy
-- No typical PMS symptoms beforehand
-- No temperature shift if you're tracking
-- Negative ovulation tests
-
-*Signs of a true period (ovulatory cycle):*
-- Comes roughly every 21-35 days
-- You had PMS symptoms
-- Temperature tracking shows a shift
-- Positive ovulation test about 2 weeks before
-
-**WHY IT MATTERS:**
-
-This isn't just confusing - it can affect your health:
-
-1. **Endometrial health** - Without progesterone from ovulation, the uterine lining keeps building up. Over time, this increases risk of endometrial hyperplasia or even cancer.
-
-2. **Fertility** - No ovulation = no egg = can't get pregnant that cycle
-
-3. **Understanding your body** - Knowing the difference helps you track what's actually happening
-
-**WHAT TO DO ABOUT IT:**
-
-- **Birth control pills** can regulate your cycle and protect your uterine lining
-- **Progesterone** (like Provera) can induce a "withdrawal bleed" to shed the lining
-- **Metformin or inositol** may help restore ovulation for some people
-- **Lifestyle changes** (diet, exercise, weight loss) can help you ovulate naturally
-
-**HOW OFTEN SHOULD YOU BLEED?**
-Doctors recommend having at least 4 periods per year to protect your uterine lining. If you go more than 3 months without bleeding, talk to your doctor!
-
-**THE BOTTOM LINE:**
-Irregular bleeding with PCOS is usually anovulatory bleeding. It's your body's way of shedding the lining without the normal hormone cycle. It's common, it's manageable, and understanding it helps you take better care of yourself! 💜`
-    };
-
-    const GREETINGS = [
-        "Hey there, friend! 👋 I'm so glad you're here. I know a PCOS diagnosis can feel overwhelming, but you've got this - and I'm here to help you understand it all. What would you like to know about?",
-        "Hi! Welcome to PCOS Buddy! 💜 Think of me as your PCOS-savvy friend who's read ALL the research so you don't have to. What's on your mind today?",
-        "Hey! I'm here to help you navigate all things PCOS. No question is too basic or too weird - I've heard them all! What can I help you with?"
+    let KNOWLEDGE = {};
+    let GREETINGS = [];
+    let TOPICS = "";
+    let PATTERNS = {};
+    let loaded = false;
+
+    // Pattern check order - IMPORTANT: anovulatory_bleeding MUST come before fertility
+    // because "anovulatory" contains "ovulat" which would match fertility pattern
+    const PATTERN_ORDER = [
+        'anovulatory_bleeding',  // Check this FIRST before fertility
+        'what_is',
+        'diagnosis',
+        'symptoms',
+        'medications',
+        'metformin',
+        'birth_control',
+        'spironolactone',
+        'natural',
+        'inositol',
+        'diet',
+        'exercise',
+        'stress',
+        'mental_health',
+        'fertility',  // Check this AFTER anovulatory_bleeding
+        'long_term',
+        'community',
+        'doctors'
     ];
 
-    const TOPICS = `
-
-Here are some things I can help you with:
-
-🔬 **"What is PCOS?"** - The basics explained simply
-📋 **"How is PCOS diagnosed?"** - Tests and criteria
-🩺 **"What are the symptoms?"** - What to look out for
-💊 **"Tell me about medications"** - Metformin, birth control, spiro
-🌿 **"Natural treatments"** - Inositol, supplements, herbs
-🥗 **"Diet tips"** - What to eat and avoid
-🏃‍♀️ **"Exercise for PCOS"** - Movement that helps
-👩‍⚕️ **"What doctors can help?"** - Finding the right specialists
-🩸 **"Anovulatory bleeding"** - When bleeding isn't a real period
-🧠 **"Mental health"** - Emotional support
-👶 **"Fertility"** - Getting pregnant info
-💬 **"Community tips"** - What others have learned
-
-Just type your question or pick a topic! 💜`;
-
-    const PATTERNS = {
-        what_is: /what is pcos|what's pcos|explain pcos|pcos mean|tell me about pcos|pcos basics|understand pcos|new to pcos|just diagnosed|recently diagnosed|polycystic ovary/i,
-        diagnosis: /diagnos|how do (they|doctors|you) know|test for pcos|rotterdam|ultrasound|blood test|criteria|amh|find out if i have/i,
-        symptoms: /symptom|sign|feel|experience|what happens|side effect|how does pcos affect|acne|hair growth|hirsutism|irregular period|weight gain|tired|fatigue|mood/i,
-        medications: /^(medication|medicine|drug|prescription|treatment option|treat pcos|what can i take)s?$/i,
-        metformin: /metformin|glucophage|insulin sensitiz/i,
-        birth_control: /birth control|the pill|oral contracept|bc pill|yaz|yasmin|hormonal contracept/i,
-        spironolactone: /spiro|aldactone|anti.?androgen/i,
-        natural: /natural|supplement|vitamin|alternative|herbal|holistic|without medication|home remed/i,
-        inositol: /inositol|myo.?inositol|d.?chiro|ovasitol/i,
-        diet: /diet|eat|food|nutrition|carb|sugar|keto|low glycemic|meal|what should i eat|mediterranean|gluten|dairy/i,
-        exercise: /exercise|workout|gym|cardio|weight train|strength|fitness|active|movement|walk|yoga|hiit/i,
-        stress: /stress|sleep|relax|meditat|self care|self-care|cope|overwhelm|cortisol/i,
-        mental_health: /mental health|depress|anxious|anxiety|sad|emotion|feel down|mood swing|therapy|counseling|support/i,
-        fertility: /fertil|pregnant|baby|conceiv|ovulat|trying to conceive|ttc|ivf|iui|have kids|have children|get pregnant/i,
-        long_term: /long term|long-term|future|risk|diabetes|heart|cancer|health risk|complicat/i,
-        community: /reddit|community|other people|tips|advice from|what works|success stor/i,
-        doctors: /doctor|specialist|endocrinologist|gynecologist|obgyn|ob-gyn|dermatologist|who (can|should) i see|find a doctor|what kind of doctor|which doctor|healthcare provider|dietitian|therapist/i,
-        anovulatory: /anovulat|withdrawal bleed|not a real period|fake period|bleeding but not period|irregular bleed|no ovulat|didn.t ovulate|without ovulat/i,
-        greeting: /^(hi|hello|hey|howdy|hiya|good morning|good afternoon|good evening)!?$/i,
-        thanks: /thank|thanks|appreciate|helpful|great info/i,
-        help: /^help$|what can you|how do you work|what do you know/i
-    };
+    // Load knowledge from JSON file
+    async function loadKnowledge() {
+        try {
+            const response = await fetch('knowledge.json');
+            const data = await response.json();
+            KNOWLEDGE = data.responses;
+            GREETINGS = data.greetings;
+            TOPICS = data.topics_menu;
+            PATTERNS = data.patterns;
+            loaded = true;
+            console.log('PCOS knowledge loaded successfully!');
+        } catch (error) {
+            console.error('Failed to load knowledge.json:', error);
+            // Fallback message
+            KNOWLEDGE = { error: "I'm having trouble loading my knowledge base. Please refresh the page!" };
+            GREETINGS = ["Hi! I'm having some technical difficulties. Please refresh the page to try again."];
+            TOPICS = "";
+            loaded = true;
+        }
+    }
 
     function detectTopic(message) {
         const msg = message.toLowerCase().trim();
-        for (const [topic, pattern] of Object.entries(PATTERNS)) {
-            if (pattern.test(msg)) return topic;
+
+        // Check special patterns first
+        if (/^(hi|hello|hey|howdy|hiya|good morning|good afternoon|good evening)!?$/i.test(msg)) {
+            return 'greeting';
         }
+        if (/thank|thanks|appreciate|helpful|great info/i.test(msg)) {
+            return 'thanks';
+        }
+        if (/^help$|what can you|how do you work|what do you know/i.test(msg)) {
+            return 'help';
+        }
+
+        // Check patterns in specific order (anovulatory_bleeding before fertility!)
+        for (const topic of PATTERN_ORDER) {
+            const keywords = PATTERNS[topic];
+            if (keywords) {
+                for (const keyword of keywords) {
+                    if (msg.includes(keyword.toLowerCase())) {
+                        return topic;
+                    }
+                }
+            }
+        }
+
         return null;
     }
 
     function getResponse(message) {
+        if (!loaded) {
+            return "I'm still loading... please wait a moment and try again!";
+        }
+
         const topic = detectTopic(message);
+
         switch(topic) {
-            case 'greeting': return "Hey again! 😊 What would you like to know about PCOS?" + TOPICS;
-            case 'thanks': return "You're so welcome! 💜 That's what I'm here for.\n\nIs there anything else you'd like to know about PCOS?";
-            case 'help': return TOPICS;
-            case 'what_is': return KNOWLEDGE.what_is;
-            case 'diagnosis': return KNOWLEDGE.diagnosis;
-            case 'symptoms': return KNOWLEDGE.symptoms;
-            case 'medications': return KNOWLEDGE.medications;
-            case 'metformin': return KNOWLEDGE.metformin;
-            case 'birth_control': return KNOWLEDGE.birth_control;
-            case 'spironolactone': return KNOWLEDGE.spironolactone;
-            case 'natural': return KNOWLEDGE.natural;
-            case 'inositol': return KNOWLEDGE.inositol;
-            case 'diet': return KNOWLEDGE.diet;
-            case 'exercise': return KNOWLEDGE.exercise;
-            case 'stress': return KNOWLEDGE.stress;
-            case 'mental_health': return KNOWLEDGE.mental_health;
-            case 'fertility': return KNOWLEDGE.fertility;
-            case 'long_term': return KNOWLEDGE.long_term;
-            case 'community': return KNOWLEDGE.community;
-            case 'doctors': return KNOWLEDGE.doctors;
-            case 'anovulatory': return KNOWLEDGE.anovulatory_bleeding;
-            default: return "Hmm, I want to make sure I give you the best info! Could you tell me a bit more about what you'd like to know?" + TOPICS;
+            case 'greeting':
+                return "Hey again! 😊 What would you like to know about PCOS?" + TOPICS;
+            case 'thanks':
+                return "You're so welcome! 💜 That's what I'm here for.\n\nIs there anything else you'd like to know about PCOS?";
+            case 'help':
+                return TOPICS;
+            default:
+                if (topic && KNOWLEDGE[topic]) {
+                    return KNOWLEDGE[topic];
+                }
+                return "Hmm, I want to make sure I give you the best info! Could you tell me a bit more about what you'd like to know?" + TOPICS;
         }
     }
 
     function getGreeting() {
+        if (!loaded || GREETINGS.length === 0) {
+            return "Hi! I'm loading... please wait a moment!";
+        }
         return GREETINGS[Math.floor(Math.random() * GREETINGS.length)] + TOPICS;
     }
 
-    return { getResponse, getGreeting };
+    function isLoaded() {
+        return loaded;
+    }
+
+    // Start loading immediately
+    loadKnowledge();
+
+    return { getResponse, getGreeting, isLoaded, loadKnowledge };
 })();
 </script>
     <script>
@@ -1097,10 +560,15 @@ Just type your question or pick a topic! 💜`;
             btn.addEventListener('click', () => sendMessage(btn.dataset.message));
         });
 
-        // Start with greeting
-        setTimeout(() => {
-            addMessage(PCOSChatbot.getGreeting());
-        }, 300);
+        // Start with greeting (wait for knowledge to load)
+        function showGreeting() {
+            if (PCOSChatbot.isLoaded()) {
+                addMessage(PCOSChatbot.getGreeting());
+            } else {
+                setTimeout(showGreeting, 100);
+            }
+        }
+        setTimeout(showGreeting, 300);
     </script>
 </body>
 </html>
