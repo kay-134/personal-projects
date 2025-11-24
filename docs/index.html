@@ -13,16 +13,16 @@
     <style>
         :root {
             /* AAA Compliant Colors - 7:1 contrast ratio for text */
-            --primary: #5C5C42;
+            --primary: #4A4A32;
             --primary-dark: #3D3D2B;
             --primary-light: #A3A380;
-            --secondary: #7A4A4D;
+            --secondary: #5C3A3D;
             --background: #EFEBCE;
             --surface: #FFFFFF;
             --text: #2D2D1F;
             --text-light: #4A4A3A;
             --border: #A3A380;
-            --user-bubble: #7A4A4D;
+            --user-bubble: #5C3A3D;
             --bot-bubble: #FFFFFF;
             --focus-ring: #2D2D1F;
         }
@@ -633,9 +633,9 @@
         }
 
         .tip-action-btn.liked {
-            background: var(--user-bubble);
+            background: var(--primary);
             border-color: var(--primary);
-            color: var(--primary-dark);
+            color: white;
         }
 
         .tip-action-btn.reported {
@@ -727,9 +727,9 @@
         }
 
         .reply-action-btn.liked {
-            background: var(--user-bubble);
+            background: var(--primary);
             border-color: var(--primary);
-            color: var(--primary-dark);
+            color: white;
         }
 
         .reply-action-btn.reported {
@@ -740,7 +740,8 @@
 
         /* Reply Form */
         .reply-form {
-            background: var(--user-bubble);
+            background: var(--background);
+            border: 2px solid var(--border);
             border-radius: 12px;
             padding: 14px;
             margin-top: 12px;
@@ -754,7 +755,7 @@
         .reply-form-header {
             font-family: 'Boldonse', system-ui, sans-serif;
             font-size: 12px;
-            color: var(--primary-dark);
+            color: var(--text);
             margin-bottom: 10px;
         }
 
