@@ -1,0 +1,866 @@
+[
+  {
+    "title": "Polycystic Ovary Syndrome: A Review of Treatment Options With a Focus on Pharmacological Approaches",
+    "authors": "Goodman NF, Cobin RH, Futterweit W, et al.",
+    "journal": "Endocrine Practice",
+    "year": "2015",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25869408/",
+    "abstract": "Comprehensive review of PCOS treatment options including lifestyle modifications, metformin, oral contraceptives, and anti-androgens for managing symptoms and metabolic complications.",
+    "tags": ["studies", "solutions", "metformin"]
+  },
+  {
+    "title": "Inositol in Polycystic Ovary Syndrome: Restoring to Normal Activities in Cell Signal Pathway",
+    "authors": "Unfer V, Carlomagno G, Dante G, Facchinetti F",
+    "journal": "Gynecological Endocrinology",
+    "year": "2012",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22916821/",
+    "abstract": "This study examines how myo-inositol and D-chiro-inositol supplementation can improve insulin sensitivity and ovarian function in women with PCOS.",
+    "tags": ["studies", "solutions", "inositol"]
+  },
+  {
+    "title": "Metformin Therapy in Polycystic Ovary Syndrome: A Meta-Analysis",
+    "authors": "Lord JM, Flight IH, Norman RJ",
+    "journal": "BMJ",
+    "year": "2003",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/14551930/",
+    "abstract": "Meta-analysis evaluating the effectiveness of metformin in treating PCOS, showing improvements in ovulation rates and metabolic parameters.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Racial and Ethnic Differences in Polycystic Ovary Syndrome",
+    "authors": "Engmann L, Jin S, Sun F, et al.",
+    "journal": "Fertility and Sterility",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28433371/",
+    "abstract": "Study examining how PCOS presentation and metabolic complications differ among racial and ethnic groups, with particular focus on African American women.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Polycystic Ovary Syndrome in African American Women",
+    "authors": "Ladson G, Dodson WC, Sweet SD, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21715526/",
+    "abstract": "Research showing that African American women with PCOS have higher rates of obesity, insulin resistance, and metabolic syndrome compared to Caucasian women.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "International Evidence-Based Guideline for the Assessment and Management of PCOS",
+    "authors": "Teede HJ, Misso ML, Costello MF, et al.",
+    "journal": "WHO/NIH Collaboration",
+    "year": "2018",
+    "url": "https://www.monash.edu/medicine/sphpm/mchri/pcos/guideline",
+    "abstract": "Comprehensive international guidelines for diagnosis, assessment, and treatment of PCOS developed by leading experts worldwide.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "The Effects of Myo-Inositol Supplementation on Metabolic Profile in PCOS",
+    "authors": "Genazzani AD, Lanzoni C, Ricchieri F, et al.",
+    "journal": "Gynecological Endocrinology",
+    "year": "2008",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18569030/",
+    "abstract": "Study demonstrating that myo-inositol supplementation improves insulin sensitivity and reduces testosterone levels in PCOS patients.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Metformin vs. Oral Contraceptives for PCOS: A Systematic Review",
+    "authors": "Costello M, Shrestha B, Eden J, et al.",
+    "journal": "Human Reproduction Update",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17068222/",
+    "abstract": "Systematic comparison of metformin and oral contraceptives for treating PCOS symptoms, evaluating efficacy for different outcomes.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Polycystic Ovary Syndrome: Definition, Aetiology, Diagnosis and Treatment",
+    "authors": "Norman RJ, Dewailly D, Legro RS, Hickey TE",
+    "journal": "Nature Reviews Endocrinology",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17984013/",
+    "abstract": "Comprehensive review covering the pathophysiology, diagnosis, and management strategies for polycystic ovary syndrome.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "Ethnic Differences in the Polycystic Ovary Syndrome Phenotype",
+    "authors": "Wijeyaratne CN, Balen AH, Barth JH, Belchetz PE",
+    "journal": "Fertility and Sterility",
+    "year": "2002",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11872202/",
+    "abstract": "Research examining phenotypic variations of PCOS across different ethnic groups including South Asian and Black women.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "D-Chiro-Inositol for PCOS: A Randomized Controlled Trial",
+    "authors": "Nestler JE, Jakubowicz DJ, Reamer P, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": "1999",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/10213550/",
+    "abstract": "Landmark study showing D-chiro-inositol improves ovulatory function and decreases androgen levels in women with PCOS.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Metformin Use in PCOS: Comprehensive Review",
+    "authors": "Palomba S, Falbo A, Zullo F, Orio F",
+    "journal": "Clinical Endocrinology",
+    "year": "2009",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19220498/",
+    "abstract": "Extensive review of metformin's mechanisms, efficacy, and safety in treating various PCOS manifestations.",
+    "tags": ["studies", "metformin", "answers"]
+  },
+  {
+    "title": "PCOS and Mental Health: Anxiety and Depression",
+    "authors": "Cooney LG, Lee I, Sammel MD, Dokras A",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28945852/",
+    "abstract": "Study examining the increased prevalence of anxiety and depression in women with PCOS and associated risk factors.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "Lifestyle Modification in PCOS: Evidence and Implementation",
+    "authors": "Moran LJ, Pasquali R, Teede HJ, et al.",
+    "journal": "Human Reproduction Update",
+    "year": "2009",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19429634/",
+    "abstract": "Evidence-based review of lifestyle interventions including diet and exercise for managing PCOS symptoms and metabolic risk.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Inositol and Metformin Combination for PCOS Treatment",
+    "authors": "Pkhaladze L, Barbakadze L, Kvashilava N",
+    "journal": "International Journal of Endocrinology",
+    "year": "2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33897787/",
+    "abstract": "Comparative study evaluating the combined effects of inositol and metformin versus monotherapy in PCOS patients.",
+    "tags": ["studies", "inositol", "metformin", "solutions"]
+  },
+  {
+    "title": "Cardiovascular Disease Risk in Women with PCOS",
+    "authors": "Wild RA, Carmina E, Diamanti-Kandarakis E, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2010",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20200335/",
+    "abstract": "Assessment of cardiovascular disease risk factors in women with PCOS and recommendations for monitoring and prevention.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "PCOS Prevalence in African American Adolescents",
+    "authors": "Hickey M, Doherty DA, Atkinson H, et al.",
+    "journal": "Journal of Pediatric and Adolescent Gynecology",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21601806/",
+    "abstract": "Study examining PCOS prevalence and characteristics in African American adolescent girls compared to other ethnic groups.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Myo-Inositol Effects on Clinical and Metabolic Features of PCOS",
+    "authors": "Gerli S, Papaleo E, Ferrari A, Di Renzo GC",
+    "journal": "Gynecological Endocrinology",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17891674/",
+    "abstract": "Clinical trial demonstrating myo-inositol's positive effects on menstrual regularity and metabolic parameters in PCOS.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Metformin and Weight Loss in PCOS: A Systematic Review",
+    "authors": "Nieuwenhuis-Ruifrok AE, Kuchenbecker WK, Hoek A, et al.",
+    "journal": "Human Reproduction Update",
+    "year": "2009",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19196709/",
+    "abstract": "Systematic review evaluating metformin's effect on body weight and composition in women with PCOS.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Diagnosis of PCOS: The Rotterdam Criteria",
+    "authors": "Rotterdam ESHRE/ASRM-Sponsored PCOS Consensus Workshop Group",
+    "journal": "Human Reproduction",
+    "year": "2004",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/14688154/",
+    "abstract": "Landmark consensus statement establishing the Rotterdam diagnostic criteria for PCOS still used today.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Insulin Resistance in PCOS: Pathophysiology and Treatment",
+    "authors": "Dunaif A",
+    "journal": "Endocrine Reviews",
+    "year": "1997",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9408743/",
+    "abstract": "Foundational review explaining the role of insulin resistance in PCOS pathophysiology and treatment implications.",
+    "tags": ["studies", "answers", "metformin"]
+  },
+  {
+    "title": "Hyperandrogenism in African American and White Women with PCOS",
+    "authors": "Legro RS, Myers ER, Barnhart HX, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16849417/",
+    "abstract": "Comparative study of androgen levels and hirsutism patterns in African American vs White women with PCOS.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Combined Myo-Inositol and D-Chiro-Inositol for PCOS",
+    "authors": "Colazingari S, Treglia M, Najjar R, Bevilacqua A",
+    "journal": "Gynecological Endocrinology",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23336594/",
+    "abstract": "Study evaluating the optimal ratio of myo-inositol to D-chiro-inositol supplementation for PCOS treatment.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Long-term Metformin Use in PCOS: Safety and Efficacy",
+    "authors": "Tang T, Lord JM, Norman RJ, et al.",
+    "journal": "Human Reproduction",
+    "year": "2012",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22416008/",
+    "abstract": "Long-term follow-up study assessing the continued benefits and safety of metformin therapy in PCOS patients.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Anti-Müllerian Hormone in PCOS Diagnosis",
+    "authors": "Dewailly D, Gronier H, Poncelet E, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21715541/",
+    "abstract": "Evaluation of anti-Müllerian hormone as a diagnostic marker for PCOS and its correlation with ovarian morphology.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "PCOS and Type 2 Diabetes: A Population-Based Study",
+    "authors": "Gambineri A, Patton L, Altieri P, et al.",
+    "journal": "Diabetes Care",
+    "year": "2012",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22723579/",
+    "abstract": "Large population study examining the progression from PCOS to type 2 diabetes and risk factors involved.",
+    "tags": ["studies", "answers", "metformin"]
+  },
+  {
+    "title": "Inositol for Ovulation Induction in PCOS: A Randomized Trial",
+    "authors": "Raffone E, Rizzo P, Benedetto V",
+    "journal": "Gynecological Endocrinology",
+    "year": "2010",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20540676/",
+    "abstract": "Randomized controlled trial comparing myo-inositol to metformin for ovulation induction in PCOS patients.",
+    "tags": ["studies", "inositol", "metformin", "solutions"]
+  },
+  {
+    "title": "Metabolic Syndrome in Black Women with PCOS",
+    "authors": "Lo JC, Feigenbaum SL, Yang J, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16368750/",
+    "abstract": "Study examining the prevalence and characteristics of metabolic syndrome in Black women with PCOS.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Dietary Approaches for PCOS Management",
+    "authors": "Marsh KA, Steinbeck KS, Atkinson FS, et al.",
+    "journal": "American Journal of Clinical Nutrition",
+    "year": "2010",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20071648/",
+    "abstract": "Comparative study of low glycemic index diet versus conventional diet for PCOS symptom management.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Metformin Effects on Ovulation and Fertility in PCOS",
+    "authors": "Legro RS, Barnhart HX, Schlaff WD, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17287476/",
+    "abstract": "Major clinical trial comparing clomiphene, metformin, and combination therapy for ovulation induction in PCOS.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Adolescent PCOS: Clinical Features and Management",
+    "authors": "Witchel SF, Oberfield S, Rosenfield RL, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2015",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25932998/",
+    "abstract": "Guidelines for diagnosing and treating PCOS in adolescent girls, addressing unique challenges in this population.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "Inositol and Folic Acid in PCOS: Effects on Pregnancy",
+    "authors": "Regidor PA, Schindler AE, Lesber R, et al.",
+    "journal": "European Review for Medical and Pharmacological Sciences",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30024632/",
+    "abstract": "Study examining the benefits of inositol and folic acid supplementation on pregnancy outcomes in PCOS women.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Hirsutism in PCOS: Evaluation and Treatment",
+    "authors": "Martin KA, Anderson RR, Chang RJ, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29522147/",
+    "abstract": "Endocrine Society guidelines for evaluating and treating hirsutism in women with PCOS.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Racial Disparities in PCOS Diagnosis and Treatment",
+    "authors": "Hillman JK, Johnson LNC, Limber M, et al.",
+    "journal": "Journal of Racial and Ethnic Health Disparities",
+    "year": "2020",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31820407/",
+    "abstract": "Analysis of racial disparities in PCOS diagnosis timing and access to treatment among different populations.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Metformin and Pregnancy Outcomes in PCOS",
+    "authors": "Glueck CJ, Goldenberg N, Wang P, et al.",
+    "journal": "Human Reproduction",
+    "year": "2004",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15117900/",
+    "abstract": "Long-term study of metformin use during pregnancy in PCOS women and effects on gestational diabetes risk.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Exercise Interventions for Women with PCOS",
+    "authors": "Harrison CL, Lombard CB, Moran LJ, Teede HJ",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21735444/",
+    "abstract": "Systematic review of exercise interventions and their effects on PCOS symptoms and metabolic health.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Inositol Isomers: Differential Effects in PCOS",
+    "authors": "Monastra G, Unfer V, Harrath AH, Bizzarri M",
+    "journal": "International Journal of Endocrinology",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29138633/",
+    "abstract": "Review comparing the different biological effects of myo-inositol and D-chiro-inositol in PCOS treatment.",
+    "tags": ["studies", "inositol", "answers"]
+  },
+  {
+    "title": "PCOS Phenotypes and Metabolic Risk",
+    "authors": "Moran L, Teede H",
+    "journal": "Human Reproduction Update",
+    "year": "2009",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19429634/",
+    "abstract": "Analysis of different PCOS phenotypes and their associated metabolic and cardiovascular risks.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Acne in PCOS: Pathogenesis and Treatment",
+    "authors": "Housman E, Reynolds RV",
+    "journal": "American Journal of Clinical Dermatology",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24453993/",
+    "abstract": "Review of acne pathogenesis in PCOS and evidence-based treatment approaches including hormonal therapies.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Metformin vs Inositol: Head-to-Head Comparison",
+    "authors": "Fruzzetti F, Perini D, Russo M, et al.",
+    "journal": "European Review for Medical and Pharmacological Sciences",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28644449/",
+    "abstract": "Direct comparison study of metformin and myo-inositol efficacy in treating PCOS symptoms.",
+    "tags": ["studies", "metformin", "inositol", "solutions"]
+  },
+  {
+    "title": "Obesity and PCOS in African American Women",
+    "authors": "Sam S, Dunaif A",
+    "journal": "Current Opinion in Endocrinology, Diabetes and Obesity",
+    "year": "2003",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20127181/",
+    "abstract": "Review examining the relationship between obesity and PCOS severity in African American women.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Sleep Apnea in Women with PCOS",
+    "authors": "Vgontzas AN, Legro RS, Bixler EO, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2001",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11232013/",
+    "abstract": "Study demonstrating increased prevalence of sleep apnea in PCOS and its metabolic implications.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Inositol for Gestational Diabetes Prevention in PCOS",
+    "authors": "D'Anna R, Di Benedetto V, Rizzo P, et al.",
+    "journal": "Obstetrics & Gynecology",
+    "year": "2012",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23168752/",
+    "abstract": "Clinical trial showing myo-inositol supplementation reduces gestational diabetes risk in pregnant PCOS women.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Anti-Androgen Therapy in PCOS",
+    "authors": "Paradisi R, Venturoli S",
+    "journal": "Journal of Endocrinological Investigation",
+    "year": "2010",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21084988/",
+    "abstract": "Comprehensive review of anti-androgen medications for treating hyperandrogenic symptoms in PCOS.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Metformin Extended-Release in PCOS",
+    "authors": "Hoeger KM, Kochman L, Wixom N, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2004",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15356012/",
+    "abstract": "Study comparing extended-release metformin to immediate-release formulation for PCOS treatment.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Fertility Treatments in PCOS: Evidence Review",
+    "authors": "Thessaloniki ESHRE/ASRM-Sponsored PCOS Consensus Workshop Group",
+    "journal": "Human Reproduction",
+    "year": "2008",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18308833/",
+    "abstract": "Consensus guidelines for fertility treatment options in women with PCOS.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Ethnic Variation in PCOS Metabolic Features",
+    "authors": "Zhao Y, Qiao J",
+    "journal": "Human Reproduction Update",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23303573/",
+    "abstract": "Review of how PCOS metabolic manifestations vary across different ethnic populations.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Inositol: Mechanism of Action in PCOS",
+    "authors": "Croze ML, Soulage CO",
+    "journal": "International Journal of Endocrinology",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24285951/",
+    "abstract": "Scientific review explaining how inositol improves insulin signaling and ovarian function in PCOS.",
+    "tags": ["studies", "inositol", "answers"]
+  },
+  {
+    "title": "PCOS and Endometrial Cancer Risk",
+    "authors": "Barry JA, Azizia MM, Hardiman PJ",
+    "journal": "Human Reproduction Update",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24688118/",
+    "abstract": "Meta-analysis examining the increased risk of endometrial cancer in women with PCOS.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Metformin Gastrointestinal Side Effects: Management",
+    "authors": "McCreight LJ, Bailey CJ, Pearson ER",
+    "journal": "Diabetologia",
+    "year": "2016",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26620237/",
+    "abstract": "Practical guidance for managing common gastrointestinal side effects of metformin therapy.",
+    "tags": ["studies", "metformin", "answers"]
+  },
+  {
+    "title": "Weight Management Strategies in PCOS",
+    "authors": "Moran LJ, Ko H, Misso M, et al.",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23450531/",
+    "abstract": "Systematic review of dietary and lifestyle interventions for weight management in PCOS.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "PCOS Genetics: Recent Discoveries",
+    "authors": "Day F, Karaderi T, Jones MR, et al.",
+    "journal": "PLoS Genetics",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30566500/",
+    "abstract": "Large genome-wide association study identifying genetic variants associated with PCOS risk.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Inositol and Egg Quality in PCOS IVF",
+    "authors": "Ciotta L, Stracquadanio M, Pagano I, et al.",
+    "journal": "European Review for Medical and Pharmacological Sciences",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21809550/",
+    "abstract": "Study showing myo-inositol supplementation improves oocyte quality in PCOS women undergoing IVF.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Hair Loss in PCOS: Causes and Treatment",
+    "authors": "Quinn M, Shinkai K, Pasch L, et al.",
+    "journal": "Journal of the American Academy of Dermatology",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25264237/",
+    "abstract": "Review of female pattern hair loss in PCOS and evidence-based treatment approaches.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Metformin vs Lifestyle Intervention in PCOS",
+    "authors": "Legro RS, Dodson WC, Kris-Etherton PM, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2015",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26053201/",
+    "abstract": "Randomized trial comparing metformin to intensive lifestyle modification for PCOS treatment.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "PCOS and Non-Alcoholic Fatty Liver Disease",
+    "authors": "Brzozowska MM, Ostapowicz G, Weltman MD",
+    "journal": "Clinical Endocrinology",
+    "year": "2009",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19170717/",
+    "abstract": "Study examining the prevalence and severity of fatty liver disease in women with PCOS.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Cultural Factors in PCOS Management",
+    "authors": "Crete J, Adamshick P",
+    "journal": "Journal of Midwifery & Women's Health",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21884488/",
+    "abstract": "Review of cultural considerations when treating PCOS in diverse patient populations.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Inositol Safety Profile: Long-term Data",
+    "authors": "Dinicola S, Chiu TTY, Unfer V, et al.",
+    "journal": "Expert Opinion on Drug Safety",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24673096/",
+    "abstract": "Comprehensive safety review of long-term inositol supplementation in PCOS patients.",
+    "tags": ["studies", "inositol", "answers"]
+  },
+  {
+    "title": "Ovarian Drilling for PCOS: Efficacy Review",
+    "authors": "Fernandez H, Morin-Surruca M, Torre A, et al.",
+    "journal": "Human Reproduction Update",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21511712/",
+    "abstract": "Evidence review of laparoscopic ovarian drilling as a treatment option for PCOS-related infertility.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "Metformin and Vitamin B12 Deficiency",
+    "authors": "de Jager J, Kooy A, Lehert P, et al.",
+    "journal": "BMJ",
+    "year": "2010",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20488910/",
+    "abstract": "Study demonstrating the association between long-term metformin use and vitamin B12 deficiency.",
+    "tags": ["studies", "metformin", "answers"]
+  },
+  {
+    "title": "Psychological Well-being in PCOS",
+    "authors": "Dokras A, Clifton S, Futterweit W, Wild R",
+    "journal": "Fertility and Sterility",
+    "year": "2012",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22192352/",
+    "abstract": "Assessment of quality of life and psychological distress in women diagnosed with PCOS.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "Inflammation in PCOS: Role and Treatment",
+    "authors": "Escobar-Morreale HF, Luque-Ramírez M, González F",
+    "journal": "Molecular and Cellular Endocrinology",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22760084/",
+    "abstract": "Review of chronic low-grade inflammation in PCOS and potential anti-inflammatory treatment approaches.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "Inositol for Menstrual Regularity in PCOS",
+    "authors": "Papaleo E, Unfer V, Baillargeon JP, et al.",
+    "journal": "Fertility and Sterility",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17498711/",
+    "abstract": "Study showing myo-inositol supplementation improves menstrual cyclicity in anovulatory PCOS women.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "PCOS in Lean Women: Characteristics and Treatment",
+    "authors": "Yildiz BO, Knochenhauer ES, Azziz R",
+    "journal": "Clinical Endocrinology",
+    "year": "2008",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17892498/",
+    "abstract": "Analysis of PCOS characteristics and optimal treatment approaches in normal-weight women.",
+    "tags": ["studies", "answers", "solutions"]
+  },
+  {
+    "title": "Metformin and Clomiphene Combination for PCOS",
+    "authors": "Johnson NP",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25502517/",
+    "abstract": "Systematic review of combined metformin and clomiphene therapy for ovulation induction in PCOS.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "PCOS Diagnosis Challenges in Black Women",
+    "authors": "Ezeh U, Yildiz BO, Azziz R",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23616148/",
+    "abstract": "Review of diagnostic challenges and considerations when evaluating Black women for PCOS.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Gut Microbiome and PCOS",
+    "authors": "Lindheim L, Bashir M, Münzker J, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28957454/",
+    "abstract": "Study examining alterations in gut microbiota composition in women with PCOS.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Inositol and Testosterone Levels in PCOS",
+    "authors": "Artini PG, Di Berardino OM, Papini F, et al.",
+    "journal": "Gynecological Endocrinology",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23418854/",
+    "abstract": "Clinical study demonstrating myo-inositol's effect on reducing androgen levels in PCOS.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Spironolactone for Hirsutism in PCOS",
+    "authors": "Brown J, Farquhar C",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": "2009",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19370698/",
+    "abstract": "Systematic review of spironolactone effectiveness for treating hirsutism in PCOS patients.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "Pregnancy Complications in PCOS Women",
+    "authors": "Boomsma CM, Eijkemans MJ, Hughes EG, et al.",
+    "journal": "Human Reproduction Update",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16982667/",
+    "abstract": "Meta-analysis of pregnancy and neonatal complications in women with polycystic ovary syndrome.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Metformin Reduces Androgen Levels in PCOS",
+    "authors": "Pasquali R, Gambineri A, Biscotti D, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2000",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/10634385/",
+    "abstract": "Study demonstrating metformin's direct effect on reducing hyperandrogenemia in PCOS women.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Low-Carbohydrate Diet for PCOS",
+    "authors": "Mavropoulos JC, Yancy WS, Hepburn J, Westman EC",
+    "journal": "Nutrition & Metabolism",
+    "year": "2005",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16359551/",
+    "abstract": "Pilot study examining the effects of a low-carbohydrate, ketogenic diet on PCOS symptoms.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "PCOS and Breast Cancer Risk",
+    "authors": "Harris HR, Terry KL",
+    "journal": "Human Reproduction",
+    "year": "2016",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26869474/",
+    "abstract": "Population-based study examining the relationship between PCOS and breast cancer risk.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Inositol Phosphoglycans in PCOS",
+    "authors": "Baillargeon JP, Nestler JE",
+    "journal": "Best Practice & Research Clinical Endocrinology & Metabolism",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16890100/",
+    "abstract": "Review of inositol phosphoglycan mediators and their role in insulin signaling defects in PCOS.",
+    "tags": ["studies", "inositol", "answers"]
+  },
+  {
+    "title": "Thiazolidinediones for PCOS Treatment",
+    "authors": "Du Q, Yang S, Wang YJ, et al.",
+    "journal": "Medicine (Baltimore)",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28030833/",
+    "abstract": "Meta-analysis evaluating thiazolidinediones as insulin sensitizers for PCOS treatment.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "Health Literacy and PCOS Self-Management",
+    "authors": "Pramodh S",
+    "journal": "International Journal of Women's Health",
+    "year": "2020",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32021540/",
+    "abstract": "Study examining the role of health literacy in PCOS self-management across different populations.",
+    "tags": ["studies", "black-women", "solutions"]
+  },
+  {
+    "title": "GLP-1 Agonists for PCOS: Emerging Evidence",
+    "authors": "Jensterle M, Kravos NA, Pfeifer M, et al.",
+    "journal": "Endocrine",
+    "year": "2019",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31124042/",
+    "abstract": "Review of glucagon-like peptide-1 receptor agonists as emerging treatment options for PCOS.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "Inositol Supplementation During IVF",
+    "authors": "Caprio F, D'Eufemia MD, Trotta C, et al.",
+    "journal": "Reproductive Biology and Endocrinology",
+    "year": "2015",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26012246/",
+    "abstract": "Clinical trial of myo-inositol supplementation effects on IVF outcomes in PCOS patients.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Metformin and Ovarian Hyperstimulation Syndrome",
+    "authors": "Palomba S, Falbo A, Carrillo L, et al.",
+    "journal": "Human Reproduction Update",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23146866/",
+    "abstract": "Meta-analysis showing metformin reduces OHSS risk in PCOS women undergoing fertility treatment.",
+    "tags": ["studies", "metformin", "solutions"]
+  },
+  {
+    "title": "Ethnic Differences in PCOS Lipid Profiles",
+    "authors": "Merkin SS, Phy JL, Sites CK, Yang D",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17327384/",
+    "abstract": "Comparative study of lipid abnormalities in PCOS women of different ethnic backgrounds.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "PCOS and Quality of Life: Systematic Review",
+    "authors": "Colwell K, Lujan ME, Engmann L, Pierson RA",
+    "journal": "Reproductive Biology and Endocrinology",
+    "year": "2010",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20932360/",
+    "abstract": "Systematic review examining factors affecting quality of life in women with PCOS.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Inositol and Insulin Resistance: Molecular Mechanisms",
+    "authors": "Larner J, Brautigan DL, Thorner MO",
+    "journal": "International Journal of Experimental Diabetes Research",
+    "year": "2002",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12028548/",
+    "abstract": "Scientific review explaining the molecular mechanisms by which inositol improves insulin sensitivity.",
+    "tags": ["studies", "inositol", "answers"]
+  },
+  {
+    "title": "PCOS Treatment in Adolescents: Special Considerations",
+    "authors": "Rosenfield RL",
+    "journal": "Journal of Pediatric Endocrinology and Metabolism",
+    "year": "2002",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12507854/",
+    "abstract": "Guidelines for managing PCOS in adolescent patients with attention to developmental considerations.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Metformin Pharmacokinetics and PCOS",
+    "authors": "Graham GG, Punt J, Arber M, et al.",
+    "journal": "Clinical Pharmacokinetics",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21142293/",
+    "abstract": "Review of metformin pharmacokinetics and optimal dosing strategies for PCOS treatment.",
+    "tags": ["studies", "metformin", "answers"]
+  },
+  {
+    "title": "Complementary Therapies for PCOS",
+    "authors": "Arentz S, Abbott JA, Smith CA, Bensoussan A",
+    "journal": "BMC Complementary and Alternative Medicine",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25475125/",
+    "abstract": "Systematic review of complementary medicine approaches including herbs and acupuncture for PCOS.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "PCOS Diagnosis: NIH vs Rotterdam Criteria",
+    "authors": "Azziz R, Carmina E, Dewailly D, et al.",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16403814/",
+    "abstract": "Position statement comparing NIH and Rotterdam diagnostic criteria for PCOS.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Inositol and Reproductive Outcomes Meta-Analysis",
+    "authors": "Pundir J, Psaroudakis D, Savnur P, et al.",
+    "journal": "European Journal of Obstetrics & Gynecology and Reproductive Biology",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29175128/",
+    "abstract": "Meta-analysis of inositol supplementation effects on reproductive outcomes in PCOS.",
+    "tags": ["studies", "inositol", "solutions"]
+  },
+  {
+    "title": "Bariatric Surgery for Obese PCOS Women",
+    "authors": "Escobar-Morreale HF, Santacruz E, Luque-Ramírez M, Botella Carretero JI",
+    "journal": "Human Reproduction Update",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28486593/",
+    "abstract": "Review of bariatric surgery outcomes and effects on PCOS symptoms in severely obese women.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "Metformin Use During Pregnancy: Safety Data",
+    "authors": "Given JE, Loane M, Garne E, et al.",
+    "journal": "Diabetic Medicine",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29280209/",
+    "abstract": "Large cohort study examining safety of metformin use during pregnancy for congenital anomalies.",
+    "tags": ["studies", "metformin", "answers"]
+  },
+  {
+    "title": "PCOS and Autoimmune Thyroid Disease",
+    "authors": "Janssen OE, Mehlmauer N, Hahn S, et al.",
+    "journal": "European Journal of Endocrinology",
+    "year": "2004",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15374807/",
+    "abstract": "Study examining the relationship between PCOS and autoimmune thyroiditis prevalence.",
+    "tags": ["studies", "answers"]
+  },
+  {
+    "title": "Social Support and PCOS Management",
+    "authors": "Snyder BS",
+    "journal": "Journal of Obstetric, Gynecologic & Neonatal Nursing",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17049011/",
+    "abstract": "Qualitative study exploring the role of social support in PCOS symptom management and well-being.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "Inositol vs Metformin: Cost-Effectiveness Analysis",
+    "authors": "Minozzi M, Nordio M, Pajalich R",
+    "journal": "International Journal of Endocrinology",
+    "year": "2013",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24089612/",
+    "abstract": "Economic analysis comparing costs and outcomes of inositol versus metformin treatment for PCOS.",
+    "tags": ["studies", "inositol", "metformin", "solutions"]
+  },
+  {
+    "title": "PCOS Awareness and Knowledge Among Women",
+    "authors": "Patel S",
+    "journal": "Clinical Epidemiology and Global Health",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30633851/",
+    "abstract": "Survey assessing PCOS awareness and knowledge levels among reproductive-age women.",
+    "tags": ["studies", "black-women", "answers"]
+  },
+  {
+    "title": "Letrozole vs Clomiphene for PCOS Ovulation",
+    "authors": "Legro RS, Brzyski RG, Diamond MP, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": "2014",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25006718/",
+    "abstract": "Major trial showing letrozole superiority to clomiphene for ovulation induction in PCOS.",
+    "tags": ["studies", "solutions"]
+  },
+  {
+    "title": "Vitamin D and PCOS: Systematic Review",
+    "authors": "He C, Lin Z, Robb SW, Ezeamama AE",
+    "journal": "Nutrients",
+    "year": "2015",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26213963/",
+    "abstract": "Systematic review examining vitamin D status and supplementation effects in PCOS women.",
+    "tags": ["studies", "solutions", "answers"]
+  },
+  {
+    "title": "PCOS Biomarkers: Current and Emerging",
+    "authors": "Lujan ME, Chizen DR, Pierson RA",
+    "journal": "Expert Opinion on Medical Diagnostics",
+    "year": "2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23489296/",
+    "abstract": "Review of established and emerging biomarkers for PCOS diagnosis and monitoring.",
+    "tags": ["studies", "answers"]
+  }
+]

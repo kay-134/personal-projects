@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Research Library - 300+ Medical Studies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4A4A32;
+            --primary-dark: #3D3D2B;
+            --primary-light: #A3A380;
+            --secondary: #5C3A3D;
+            --background: #EFEBCE;
+            --surface: #FFFFFF;
+            --text: #2D2D1F;
+            --text-light: #4A4A3A;
+            --border: #A3A380;
+            --focus-ring: #2D2D1F;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-dark);
+            color: white;
+            padding: 8px 16px;
+            z-index: 100;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .skip-link:focus { top: 0; }
+
+        *:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        *:focus:not(:focus-visible) { outline: none; }
+
+        *:focus-visible {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', Georgia, serif;
+            background: var(--background);
+            min-height: 100vh;
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            background: var(--surface);
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .search-container {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .search-header {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 18px;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .search-input-wrapper {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+        }
+
+        .search-btn {
+            padding: 14px 24px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 24px;
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .tags-section {
+            margin-top: 16px;
+        }
+
+        .tags-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .tag-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .tag-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .clear-filters {
+            padding: 6px 12px;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            font-size: 12px;
+            color: var(--text-light);
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .clear-filters:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .articles-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .article-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+
+        .article-card:hover {
+            border-color: var(--primary);
+        }
+
+        .article-title {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 16px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .article-title a:hover {
+            text-decoration: underline;
+        }
+
+        .article-meta {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .article-abstract {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .article-tag {
+            padding: 4px 10px;
+            background: var(--background);
+            border-radius: 12px;
+            font-size: 11px;
+            color: var(--text-light);
+        }
+
+        .load-more {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-top: 24px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            font-family: 'Boldonse', system-ui, sans-serif;
+            font-size: 14px;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .load-more:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .no-results h3 {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--text-light);
+            font-size: 13px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 10px; }
+            h1 { font-size: 24px; }
+            .search-input-wrapper { flex-direction: column; }
+            .search-btn { width: 100%; }
+            .results-info { flex-direction: column; gap: 10px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header class="header" role="banner">
+            <div class="logo">
+                <div class="logo-icon" aria-hidden="true">📚</div>
+                <h1>PCOS Research Library</h1>
+            </div>
+            <p class="tagline">300+ peer-reviewed studies and medical articles</p>
+        </header>
+
+        <a href="index.html" class="back-link" aria-label="Back to PCOS Buddy chatbot">
+            <span aria-hidden="true">←</span> Back to PCOS Buddy
+        </a>
+
+        <main id="main-content" role="main">
+            <div class="search-container" role="search">
+                <div class="search-header">Search Research Articles</div>
+                <div class="search-input-wrapper">
+                    <label for="search-input" class="visually-hidden">Search articles by title or keyword</label>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search by title, keyword, or author..." aria-label="Search articles">
+                    <button class="search-btn" id="search-btn" aria-label="Search">Search</button>
+                </div>
+                <div class="tags-section">
+                    <span class="tags-label" id="filter-label">Filter by topic:</span>
+                    <div class="tags-container" role="group" aria-labelledby="filter-label">
+                        <button class="tag-btn" data-tag="studies" aria-pressed="false">Studies</button>
+                        <button class="tag-btn" data-tag="solutions" aria-pressed="false">Solutions</button>
+                        <button class="tag-btn" data-tag="answers" aria-pressed="false">Answers</button>
+                        <button class="tag-btn" data-tag="black-women" aria-pressed="false">Black Women</button>
+                        <button class="tag-btn" data-tag="metformin" aria-pressed="false">Metformin</button>
+                        <button class="tag-btn" data-tag="inositol" aria-pressed="false">Inositol</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-info" aria-live="polite">
+                <span class="results-count" id="results-count">Loading articles...</span>
+                <button class="clear-filters" id="clear-filters" style="display: none;">Clear filters</button>
+            </div>
+
+            <div class="articles-list" id="articles-list" role="feed" aria-label="Research articles">
+                <div class="loading">Loading research articles...</div>
+            </div>
+
+            <button class="load-more" id="load-more" style="display: none;" aria-label="Load more articles">
+                Load More Articles
+            </button>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <p>All articles link to PubMed, Google Scholar, or official journal sources. Always consult healthcare providers for medical decisions.</p>
+        </footer>
+    </div>
+
+    <script>
+    const ResearchLibrary = {
+        articles: [],
+        filteredArticles: [],
+        displayedCount: 0,
+        perPage: 20,
+        currentSearch: '',
+        activeTags: [],
+
+        async init() {
+            await this.loadArticles();
+            this.setupEventListeners();
+            this.renderArticles();
+        },
+
+        async loadArticles() {
+            try {
+                const response = await fetch('articles.json');
+                this.articles = await response.json();
+                this.filteredArticles = [...this.articles];
+            } catch (error) {
+                console.error('Error loading articles:', error);
+                document.getElementById('articles-list').innerHTML =
+                    '<div class="no-results"><h3>Error loading articles</h3><p>Please refresh the page to try again.</p></div>';
+            }
+        },
+
+        setupEventListeners() {
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                this.currentSearch = e.target.value;
+                this.filterArticles();
+            });
+
+            document.getElementById('search-input').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') this.filterArticles();
+            });
+
+            document.getElementById('search-btn').addEventListener('click', () => this.filterArticles());
+
+            document.querySelectorAll('.tag-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tag = btn.dataset.tag;
+                    if (this.activeTags.includes(tag)) {
+                        this.activeTags = this.activeTags.filter(t => t !== tag);
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    } else {
+                        this.activeTags.push(tag);
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-pressed', 'true');
+                    }
+                    this.filterArticles();
+                });
+            });
+
+            document.getElementById('clear-filters').addEventListener('click', () => {
+                this.currentSearch = '';
+                this.activeTags = [];
+                document.getElementById('search-input').value = '';
+                document.querySelectorAll('.tag-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-pressed', 'false');
+                });
+                this.filterArticles();
+            });
+
+            document.getElementById('load-more').addEventListener('click', () => {
+                this.displayedCount += this.perPage;
+                this.renderArticles(true);
+            });
+        },
+
+        filterArticles() {
+            const search = this.currentSearch.toLowerCase();
+
+            this.filteredArticles = this.articles.filter(article => {
+                const matchesSearch = !search ||
+                    article.title.toLowerCase().includes(search) ||
+                    article.abstract.toLowerCase().includes(search) ||
+                    article.authors.toLowerCase().includes(search) ||
+                    article.journal.toLowerCase().includes(search);
+
+                const matchesTags = this.activeTags.length === 0 ||
+                    this.activeTags.some(tag => article.tags.includes(tag));
+
+                return matchesSearch && matchesTags;
+            });
+
+            this.displayedCount = 0;
+            this.renderArticles();
+
+            const clearBtn = document.getElementById('clear-filters');
+            clearBtn.style.display = (this.currentSearch || this.activeTags.length > 0) ? 'block' : 'none';
+        },
+
+        renderArticles(append = false) {
+            const container = document.getElementById('articles-list');
+            const loadMoreBtn = document.getElementById('load-more');
+            const resultsCount = document.getElementById('results-count');
+
+            if (!append) {
+                container.innerHTML = '';
+                this.displayedCount = 0;
+            }
+
+            if (this.filteredArticles.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>No articles found</h3>
+                        <p>Try adjusting your search terms or filters.</p>
+                    </div>
+                `;
+                loadMoreBtn.style.display = 'none';
+                resultsCount.textContent = '0 articles found';
+                return;
+            }
+
+            const start = this.displayedCount;
+            const end = Math.min(start + this.perPage, this.filteredArticles.length);
+
+            for (let i = start; i < end; i++) {
+                const article = this.filteredArticles[i];
+                container.appendChild(this.createArticleCard(article));
+            }
+
+            this.displayedCount = end;
+            resultsCount.textContent = `Showing ${this.displayedCount} of ${this.filteredArticles.length} articles`;
+            loadMoreBtn.style.display = this.displayedCount < this.filteredArticles.length ? 'block' : 'none';
+        },
+
+        createArticleCard(article) {
+            const card = document.createElement('article');
+            card.className = 'article-card';
+            card.innerHTML = `
+                <h2 class="article-title">
+                    <a href="${article.url}" target="_blank" rel="noopener noreferrer">${this.escapeHtml(article.title)}</a>
+                </h2>
+                <div class="article-meta">
+                    ${this.escapeHtml(article.authors)} • ${this.escapeHtml(article.journal)} • ${article.year}
+                </div>
+                <p class="article-abstract">${this.escapeHtml(article.abstract)}</p>
+                <div class="article-tags">
+                    ${article.tags.map(tag => `<span class="article-tag">${this.formatTag(tag)}</span>`).join('')}
+                </div>
+            `;
+            return card;
+        },
+
+        formatTag(tag) {
+            return tag.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        },
+
+        escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => ResearchLibrary.init());
+    </script>
+</body>
+</html>
