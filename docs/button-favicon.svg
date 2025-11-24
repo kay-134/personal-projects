@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Button circle -->
+  <circle cx="50" cy="50" r="45" fill="#BB8588" stroke="#5C3A3D" stroke-width="3"/>
+
+  <!-- Button holes -->
+  <circle cx="35" cy="35" r="6" fill="#4A4A32"/>
+  <circle cx="65" cy="35" r="6" fill="#4A4A32"/>
+  <circle cx="35" cy="65" r="6" fill="#4A4A32"/>
+  <circle cx="65" cy="65" r="6" fill="#4A4A32"/>
+
+  <!-- Subtle shading for dimension -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#D8A48F" stroke-width="2" opacity="0.3" stroke-dasharray="20,200" stroke-dashoffset="10"/>
+</svg>
