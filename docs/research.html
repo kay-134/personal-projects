@@ -461,6 +461,8 @@
             try {
                 const response = await fetch('articles.json');
                 this.articles = await response.json();
+                // Sort by year descending (most recent first)
+                this.articles.sort((a, b) => parseInt(b.year) - parseInt(a.year));
                 this.filteredArticles = [...this.articles];
             } catch (error) {
                 console.error('Error loading articles:', error);
@@ -529,6 +531,9 @@
 
                 return matchesSearch && matchesTags;
             });
+
+            // Sort by year descending (most recent first)
+            this.filteredArticles.sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
             this.displayedCount = 0;
             this.renderArticles();
