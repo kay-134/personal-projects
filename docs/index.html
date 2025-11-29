@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stitching PCOS Literacy</title>
+    <title>Receipts, Reasons, & Research</title>
     <link rel="icon" type="image/svg+xml" href="button-favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
     <style>
         :root {
-            /* AAA Compliant Colors - 7:1 contrast ratio for text */
+            /* AAA Compliant Colors - matching the sewing theme */
             --primary: #4A4A32;
             --primary-dark: #3D3D2B;
             --primary-light: #A3A380;
@@ -23,63 +21,10 @@
             --text: #2D2D1F;
             --text-light: #4A4A3A;
             --border: #A3A380;
-            --user-bubble: #5C3A3D;
-            --bot-bubble: #FFFFFF;
+            --accent-1: #D8A48F;
+            --accent-2: #BB8588;
+            --accent-3: #D7CE93;
             --focus-ring: #2D2D1F;
-        }
-
-        /* Skip Link for keyboard navigation */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary-dark);
-            color: white;
-            padding: 8px 16px;
-            z-index: 100;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-
-        /* Global focus styles for AAA compliance */
-        *:focus {
-            outline: 3px solid var(--focus-ring);
-            outline-offset: 2px;
-        }
-
-        *:focus:not(:focus-visible) {
-            outline: none;
-        }
-
-        *:focus-visible {
-            outline: 3px solid var(--focus-ring);
-            outline-offset: 2px;
-        }
-
-        /* Visually hidden but accessible to screen readers */
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        /* Reduced motion for users who prefer it */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
         }
 
         * {
@@ -88,1628 +33,190 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Playfair Display', Georgia, serif;
-            background: var(--background);
-            min-height: 100vh;
+        html {
+            font-family: "Playfair Display", serif;
+            background-color: var(--background);
             color: var(--text);
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            height: 100vh;
+        body {
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
         }
 
-        .header {
+        header {
+            margin-top: 5%;
+            padding: 20px;
             text-align: center;
-            padding: 20px 0;
-            flex-shrink: 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
         }
 
         h1 {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-
-        .tagline {
-            color: var(--text-light);
-            font-size: 16px;
-            margin-top: 4px;
-        }
-
-        .chat-container {
-            flex: 1;
-            background: var(--surface);
-            border-radius: 24px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border: 2px solid var(--border);
-        }
-
-        .messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 24px;
-            scroll-behavior: smooth;
-        }
-
-        .message {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 20px;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .message.user {
-            flex-direction: row-reverse;
-        }
-
-        .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .message.bot .avatar {
-            background: var(--primary);
-        }
-
-        .message.user .avatar {
-            background: var(--user-bubble);
-        }
-
-        .bubble {
-            max-width: 75%;
-            padding: 16px 20px;
-            border-radius: 20px;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        .message.bot .bubble {
-            background: var(--bot-bubble);
-            border: 1px solid var(--border);
-            border-bottom-left-radius: 4px;
-        }
-
-        .message.user .bubble {
-            background: var(--user-bubble);
-            color: white;
-            border-bottom-right-radius: 4px;
-        }
-
-        .bubble h1, .bubble h2, .bubble h3 {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 16px;
-            margin: 16px 0 8px 0;
-            color: var(--primary-dark);
-        }
-
-        .bubble h1:first-child, .bubble h2:first-child, .bubble h3:first-child {
-            margin-top: 0;
-        }
-
-        .bubble p {
-            margin: 8px 0;
-        }
-
-        .bubble strong {
-            color: var(--primary-dark);
-        }
-
-        .bubble ul, .bubble ol {
-            margin: 8px 0;
-            padding-left: 20px;
-        }
-
-        .bubble li {
-            margin: 4px 0;
-        }
-
-        .quick-actions {
-            padding: 12px 24px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            background: #FAFAFA;
-        }
-
-        .quick-btn {
-            padding: 8px 16px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--text);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
-        }
-
-        .quick-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-
-        .input-area {
-            padding: 20px 24px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            gap: 12px;
-            background: white;
-        }
-
-        .input-wrapper {
-            flex: 1;
-            position: relative;
-        }
-
-        #message-input {
-            width: 100%;
-            padding: 14px 20px;
-            border: 2px solid var(--border);
-            border-radius: 24px;
-            font-size: 15px;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        #message-input:focus {
-            border-color: var(--primary-light);
-        }
-
-        .send-btn {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            transition: transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .send-btn:hover {
-            transform: scale(1.05);
-            background: var(--primary-dark);
-        }
-
-        .typing-indicator {
-            display: none;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .typing-indicator.active {
-            display: flex;
-        }
-
-        .typing-dots {
-            display: flex;
-            gap: 4px;
-            padding: 16px 20px;
-            background: var(--bot-bubble);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            border-bottom-left-radius: 4px;
-        }
-
-        .typing-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--text-light);
-            border-radius: 50%;
-            animation: bounce 1.4s infinite ease-in-out;
-        }
-
-        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
-        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes bounce {
-            0%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-6px); }
-        }
-
-        .footer {
-            text-align: center;
-            padding: 16px;
-            color: var(--text-light);
-            font-size: 13px;
-            flex-shrink: 0;
-        }
-
-        @media (max-width: 640px) {
-            .container { padding: 10px; }
-            .header { padding: 10px 0; }
-            h1 { font-size: 24px; }
-            .bubble { max-width: 85%; padding: 12px 16px; font-size: 14px; }
-            .quick-actions { padding: 10px 16px; }
-            .messages { padding: 16px; }
-            .input-area { padding: 16px; }
-        }
-
-        .messages::-webkit-scrollbar { width: 6px; }
-        .messages::-webkit-scrollbar-track { background: transparent; }
-        .messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-        /* Tab Navigation */
-        .tab-nav {
-            display: flex;
-            gap: 0;
-            margin-bottom: 16px;
-            background: var(--surface);
-            border-radius: 16px;
-            padding: 4px;
-            border: 2px solid var(--border);
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 12px 20px;
-            border: none;
-            background: transparent;
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 14px;
-            color: var(--text-light);
-            cursor: pointer;
-            border-radius: 12px;
-            transition: all 0.2s;
-        }
-
-        .tab-btn:hover {
+            font-family: "Boldonse", system-ui;
+            font-size: 6em;
             color: var(--primary);
-        }
-
-        .tab-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-            flex: 1;
-            min-height: 0;
-        }
-
-        .tab-content.active {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Main content wrapper */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            min-height: 0;
-        }
-
-        /* Community Section */
-        .community-container {
-            flex: 1;
-            background: var(--surface);
-            border-radius: 24px;
-            border: 2px solid var(--border);
-            padding: 24px;
-            overflow-y: auto;
-        }
-
-        .community-header {
-            text-align: center;
             margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
+            line-height: 1.2;
         }
 
-        .community-header h2 {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 20px;
-            color: var(--primary-dark);
-            margin-bottom: 8px;
-        }
-
-        .community-header p {
-            color: var(--text-light);
-            font-size: 14px;
-        }
-
-        .community-warning {
-            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-            border: 1px solid #F59E0B;
-            border-radius: 12px;
-            padding: 12px 16px;
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 2.5em;
+            color: var(--text);
+            font-weight: 500;
+            line-height: 1.4;
             margin-bottom: 20px;
-            font-size: 13px;
-            color: #92400E;
         }
 
-        .community-warning strong {
-            color: #B45309;
+        header h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 1.5em;
         }
 
-        /* Tip Form */
-        .tip-form {
-            background: var(--background);
-            border: 2px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 24px;
-        }
-
-        .tip-form-header {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 14px;
-            color: var(--text);
-            margin-bottom: 12px;
-        }
-
-        .tip-input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            font-family: inherit;
-            font-size: 14px;
-            resize: vertical;
-            min-height: 80px;
-            margin-bottom: 8px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .tip-input:focus {
-            border-color: var(--primary-light);
-        }
-
-        .tip-name-input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            font-family: inherit;
-            font-size: 14px;
-            margin-bottom: 12px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .tip-name-input:focus {
-            border-color: var(--primary-light);
-        }
-
-        .tip-submit-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 24px;
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 14px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .tip-submit-btn:hover {
-            transform: scale(1.02);
-            background: var(--primary-dark);
-        }
-
-        .tip-submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        /* Tips List */
-        .tips-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .tip-card {
-            background: white;
-            border: 2px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            transition: border-color 0.2s;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .tip-card:hover {
-            border-color: var(--primary);
-        }
-
-        .tip-card.reported {
-            opacity: 0.5;
-            background: #FEE2E2;
-        }
-
-        .tip-author {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .tip-avatar {
-            width: 36px;
-            height: 36px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-        }
-
-        .tip-author-info {
+        main {
             flex: 1;
-        }
-
-        .tip-author-name {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 14px;
-            color: var(--primary-dark);
-        }
-
-        .tip-date {
-            font-size: 12px;
-            color: var(--text-light);
-        }
-
-        .tip-content {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--text);
-            margin-bottom: 16px;
-        }
-
-        .tip-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .tip-action-btn {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 14px;
-            border: 1px solid var(--border);
-            background: white;
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
-        }
-
-        .tip-action-btn:hover {
-            border-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .tip-action-btn.liked {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-
-        .tip-action-btn.reported {
-            background: #FEE2E2;
-            border-color: #EF4444;
-            color: #DC2626;
-        }
-
-        /* Reply Styles */
-        .replies-container {
-            margin-top: 16px;
-            padding-left: 20px;
-            border-left: 2px solid var(--primary-light);
-        }
-
-        .reply-card {
-            background: #FAFAFA;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 14px;
-            margin-bottom: 10px;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .reply-card.reported {
-            opacity: 0.5;
-            background: #FEE2E2;
-        }
-
-        .reply-author {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        .reply-avatar {
-            width: 28px;
-            height: 28px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-
-        .reply-author-name {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 12px;
-            color: var(--primary-dark);
-        }
-
-        .reply-date {
-            font-size: 11px;
-            color: var(--text-light);
-        }
-
-        .reply-content {
-            font-size: 14px;
-            line-height: 1.5;
-            color: var(--text);
-            margin-bottom: 10px;
-        }
-
-        .reply-actions {
-            display: flex;
-            gap: 8px;
-        }
-
-        .reply-action-btn {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 10px;
-            border: 1px solid var(--border);
-            background: white;
-            border-radius: 14px;
-            font-size: 11px;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
-        }
-
-        .reply-action-btn:hover {
-            border-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .reply-action-btn.liked {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-
-        .reply-action-btn.reported {
-            background: #FEE2E2;
-            border-color: #EF4444;
-            color: #DC2626;
-        }
-
-        /* Reply Form */
-        .reply-form {
-            background: var(--background);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 14px;
-            margin-top: 12px;
-            display: none;
-        }
-
-        .reply-form.active {
-            display: block;
-        }
-
-        .reply-form-header {
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 12px;
-            color: var(--text);
-            margin-bottom: 10px;
-        }
-
-        .reply-name-input {
-            width: 100%;
-            padding: 10px 12px;
-            border: 2px solid var(--border);
+            margin: 10px;
+            padding: 40px 20px;
             border-radius: 10px;
-            font-family: inherit;
-            font-size: 13px;
-            margin-bottom: 8px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .reply-name-input:focus {
-            border-color: var(--primary-light);
-        }
-
-        .reply-input {
-            width: 100%;
-            padding: 10px 12px;
-            border: 2px solid var(--border);
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 13px;
-            resize: vertical;
-            min-height: 60px;
-            margin-bottom: 10px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .reply-input:focus {
-            border-color: var(--primary-light);
-        }
-
-        .reply-form-actions {
+            text-align: center;
             display: flex;
-            gap: 8px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .reply-submit-btn {
-            background: var(--primary);
+        button {
+            border: 3px solid var(--border);
+            background-color: var(--surface);
+            color: var(--primary);
+            padding: 20px 40px;
+            font-size: 3em;
+            margin: 10px;
+            border-radius: 15px;
+            font-family: "Boldonse", system-ui;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 300px;
+        }
+
+        button:hover {
+            background-color: var(--primary);
+            color: var(--surface);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        button:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        button:nth-child(1):hover {
+            background-color: var(--accent-1);
+            border-color: var(--accent-1);
             color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 16px;
-            font-family: 'Boldonse', system-ui, sans-serif;
-            font-size: 12px;
-            cursor: pointer;
-            transition: transform 0.2s;
         }
 
-        .reply-submit-btn:hover {
-            transform: scale(1.02);
-            background: var(--primary-dark);
+        button:nth-child(2):hover {
+            background-color: var(--accent-2);
+            border-color: var(--accent-2);
+            color: white;
         }
 
-        .reply-submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
+        button:nth-child(3):hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
         }
 
-        .reply-cancel-btn {
-            background: white;
-            color: var(--text-light);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 16px;
-            font-family: inherit;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .reply-cancel-btn:hover {
-            border-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .view-replies-btn {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 13px;
-            cursor: pointer;
-            padding: 8px 0;
-            font-family: inherit;
-        }
-
-        .view-replies-btn:hover {
-            text-decoration: underline;
-        }
-
-        .tips-empty {
+        footer {
+            background-color: var(--primary);
+            color: var(--background);
             text-align: center;
-            padding: 40px;
-            color: var(--text-light);
+            padding: 30px;
+            margin-top: 40px;
         }
 
-        .tips-loading {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-light);
+        footer h4 {
+            font-family: "Playfair Display", serif;
+            color: var(--background);
+            font-weight: 500;
+            font-size: 1.2em;
         }
 
-        .tip-error {
-            background: #FEE2E2;
-            border: 1px solid #EF4444;
-            color: #DC2626;
-            padding: 12px 16px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            font-size: 14px;
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
 
-        .tip-success {
-            background: #D1FAE5;
-            border: 1px solid #10B981;
-            color: #047857;
-            padding: 12px 16px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            font-size: 14px;
+        /* Mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            button {
+                font-size: 2em;
+                min-width: 250px;
+                padding: 15px 30px;
+            }
         }
 
-        /* Container height adjustment for tabs */
-        .container {
-            height: auto;
-            min-height: 100vh;
-        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
 
-        @media (max-width: 640px) {
-            .tab-btn { font-size: 12px; padding: 10px 12px; }
-            .community-container { padding: 16px; }
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+
+            button {
+                font-size: 1.5em;
+                min-width: 200px;
+                padding: 12px 25px;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Skip Link for keyboard navigation -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <div class="container">
-        <header class="header" role="banner">
-            <div class="logo">
-                <div class="logo-icon" aria-hidden="true">🧵</div>
-                <h1>Stitching PCOS Literacy</h1>
-            </div>
-            <p class="tagline">Like finding a sewing kit in a cookie tin - let's make something beautiful together</p>
-        </header>
-
-        <!-- Tab Navigation -->
-        <nav class="tab-nav" role="tablist" aria-label="Main navigation">
-            <button class="tab-btn active" data-tab="chatbot" role="tab" aria-selected="true" aria-controls="chatbot-tab" id="tab-chatbot">
-                <span aria-hidden="true">💬</span> Chat
-            </button>
-            <button class="tab-btn" data-tab="community" role="tab" aria-selected="false" aria-controls="community-tab" id="tab-community">
-                <span aria-hidden="true">🧷</span> PCOS Loose Threads
-            </button>
-            <a href="research.html" class="tab-btn" style="text-decoration: none;" aria-label="Browse 120+ PCOS research articles">
-                <span aria-hidden="true">🔍</span> Uncovering the Lid
-            </a>
-        </nav>
-
-        <main class="main-content" id="main-content" role="main">
-            <!-- Chatbot Tab -->
-            <div class="tab-content active" id="chatbot-tab" role="tabpanel" aria-labelledby="tab-chatbot">
-                <div class="chat-container" role="region" aria-label="Chat">
-                    <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Chat messages">
-                        <div class="typing-indicator" id="typing" aria-hidden="true">
-                            <div class="avatar">🧵</div>
-                            <div class="typing-dots">
-                                <div class="typing-dot"></div>
-                                <div class="typing-dot"></div>
-                                <div class="typing-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="quick-actions" role="group" aria-label="Quick question buttons">
-                        <button class="quick-btn" data-message="What is PCOS?" aria-label="Ask: What is PCOS?">What is PCOS?</button>
-                        <button class="quick-btn" data-message="What are the symptoms?" aria-label="Ask about symptoms">Symptoms</button>
-                        <button class="quick-btn" data-message="Tell me about medications" aria-label="Ask about medications">Medications</button>
-                        <button class="quick-btn" data-message="Natural treatments" aria-label="Ask about natural treatments">Natural Treatments</button>
-                        <button class="quick-btn" data-message="What doctors can help with PCOS?" aria-label="Ask about finding a doctor">Find a Doctor</button>
-                        <button class="quick-btn" data-message="What is anovulatory bleeding?" aria-label="Ask about anovulatory bleeding">Anovulatory Bleeding</button>
-                    </div>
-
-                    <div class="input-area" role="search">
-                        <div class="input-wrapper">
-                            <label for="message-input" class="visually-hidden">Ask a question about PCOS</label>
-                            <input type="text" id="message-input" placeholder="Ask me anything about PCOS..." autocomplete="off" aria-label="Type your question about PCOS">
-                        </div>
-                        <button class="send-btn" id="send-btn" title="Send message" aria-label="Send message">
-                            <span aria-hidden="true">➤</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Community Tab -->
-            <div class="tab-content" id="community-tab" role="tabpanel" aria-labelledby="tab-community" hidden>
-                <div class="community-container" role="region" aria-label="PCOS Loose Threads Section">
-                    <div class="community-header">
-                        <h2><span aria-hidden="true">🧷</span> PCOS Loose Threads</h2>
-                        <p>Share tips from your sewing kit and learn what's worked for others in the community!</p>
-                    </div>
-
-                    <div class="community-warning" role="alert">
-                        <strong><span aria-hidden="true">⚠️</span> Community Guidelines:</strong> Be kind and supportive. This is a safe space.
-                        Harassment, hate speech, and inappropriate content will be removed.
-                        Remember: Tips shared here are personal experiences, not medical advice. Always consult your doctor!
-                    </div>
-
-                    <!-- Tip Submission Form -->
-                    <form class="tip-form" role="form" aria-label="Share a tip form">
-                        <div class="tip-form-header" id="tip-form-label"><span aria-hidden="true">💡</span> Share a tip that's helped you</div>
-                        <label for="tip-name" class="visually-hidden">Your name or nickname</label>
-                        <input type="text" class="tip-name-input" id="tip-name" placeholder="Your name (or nickname)" maxlength="30" aria-describedby="tip-form-label">
-                        <label for="tip-content" class="visually-hidden">Your PCOS tip</label>
-                        <textarea class="tip-input" id="tip-content" placeholder="What's worked for you? Share your experience with diet, exercise, supplements, medications, or anything that's helped your PCOS journey..." maxlength="500" aria-describedby="tip-form-label"></textarea>
-                        <button type="button" class="tip-submit-btn" id="submit-tip" aria-label="Share your tip">Share My Tip <span aria-hidden="true">💜</span></button>
-                        <div id="tip-message" role="status" aria-live="polite"></div>
-                    </form>
-
-                    <!-- Tips List -->
-                    <div class="tips-list" id="tips-list" role="feed" aria-label="Community tips">
-                        <div class="tips-loading" aria-live="polite">Loading community tips... <span aria-hidden="true">💜</span></div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer" role="contentinfo">
-            <p><span aria-hidden="true">💜</span> Remember: This is for information only, not medical advice. Always consult your healthcare provider.</p>
-        </footer>
-    </div>
-
-    <script>
-/**
- * PCOS Buddy - Client-side Chatbot
- * Loads knowledge from external JSON file for easy updates
- */
-const PCOSChatbot = (function() {
-    let KNOWLEDGE = {};
-    let GREETINGS = [];
-    let TOPICS = "";
-    let PATTERNS = {};
-    let loaded = false;
-
-    // Pattern check order - IMPORTANT: anovulatory_bleeding MUST come before fertility
-    // because "anovulatory" contains "ovulat" which would match fertility pattern
-    const PATTERN_ORDER = [
-        'anovulatory_bleeding',  // Check this FIRST before fertility
-        'what_is',
-        'diagnosis',
-        'symptoms',
-        'medications',
-        'metformin',
-        'birth_control',
-        'spironolactone',
-        'natural',
-        'inositol',
-        'diet',
-        'exercise',
-        'stress',
-        'mental_health',
-        'fertility',  // Check this AFTER anovulatory_bleeding
-        'long_term',
-        'community',
-        'doctors'
-    ];
-
-    // Load knowledge from JSON file
-    async function loadKnowledge() {
-        try {
-            const response = await fetch('knowledge.json');
-            const data = await response.json();
-            KNOWLEDGE = data.responses;
-            GREETINGS = data.greetings;
-            TOPICS = data.topics_menu;
-            PATTERNS = data.patterns;
-            loaded = true;
-            console.log('PCOS knowledge loaded successfully!');
-        } catch (error) {
-            console.error('Failed to load knowledge.json:', error);
-            // Fallback message
-            KNOWLEDGE = { error: "I'm having trouble loading my knowledge base. Please refresh the page!" };
-            GREETINGS = ["Hi! I'm having some technical difficulties. Please refresh the page to try again."];
-            TOPICS = "";
-            loaded = true;
-        }
-    }
-
-    function detectTopic(message) {
-        const msg = message.toLowerCase().trim();
-
-        // Check special patterns first
-        if (/^(hi|hello|hey|howdy|hiya|good morning|good afternoon|good evening)!?$/i.test(msg)) {
-            return 'greeting';
-        }
-        if (/thank|thanks|appreciate|helpful|great info/i.test(msg)) {
-            return 'thanks';
-        }
-        if (/^help$|what can you|how do you work|what do you know/i.test(msg)) {
-            return 'help';
-        }
-
-        // Check patterns in specific order (anovulatory_bleeding before fertility!)
-        for (const topic of PATTERN_ORDER) {
-            const keywords = PATTERNS[topic];
-            if (keywords) {
-                for (const keyword of keywords) {
-                    if (msg.includes(keyword.toLowerCase())) {
-                        return topic;
-                    }
-                }
-            }
-        }
-
-        return null;
-    }
-
-    function getResponse(message) {
-        if (!loaded) {
-            return "I'm still loading... please wait a moment and try again!";
-        }
-
-        const topic = detectTopic(message);
-
-        switch(topic) {
-            case 'greeting':
-                return "Hey again! 😊 What would you like to know about PCOS?" + TOPICS;
-            case 'thanks':
-                return "You're so welcome! 💜 That's what I'm here for.\n\nIs there anything else you'd like to know about PCOS?";
-            case 'help':
-                return TOPICS;
-            default:
-                if (topic && KNOWLEDGE[topic]) {
-                    return KNOWLEDGE[topic];
-                }
-                return "Hmm, I want to make sure I give you the best info! Could you tell me a bit more about what you'd like to know?" + TOPICS;
-        }
-    }
-
-    function getGreeting() {
-        if (!loaded || GREETINGS.length === 0) {
-            return "Hi! I'm loading... please wait a moment!";
-        }
-        return GREETINGS[Math.floor(Math.random() * GREETINGS.length)] + TOPICS;
-    }
-
-    function isLoaded() {
-        return loaded;
-    }
-
-    // Start loading immediately
-    loadKnowledge();
-
-    return { getResponse, getGreeting, isLoaded, loadKnowledge };
-})();
-</script>
-    <script>
-        function parseMarkdown(text) {
-            text = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            text = text.replace(/^### (.*$)/gm, '<h3>$1</h3>');
-            text = text.replace(/^## (.*$)/gm, '<h2>$1</h2>');
-            text = text.replace(/^# (.*$)/gm, '<h1>$1</h1>');
-            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
-            text = text.replace(/\n\n/g, '</p><p>');
-            text = text.replace(/\n/g, '<br>');
-            text = '<p>' + text + '</p>';
-            text = text.replace(/<p><\/p>/g, '');
-            text = text.replace(/<p>(<h[1-3]>)/g, '$1');
-            text = text.replace(/(<\/h[1-3]>)<\/p>/g, '$1');
-            return text;
-        }
-
-        const messagesContainer = document.getElementById('messages');
-        const messageInput = document.getElementById('message-input');
-        const sendBtn = document.getElementById('send-btn');
-        const typingIndicator = document.getElementById('typing');
-        const quickBtns = document.querySelectorAll('.quick-btn');
-
-        function addMessage(content, isUser = false) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
-            const avatar = document.createElement('div');
-            avatar.className = 'avatar';
-            avatar.textContent = isUser ? '😊' : '💜';
-            const bubble = document.createElement('div');
-            bubble.className = 'bubble';
-            bubble.innerHTML = isUser ? content : parseMarkdown(content);
-            messageDiv.appendChild(avatar);
-            messageDiv.appendChild(bubble);
-            messagesContainer.insertBefore(messageDiv, typingIndicator);
-            scrollToBottom();
-        }
-
-        function scrollToBottom() {
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-
-        function setTyping(show) {
-            typingIndicator.classList.toggle('active', show);
-            if (show) scrollToBottom();
-        }
-
-        function sendMessage(message) {
-            if (!message.trim()) return;
-            addMessage(message, true);
-            messageInput.value = '';
-            setTyping(true);
-
-            setTimeout(() => {
-                const response = PCOSChatbot.getResponse(message);
-                setTyping(false);
-                addMessage(response);
-            }, 500 + Math.random() * 500);
-
-            messageInput.focus();
-        }
-
-        sendBtn.addEventListener('click', () => sendMessage(messageInput.value));
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage(messageInput.value);
-        });
-        quickBtns.forEach(btn => {
-            btn.addEventListener('click', () => sendMessage(btn.dataset.message));
-        });
-
-        // Start with greeting (wait for knowledge to load)
-        function showGreeting() {
-            if (PCOSChatbot.isLoaded()) {
-                addMessage(PCOSChatbot.getGreeting());
-            } else {
-                setTimeout(showGreeting, 100);
-            }
-        }
-        setTimeout(showGreeting, 300);
-
-        // Tab switching functionality with ARIA support
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.dataset.tab;
-
-                // Update active button and ARIA states
-                tabBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
-                });
-                btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
-
-                // Update active content and hidden state
-                tabContents.forEach(content => {
-                    content.classList.remove('active');
-                    content.setAttribute('hidden', '');
-                    if (content.id === tabId + '-tab') {
-                        content.classList.add('active');
-                        content.removeAttribute('hidden');
-                    }
-                });
-            });
-
-            // Keyboard navigation for tabs
-            btn.addEventListener('keydown', (e) => {
-                let targetBtn = null;
-                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    const nextBtn = btn.nextElementSibling || tabBtns[0];
-                    targetBtn = nextBtn;
-                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                    e.preventDefault();
-                    const prevBtn = btn.previousElementSibling || tabBtns[tabBtns.length - 1];
-                    targetBtn = prevBtn;
-                } else if (e.key === 'Home') {
-                    e.preventDefault();
-                    targetBtn = tabBtns[0];
-                } else if (e.key === 'End') {
-                    e.preventDefault();
-                    targetBtn = tabBtns[tabBtns.length - 1];
-                }
-                if (targetBtn) {
-                    targetBtn.focus();
-                    targetBtn.click();
-                }
-            });
-        });
-
-        // ===== FIREBASE COMMUNITY TIPS =====
-        const firebaseConfig = {
-            apiKey: "AIzaSyDkoZ2mg7-5g942h5cb0vSLsOHdDWnGcYI",
-            authDomain: "pcos-buddy-community.firebaseapp.com",
-            projectId: "pcos-buddy-community",
-            storageBucket: "pcos-buddy-community.firebasestorage.app",
-            messagingSenderId: "774724869340",
-            appId: "1:774724869340:web:dfcd6b466412f766b1a819"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-
-        // Content filter - blocks profanity, slurs, hate speech
-        const ContentFilter = {
-            // Bad words list (partial - add more as needed)
-            badWords: [
-                // Profanity
-                'fuck', 'shit', 'ass', 'bitch', 'damn', 'crap', 'piss', 'dick', 'cock', 'pussy',
-                'bastard', 'slut', 'whore', 'cunt', 'twat', 'wanker', 'bollocks',
-                // Slurs and hate speech
-                'nigger', 'nigga', 'faggot', 'fag', 'dyke', 'tranny', 'retard', 'retarded',
-                'spic', 'chink', 'gook', 'kike', 'wetback', 'beaner', 'cracker',
-                // Homophobic terms
-                'homo', 'queer', 'sodomite', 'lesbo',
-                // Other offensive
-                'nazi', 'hitler', 'kill yourself', 'kys', 'die'
-            ],
-
-            // Check if text contains bad words
-            containsBadWords(text) {
-                const lowerText = text.toLowerCase();
-                // Check for exact matches and common obfuscations
-                for (const word of this.badWords) {
-                    // Check plain word
-                    if (lowerText.includes(word)) return true;
-                    // Check with common substitutions (1=i, 0=o, @=a, 3=e, $=s)
-                    const obfuscated = word
-                        .replace(/i/g, '[i1!]')
-                        .replace(/o/g, '[o0]')
-                        .replace(/a/g, '[a@4]')
-                        .replace(/e/g, '[e3]')
-                        .replace(/s/g, '[s$5]');
-                    const regex = new RegExp(obfuscated, 'i');
-                    if (regex.test(lowerText)) return true;
-                }
-                return false;
-            },
-
-            // Validate content
-            validate(text) {
-                if (!text || text.trim().length < 10) {
-                    return { valid: false, reason: "Please write at least 10 characters." };
-                }
-                if (text.length > 500) {
-                    return { valid: false, reason: "Please keep your tip under 500 characters." };
-                }
-                if (this.containsBadWords(text)) {
-                    return { valid: false, reason: "Please keep the language respectful and supportive. 💜" };
-                }
-                return { valid: true };
-            }
-        };
-
-        // Community Tips Manager
-        const CommunityTips = {
-            tipsContainer: document.getElementById('tips-list'),
-            tipNameInput: document.getElementById('tip-name'),
-            tipContentInput: document.getElementById('tip-content'),
-            submitBtn: document.getElementById('submit-tip'),
-            messageContainer: document.getElementById('tip-message'),
-            likedTips: JSON.parse(localStorage.getItem('likedTips') || '[]'),
-            reportedTips: JSON.parse(localStorage.getItem('reportedTips') || '[]'),
-
-            init() {
-                this.loadTips();
-                this.submitBtn.addEventListener('click', () => this.submitTip());
-                this.tipContentInput.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' && e.ctrlKey) this.submitTip();
-                });
-            },
-
-            showMessage(message, isError = false) {
-                this.messageContainer.innerHTML = `<div class="${isError ? 'tip-error' : 'tip-success'}">${message}</div>`;
-                setTimeout(() => { this.messageContainer.innerHTML = ''; }, 5000);
-            },
-
-            async loadTips() {
-                try {
-                    const snapshot = await db.collection('tips')
-                        .where('reported', '<', 3) // Hide tips with 3+ reports
-                        .orderBy('reported')
-                        .orderBy('createdAt', 'desc')
-                        .limit(50)
-                        .get();
-
-                    if (snapshot.empty) {
-                        this.tipsContainer.innerHTML = `
-                            <div class="tips-empty">
-                                <p>No tips yet! Be the first to share what's helped you. 💜</p>
-                            </div>
-                        `;
-                        return;
-                    }
-
-                    this.tipsContainer.innerHTML = '';
-                    snapshot.forEach(doc => {
-                        this.renderTip(doc.id, doc.data());
-                    });
-                } catch (error) {
-                    console.error('Error loading tips:', error);
-                    this.tipsContainer.innerHTML = `
-                        <div class="tips-empty">
-                            <p>Having trouble loading tips. Please refresh the page. 💜</p>
-                        </div>
-                    `;
-                }
-            },
-
-            renderTip(id, data) {
-                const isLiked = this.likedTips.includes(id);
-                const isReported = this.reportedTips.includes(id);
-                const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
-                const replyCount = data.replyCount || 0;
-
-                const tipCard = document.createElement('div');
-                tipCard.className = `tip-card ${isReported ? 'reported' : ''}`;
-                tipCard.innerHTML = `
-                    <div class="tip-author">
-                        <div class="tip-avatar">💜</div>
-                        <div class="tip-author-info">
-                            <div class="tip-author-name">${this.escapeHtml(data.name || 'Anonymous')}</div>
-                            <div class="tip-date">${date}</div>
-                        </div>
-                    </div>
-                    <div class="tip-content">${this.escapeHtml(data.content)}</div>
-                    <div class="tip-actions">
-                        <button class="tip-action-btn ${isLiked ? 'liked' : ''}" data-action="like" data-id="${id}">
-                            ${isLiked ? '💜' : '🤍'} <span>${data.likes || 0}</span> Helpful
-                        </button>
-                        <button class="tip-action-btn" data-action="reply" data-id="${id}">
-                            💬 Reply
-                        </button>
-                        <button class="tip-action-btn ${isReported ? 'reported' : ''}" data-action="report" data-id="${id}">
-                            🚩 ${isReported ? 'Reported' : 'Report'}
-                        </button>
-                    </div>
-
-                    <!-- Reply Form (hidden by default) -->
-                    <div class="reply-form" id="reply-form-${id}">
-                        <div class="reply-form-header">💬 Add a reply</div>
-                        <input type="text" class="reply-name-input" id="reply-name-${id}" placeholder="Your name" maxlength="30">
-                        <textarea class="reply-input" id="reply-content-${id}" placeholder="Share your thoughts..." maxlength="300"></textarea>
-                        <div class="reply-form-actions">
-                            <button class="reply-submit-btn" data-tip-id="${id}">Reply 💜</button>
-                            <button class="reply-cancel-btn" data-tip-id="${id}">Cancel</button>
-                        </div>
-                    </div>
-
-                    <!-- Replies Section -->
-                    ${replyCount > 0 ? `<button class="view-replies-btn" data-tip-id="${id}">View ${replyCount} ${replyCount === 1 ? 'reply' : 'replies'} 💬</button>` : ''}
-                    <div class="replies-container" id="replies-${id}" style="display: none;"></div>
-                `;
-
-                // Add event listeners
-                tipCard.querySelector('[data-action="like"]').addEventListener('click', () => this.likeTip(id, isLiked));
-                tipCard.querySelector('[data-action="reply"]').addEventListener('click', () => this.toggleReplyForm(id));
-                tipCard.querySelector('[data-action="report"]').addEventListener('click', () => this.reportTip(id, isReported));
-
-                // Reply form listeners
-                tipCard.querySelector('.reply-submit-btn').addEventListener('click', () => this.submitReply(id));
-                tipCard.querySelector('.reply-cancel-btn').addEventListener('click', () => this.toggleReplyForm(id, false));
-
-                // View replies button
-                const viewRepliesBtn = tipCard.querySelector('.view-replies-btn');
-                if (viewRepliesBtn) {
-                    viewRepliesBtn.addEventListener('click', () => this.loadReplies(id));
-                }
-
-                this.tipsContainer.appendChild(tipCard);
-            },
-
-            escapeHtml(text) {
-                const div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
-            },
-
-            async submitTip() {
-                const name = this.tipNameInput.value.trim() || 'Anonymous';
-                const content = this.tipContentInput.value.trim();
-
-                // Validate name
-                const nameCheck = ContentFilter.validate(name.length > 0 ? name : 'Anonymous');
-                if (ContentFilter.containsBadWords(name)) {
-                    this.showMessage("Please use a respectful name. 💜", true);
-                    return;
-                }
-
-                // Validate content
-                const contentCheck = ContentFilter.validate(content);
-                if (!contentCheck.valid) {
-                    this.showMessage(contentCheck.reason, true);
-                    return;
-                }
-
-                this.submitBtn.disabled = true;
-                this.submitBtn.textContent = 'Sharing...';
-
-                try {
-                    await db.collection('tips').add({
-                        name: name,
-                        content: content,
-                        likes: 0,
-                        reported: 0,
-                        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-                    });
-
-                    this.tipNameInput.value = '';
-                    this.tipContentInput.value = '';
-                    this.showMessage("Thank you for sharing! Your tip has been added. 💜");
-                    this.loadTips();
-                } catch (error) {
-                    console.error('Error submitting tip:', error);
-                    this.showMessage("Couldn't submit your tip. Please try again.", true);
-                } finally {
-                    this.submitBtn.disabled = false;
-                    this.submitBtn.textContent = 'Share My Tip 💜';
-                }
-            },
-
-            async likeTip(id, alreadyLiked) {
-                if (alreadyLiked) {
-                    // Unlike
-                    await db.collection('tips').doc(id).update({
-                        likes: firebase.firestore.FieldValue.increment(-1)
-                    });
-                    this.likedTips = this.likedTips.filter(t => t !== id);
-                } else {
-                    // Like
-                    await db.collection('tips').doc(id).update({
-                        likes: firebase.firestore.FieldValue.increment(1)
-                    });
-                    this.likedTips.push(id);
-                }
-                localStorage.setItem('likedTips', JSON.stringify(this.likedTips));
-                this.loadTips();
-            },
-
-            async reportTip(id, alreadyReported) {
-                if (alreadyReported) {
-                    this.showMessage("You've already reported this tip.", true);
-                    return;
-                }
-
-                if (confirm("Report this tip as inappropriate? Tips with multiple reports will be hidden.")) {
-                    await db.collection('tips').doc(id).update({
-                        reported: firebase.firestore.FieldValue.increment(1)
-                    });
-                    this.reportedTips.push(id);
-                    localStorage.setItem('reportedTips', JSON.stringify(this.reportedTips));
-                    this.showMessage("Thank you for helping keep our community safe. 💜");
-                    this.loadTips();
-                }
-            },
-
-            // Toggle reply form visibility
-            toggleReplyForm(tipId, show = null) {
-                const form = document.getElementById(`reply-form-${tipId}`);
-                if (!form) return;
-
-                if (show === null) {
-                    form.classList.toggle('active');
-                } else {
-                    form.classList.toggle('active', show);
-                }
-
-                // Focus on name input when opening
-                if (form.classList.contains('active')) {
-                    document.getElementById(`reply-name-${tipId}`).focus();
-                }
-            },
-
-            // Submit a reply
-            async submitReply(tipId) {
-                const nameInput = document.getElementById(`reply-name-${tipId}`);
-                const contentInput = document.getElementById(`reply-content-${tipId}`);
-                const name = nameInput.value.trim() || 'Anonymous';
-                const content = contentInput.value.trim();
-
-                // Validate name
-                if (ContentFilter.containsBadWords(name)) {
-                    this.showMessage("Please use a respectful name. 💜", true);
-                    return;
-                }
-
-                // Validate content (shorter minimum for replies)
-                if (!content || content.length < 5) {
-                    this.showMessage("Please write at least 5 characters.", true);
-                    return;
-                }
-                if (content.length > 300) {
-                    this.showMessage("Please keep your reply under 300 characters.", true);
-                    return;
-                }
-                if (ContentFilter.containsBadWords(content)) {
-                    this.showMessage("Please keep the language respectful and supportive. 💜", true);
-                    return;
-                }
-
-                const submitBtn = document.querySelector(`.reply-submit-btn[data-tip-id="${tipId}"]`);
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
-
-                try {
-                    // Add reply to subcollection
-                    await db.collection('tips').doc(tipId).collection('replies').add({
-                        name: name,
-                        content: content,
-                        likes: 0,
-                        reported: 0,
-                        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-                    });
-
-                    // Increment reply count on parent tip
-                    await db.collection('tips').doc(tipId).update({
-                        replyCount: firebase.firestore.FieldValue.increment(1)
-                    });
-
-                    nameInput.value = '';
-                    contentInput.value = '';
-                    this.toggleReplyForm(tipId, false);
-                    this.showMessage("Reply added! 💜");
-                    this.loadTips(); // Refresh to show updated count
-                } catch (error) {
-                    console.error('Error submitting reply:', error);
-                    this.showMessage("Couldn't submit your reply. Please try again.", true);
-                } finally {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Reply 💜';
-                }
-            },
-
-            // Load replies for a tip
-            async loadReplies(tipId) {
-                const container = document.getElementById(`replies-${tipId}`);
-                const viewBtn = document.querySelector(`.view-replies-btn[data-tip-id="${tipId}"]`);
-
-                if (!container) return;
-
-                // Toggle visibility
-                if (container.style.display === 'block') {
-                    container.style.display = 'none';
-                    if (viewBtn) viewBtn.textContent = viewBtn.textContent.replace('Hide', 'View');
-                    return;
-                }
-
-                container.style.display = 'block';
-                container.innerHTML = '<div style="padding: 10px; color: var(--text-light); font-size: 13px;">Loading replies...</div>';
-                if (viewBtn) viewBtn.textContent = viewBtn.textContent.replace('View', 'Hide');
-
-                try {
-                    const snapshot = await db.collection('tips').doc(tipId).collection('replies')
-                        .where('reported', '<', 3)
-                        .orderBy('reported')
-                        .orderBy('createdAt', 'asc')
-                        .limit(20)
-                        .get();
-
-                    container.innerHTML = '';
-
-                    if (snapshot.empty) {
-                        container.innerHTML = '<div style="padding: 10px; color: var(--text-light); font-size: 13px;">No replies yet.</div>';
-                        return;
-                    }
-
-                    snapshot.forEach(doc => {
-                        this.renderReply(container, tipId, doc.id, doc.data());
-                    });
-                } catch (error) {
-                    console.error('Error loading replies:', error);
-                    container.innerHTML = '<div style="padding: 10px; color: #DC2626; font-size: 13px;">Error loading replies.</div>';
-                }
-            },
-
-            // Render a single reply
-            renderReply(container, tipId, replyId, data) {
-                const isLiked = this.likedTips.includes(`reply-${replyId}`);
-                const isReported = this.reportedTips.includes(`reply-${replyId}`);
-                const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
-
-                const replyCard = document.createElement('div');
-                replyCard.className = `reply-card ${isReported ? 'reported' : ''}`;
-                replyCard.innerHTML = `
-                    <div class="reply-author">
-                        <div class="reply-avatar">💬</div>
-                        <div class="reply-author-info">
-                            <span class="reply-author-name">${this.escapeHtml(data.name || 'Anonymous')}</span>
-                            <span class="reply-date"> · ${date}</span>
-                        </div>
-                    </div>
-                    <div class="reply-content">${this.escapeHtml(data.content)}</div>
-                    <div class="reply-actions">
-                        <button class="reply-action-btn ${isLiked ? 'liked' : ''}" data-action="like-reply">
-                            ${isLiked ? '💜' : '🤍'} ${data.likes || 0}
-                        </button>
-                        <button class="reply-action-btn ${isReported ? 'reported' : ''}" data-action="report-reply">
-                            🚩
-                        </button>
-                    </div>
-                `;
-
-                // Like reply
-                replyCard.querySelector('[data-action="like-reply"]').addEventListener('click', async () => {
-                    const key = `reply-${replyId}`;
-                    if (this.likedTips.includes(key)) {
-                        await db.collection('tips').doc(tipId).collection('replies').doc(replyId).update({
-                            likes: firebase.firestore.FieldValue.increment(-1)
-                        });
-                        this.likedTips = this.likedTips.filter(t => t !== key);
-                    } else {
-                        await db.collection('tips').doc(tipId).collection('replies').doc(replyId).update({
-                            likes: firebase.firestore.FieldValue.increment(1)
-                        });
-                        this.likedTips.push(key);
-                    }
-                    localStorage.setItem('likedTips', JSON.stringify(this.likedTips));
-                    this.loadReplies(tipId);
-                    this.loadReplies(tipId); // Toggle twice to refresh
-                });
-
-                // Report reply
-                replyCard.querySelector('[data-action="report-reply"]').addEventListener('click', async () => {
-                    const key = `reply-${replyId}`;
-                    if (this.reportedTips.includes(key)) {
-                        this.showMessage("You've already reported this reply.", true);
-                        return;
-                    }
-                    if (confirm("Report this reply as inappropriate?")) {
-                        await db.collection('tips').doc(tipId).collection('replies').doc(replyId).update({
-                            reported: firebase.firestore.FieldValue.increment(1)
-                        });
-                        this.reportedTips.push(key);
-                        localStorage.setItem('reportedTips', JSON.stringify(this.reportedTips));
-                        this.showMessage("Reply reported. Thank you! 💜");
-                        this.loadReplies(tipId);
-                        this.loadReplies(tipId); // Toggle twice to refresh
-                    }
-                });
-
-                container.appendChild(replyCard);
-            }
-        };
-
-        // Initialize when DOM is ready
-        CommunityTips.init();
-    </script>
+    <header>
+        <h1>Receipts, Reasons, & Research</h1>
+        <h2>A visual story of how Polycystic Ovarian Syndrome (PCOS)<br>looks through receipts, reasons, and research</h2>
+        <br><h3>Click a storypath to get started!</h3>
+    </header>
+
+    <main>
+        <button onclick="window.location.href = 'receipts.html';">Receipts</button>
+        <button onclick="window.location.href = 'reasons.html';">Reasons</button>
+        <button onclick="window.location.href = 'research.html';">Research</button>
+    </main>
+
+    <footer>
+        <h4>All from the mind and heart of Kayley Chery</h4>
+    </footer>
 </body>
 </html>
