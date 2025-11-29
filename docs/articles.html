@@ -196,44 +196,46 @@
             background: var(--primary-dark);
         }
 
-        .tags-section {
+        .filters-section {
             margin-top: 16px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .tags-label {
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .filter-label {
             font-size: 14px;
             color: var(--text-light);
-            margin-bottom: 10px;
-            display: block;
+            font-weight: 500;
         }
 
-        .tags-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag-btn {
-            padding: 8px 16px;
+        .filter-select {
+            padding: 10px 16px;
             border: 2px solid var(--border);
             background: var(--surface);
-            border-radius: 20px;
-            font-size: 13px;
+            border-radius: 12px;
+            font-size: 14px;
             color: var(--text);
             cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            min-width: 180px;
             transition: all 0.2s;
-            font-family: inherit;
         }
 
-        .tag-btn:hover {
+        .filter-select:hover {
             border-color: var(--primary);
-            color: var(--primary);
         }
 
-        .tag-btn.active {
-            background: var(--primary);
+        .filter-select:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
             border-color: var(--primary);
-            color: white;
         }
 
         .results-info {
@@ -411,15 +413,48 @@
                     <input type="text" id="search-input" class="search-input" placeholder="Search by title, keyword, or author..." aria-label="Search articles">
                     <button class="search-btn" id="search-btn" aria-label="Search">Search</button>
                 </div>
-                <div class="tags-section">
-                    <span class="tags-label" id="filter-label">Filter by topic:</span>
-                    <div class="tags-container" role="group" aria-labelledby="filter-label">
-                        <button class="tag-btn" data-tag="studies" aria-pressed="false">Studies</button>
-                        <button class="tag-btn" data-tag="solutions" aria-pressed="false">Solutions</button>
-                        <button class="tag-btn" data-tag="answers" aria-pressed="false">Answers</button>
-                        <button class="tag-btn" data-tag="black-women" aria-pressed="false">Black Women</button>
-                        <button class="tag-btn" data-tag="metformin" aria-pressed="false">Metformin</button>
-                        <button class="tag-btn" data-tag="inositol" aria-pressed="false">Inositol</button>
+                <div class="filters-section">
+                    <div class="filter-group">
+                        <label for="treatment-filter" class="filter-label">Treatment:</label>
+                        <select id="treatment-filter" class="filter-select" aria-label="Filter by treatment">
+                            <option value="">All Treatments</option>
+                            <option value="metformin">Metformin</option>
+                            <option value="inositol">Inositol</option>
+                            <option value="black-women">Black Women</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year-filter" class="filter-label">Year:</label>
+                        <select id="year-filter" class="filter-select" aria-label="Filter by year">
+                            <option value="">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1997">1997</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -450,7 +485,8 @@
         displayedCount: 0,
         perPage: 20,
         currentSearch: '',
-        activeTags: [],
+        selectedTreatment: '',
+        selectedYear: '',
 
         async init() {
             await this.loadArticles();
@@ -484,30 +520,23 @@
 
             document.getElementById('search-btn').addEventListener('click', () => this.filterArticles());
 
-            document.querySelectorAll('.tag-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const tag = btn.dataset.tag;
-                    if (this.activeTags.includes(tag)) {
-                        this.activeTags = this.activeTags.filter(t => t !== tag);
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-pressed', 'false');
-                    } else {
-                        this.activeTags.push(tag);
-                        btn.classList.add('active');
-                        btn.setAttribute('aria-pressed', 'true');
-                    }
-                    this.filterArticles();
-                });
+            document.getElementById('treatment-filter').addEventListener('change', (e) => {
+                this.selectedTreatment = e.target.value;
+                this.filterArticles();
+            });
+
+            document.getElementById('year-filter').addEventListener('change', (e) => {
+                this.selectedYear = e.target.value;
+                this.filterArticles();
             });
 
             document.getElementById('clear-filters').addEventListener('click', () => {
                 this.currentSearch = '';
-                this.activeTags = [];
+                this.selectedTreatment = '';
+                this.selectedYear = '';
                 document.getElementById('search-input').value = '';
-                document.querySelectorAll('.tag-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                    btn.setAttribute('aria-pressed', 'false');
-                });
+                document.getElementById('treatment-filter').value = '';
+                document.getElementById('year-filter').value = '';
                 this.filterArticles();
             });
 
@@ -527,10 +556,13 @@
                     article.authors.toLowerCase().includes(search) ||
                     article.journal.toLowerCase().includes(search);
 
-                const matchesTags = this.activeTags.length === 0 ||
-                    this.activeTags.some(tag => article.tags.includes(tag));
+                const matchesTreatment = !this.selectedTreatment ||
+                    article.tags.includes(this.selectedTreatment);
 
-                return matchesSearch && matchesTags;
+                const matchesYear = !this.selectedYear ||
+                    article.year === this.selectedYear;
+
+                return matchesSearch && matchesTreatment && matchesYear;
             });
 
             // Sort by year descending (most recent first)
@@ -540,7 +572,7 @@
             this.renderArticles();
 
             const clearBtn = document.getElementById('clear-filters');
-            clearBtn.style.display = (this.currentSearch || this.activeTags.length > 0) ? 'block' : 'none';
+            clearBtn.style.display = (this.currentSearch || this.selectedTreatment || this.selectedYear) ? 'block' : 'none';
         },
 
         renderArticles(append = false) {
