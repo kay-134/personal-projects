@@ -12,3 +12,16 @@
 
 # Summary: 7 out of 8 PubMed links checked are WRONG (87.5% error rate)
 # Estimated: ~110+ more articles need fixing
+
+# APPLIED FIXES (9 total):
+# ✓ Article 1: Goodman 25869408 → 26509855
+# ✓ Article 2: Unfer inositol 22916821 → 22296306
+# ✓ Article 3: Lord metformin 14551930 → 14576245
+# ✓ Article 4: Engmann racial 28433371 → 28104402
+# ✓ Article 5: Ladson African American 21715526 → 21723443
+# ✓ Article 8: Costello metformin vs OCP 17068222 → 17261574
+# ✓ Article 11: Nestler D-chiro 10213550 → 10219066
+# ✓ Article 13: Cooney mental health 28945852 → 28333286
+# ✓ Article 16: Wild CVD 20200335 → 20375205
+
+# REMAINING: ~110 articles to verify
