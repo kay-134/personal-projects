@@ -1,0 +1,5 @@
+# Article URL Corrections
+# Format: Article# | Title | Current PMID | Correct PMID | Status
+
+1 | Polycystic Ovary Syndrome: A Review of Treatment Options With a Focus on Pharmacological Approaches | 25869408 | 26509855 | NEEDS_FIX (current=diabetes paper, should be Goodman PCOS Part 1)
+2 | Inositol in Polycystic Ovary Syndrome: Restoring to Normal Activities in Cell Signal Pathway | 22916821 | 22296306 | NEEDS_FIX (current=gold nanoparticles, should be Unfer systematic review)
