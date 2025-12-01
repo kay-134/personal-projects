@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayley's Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Primary - Royal Blue from tin */
+            --royal-blue: #3B5BA5;
+            
+            /* Accent Colors from sewing supplies */
+            --dusty-pink: #D4A5A5;
+            --sage-green: #A8C5A8;
+            --butter-yellow: #E8D4A0;
+            --soft-lavender: #B5A8C5;
+            --muted-coral: #D8916E;
+            --powder-blue: #9CB4D4;
+            
+            /* Neutrals from tin and cookies */
+            --cream: #F2F1DF;
+            --golden-tan: #C9A875;
+            --warm-gray: #8B8680;
+            --silver-rim: #A8A8A8;
+            
+            /* For text */
+            --deep-navy: #2A3E5C;
+        }
+        
+        .mansalva-regular {
+            font-family: "Mansalva", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--sage-green);
+            color: var(--deep-navy);;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            justify-content: center;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+        }
+        header h1{
+            justify-content: center
+        }
+        header button{
+            position: absolute;
+            left: 20px;
+            font-size: 2em;
+        }
+        h1 {
+            font-family: "Mansalva", sans-serif;
+            font-size: 4em;
+            
+            text-decoration: none;
+        }
+
+        header h3 {
+            font-family: "Boldonse", system-ui;
+            color:#4F0313;
+        }
+
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+
+        main {
+            flex: 1;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* Gallery Grid - Masonry-style layout */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-height: calc(100vh - 300px);
+            overflow-y: auto;
+            align-items: start;
+        }
+
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: visible;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Lightbox Overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .lightbox.active .lightbox-content {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .lightbox-image {
+            width: 60%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            
+            
+        }
+
+        .lightbox-caption {
+            width: 40%;
+            background-color: #F2F1DF;
+            color: #283d3b;
+            padding: 30px;
+            border-radius: 10px;
+            overflow-y: auto;
+            font-family: "Mansalva", sans-serif;
+            font-size: 1.5em;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-button {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            border: none;
+            background-color: #BC581E;
+            color: #F2F1DF;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 15px;
+            font-family: "Mansalva", sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #7E4229;
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            border: none;
+            background-color: #BC581E;
+            color: #F2F1DF;
+            padding: 15px;
+            font-size: 0.8em;
+            margin: 5px;
+            border-radius: 15px;
+            font-family: "Mansalva", sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button.active {
+            background-color: #7E4229;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background-color: var(--deep-navy);
+            color: #7E4229;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer h4 {
+            font-family: "Boldonse", system-ui;
+            color: #d9bcaf;
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            .lightbox-content {
+                flex-direction: column;
+                max-width: 95%;
+            }
+
+            .lightbox-image {
+                width: 100%;
+                max-height: 50vh;
+            }
+
+            .lightbox-caption {
+                width: 100%;
+                max-height: 30vh;
+                font-size: 1.2em;
+                padding: 20px;
+            }
+
+            .close-button {
+                top: -40px;
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href = 'index.html';">home</button>
+        <h1>Receipts</h1>
+    </header>
+
+    <main> 
+        
+
+        <div class="gallery-container" id="gallery">
+            <!-- Gallery items will be generated by JavaScript -->
+        </div>
+        
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-button" onclick="closeLightbox()">← Back to Gallery</button>
+                <img class="lightbox-image" id="lightboxImage" src="" alt="">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h4>All from the mind and heart of Kayley Chery</h4>
+    </footer>
+
+    <script>
+        // Sample gallery data - replace with your actual images
+        // Images are sorted chronologically by date taken
+        const galleryData = [
+            {
+                id: 1,
+                src: 'images/1.png',
+                src: 'images/1.png',
+                category: 'reasons',
+                date: '2024-11-13', // Date photo was taken (YYYY-MM-DD)
+                caption: 'On October 27th I admitted myself to the ER due to severe abdominal pain/intense menstrual cycle. They tested my blood, pee, regular vitals, gave me an ultrasound and diagnosed me with anovulatory bleeding. The doctors told me to basically "thug it out" in more professional terms ofc, was given a tuna sandwitch and a $500 hospital bill...'},
+            
+        ].sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date, oldest first
+
+        let currentFilter = 'all';
+
+        // Initialize gallery
+        function initGallery() {
+            renderGallery();
+        }
+
+        // Render gallery - always show all images sorted by date
+        function renderGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            // Display all images (already sorted by date)
+            galleryData.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.onclick = () => openLightbox(item);
+
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = item.caption;
+
+                galleryItem.appendChild(img);
+                gallery.appendChild(galleryItem);
+            });
+        }
+
+        // Open lightbox
+        function openLightbox(item) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+
+            lightboxImage.src = item.src;
+            lightboxCaption.textContent = item.caption;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the content
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Initialize on page load
+        initGallery();
+    </script>
+</body>
+</html>
