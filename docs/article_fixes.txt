@@ -3,3 +3,12 @@
 
 1 | Polycystic Ovary Syndrome: A Review of Treatment Options With a Focus on Pharmacological Approaches | 25869408 | 26509855 | NEEDS_FIX (current=diabetes paper, should be Goodman PCOS Part 1)
 2 | Inositol in Polycystic Ovary Syndrome: Restoring to Normal Activities in Cell Signal Pathway | 22916821 | 22296306 | NEEDS_FIX (current=gold nanoparticles, should be Unfer systematic review)
+3 | Metformin Therapy in Polycystic Ovary Syndrome: A Meta-Analysis | 14551930 | 14576245 | NEEDS_FIX (Lord BMJ 2003)
+4 | Racial and Ethnic Differences in Polycystic Ovary Syndrome | 28433371 | 28104402 | NEEDS_FIX (current=IVF/PGD, should be Engmann metabolic phenotype)
+5 | Polycystic Ovary Syndrome in African American Women | 21715526 | 21723443 | NEEDS_FIX (current=Nuts/Diabetes, should be Ladson racial influence study)
+6 | International Evidence-Based Guideline for the Assessment and Management of PCOS | monash.edu/guideline | 30033227 OR keep monash | OPTIONAL (current link OK, could use PubMed)
+7 | The Effects of Myo-Inositol Supplementation on Metabolic Profile in PCOS | 18569030 | NEEDS_VERIFICATION | PENDING
+8 | Metformin vs. Oral Contraceptives for PCOS: A Systematic Review | 17068222 | 17261574 | NEEDS_FIX (current=placental/cancer cells, should be Costello Cochrane review)
+
+# Summary: 7 out of 8 PubMed links checked are WRONG (87.5% error rate)
+# Estimated: ~110+ more articles need fixing
