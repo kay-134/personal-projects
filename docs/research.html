@@ -11,6 +11,7 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
     <style>
         :root {
             /* AAA Compliant Colors - 7:1 contrast ratio for text */
@@ -920,6 +921,115 @@
             .tab-btn { font-size: 12px; padding: 10px 12px; }
             .community-container { padding: 16px; }
         }
+
+        /* Authentication Styles */
+        .auth-container {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .auth-container h3 {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .auth-container p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .google-sign-in-btn {
+            background: white;
+            color: var(--text);
+            border: 2px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 16px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .google-sign-in-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .google-sign-in-btn:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        .user-info {
+            background: var(--background);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .user-details {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-light);
+        }
+
+        .user-name {
+            font-family: 'Boldonse', system-ui, sans-serif;
+            color: var(--primary);
+            font-size: 1em;
+        }
+
+        .sign-out-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sign-out-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        .sign-out-btn:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        .tip-form.disabled {
+            opacity: 0.6;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -1002,11 +1112,36 @@
                         Remember: Tips shared here are personal experiences, not medical advice. Always consult your doctor!
                     </div>
 
+                    <!-- Authentication Section -->
+                    <div id="auth-section">
+                        <!-- Show this when user is NOT signed in -->
+                        <div id="auth-prompt" class="auth-container" style="display: none;">
+                            <h3><span aria-hidden="true">🔐</span> Sign in to share your tips</h3>
+                            <p>Connect with your Google Account to join the community and share your PCOS journey!</p>
+                            <button id="google-sign-in" class="google-sign-in-btn" aria-label="Sign in with Google">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#4285F4"/>
+                                    <path d="M9.003 18c2.43 0 4.467-.806 5.956-2.18L12.05 13.56c-.806.54-1.836.86-3.047.86-2.344 0-4.328-1.584-5.036-3.711H.96v2.332C2.44 15.983 5.485 18 9.003 18z" fill="#34A853"/>
+                                    <path d="M3.964 10.712c-.18-.54-.282-1.117-.282-1.71 0-.593.102-1.17.282-1.71V4.96H.957C.347 6.175 0 7.55 0 9.002c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/>
+                                    <path d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.426 0 9.003 0 5.485 0 2.44 2.017.96 4.958L3.967 7.29c.708-2.127 2.692-3.71 5.036-3.71z" fill="#EA4335"/>
+                                </svg>
+                                Sign in with Google
+                            </button>
+                        </div>
+
+                        <!-- Show this when user IS signed in -->
+                        <div id="user-info-display" class="user-info" style="display: none;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <img id="user-avatar" class="user-avatar" src="" alt="">
+                                <span id="user-name-display" class="user-name"></span>
+                            </div>
+                            <button id="sign-out-btn" class="sign-out-btn" aria-label="Sign out">Sign Out</button>
+                        </div>
+                    </div>
+
                     <!-- Tip Submission Form -->
                     <form class="tip-form" role="form" aria-label="Share a tip form">
                         <div class="tip-form-header" id="tip-form-label"><span aria-hidden="true">💡</span> Share a tip that's helped you</div>
-                        <label for="tip-name" class="visually-hidden">Your name or nickname</label>
-                        <input type="text" class="tip-name-input" id="tip-name" placeholder="Your name (or nickname)" maxlength="30" aria-describedby="tip-form-label">
                         <label for="tip-content" class="visually-hidden">Your PCOS tip</label>
                         <textarea class="tip-input" id="tip-content" placeholder="What's worked for you? Share your experience with diet, exercise, supplements, medications, or anything that's helped your PCOS journey..." maxlength="500" aria-describedby="tip-form-label"></textarea>
                         <button type="button" class="tip-submit-btn" id="submit-tip" aria-label="Share your tip">Share My Tip <span aria-hidden="true">💜</span></button>
@@ -1295,6 +1430,59 @@ const PCOSChatbot = (function() {
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
+        const auth = firebase.auth();
+
+        // ===== AUTHENTICATION =====
+        let currentUser = null;
+
+        // Initialize authentication UI
+        const authPrompt = document.getElementById('auth-prompt');
+        const userInfoDisplay = document.getElementById('user-info-display');
+        const googleSignInBtn = document.getElementById('google-sign-in');
+        const signOutBtn = document.getElementById('sign-out-btn');
+        const userAvatar = document.getElementById('user-avatar');
+        const userNameDisplay = document.getElementById('user-name-display');
+        const tipForm = document.querySelector('.tip-form');
+
+        // Google Sign In
+        googleSignInBtn.addEventListener('click', async () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            try {
+                await auth.signInWithPopup(provider);
+            } catch (error) {
+                console.error('Sign in error:', error);
+                alert('Failed to sign in. Please try again.');
+            }
+        });
+
+        // Sign Out
+        signOutBtn.addEventListener('click', async () => {
+            try {
+                await auth.signOut();
+            } catch (error) {
+                console.error('Sign out error:', error);
+            }
+        });
+
+        // Monitor authentication state
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in
+                currentUser = user;
+                authPrompt.style.display = 'none';
+                userInfoDisplay.style.display = 'flex';
+                userAvatar.src = user.photoURL || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%234A4A32"/><text x="50" y="65" text-anchor="middle" fill="white" font-size="50">👤</text></svg>';
+                userAvatar.alt = user.displayName || 'User avatar';
+                userNameDisplay.textContent = user.displayName || user.email;
+                tipForm.classList.remove('disabled');
+            } else {
+                // User is signed out
+                currentUser = null;
+                authPrompt.style.display = 'block';
+                userInfoDisplay.style.display = 'none';
+                tipForm.classList.add('disabled');
+            }
+        });
 
         // Content filter - blocks profanity, slurs, hate speech
         const ContentFilter = {
@@ -1350,7 +1538,6 @@ const PCOSChatbot = (function() {
         // Community Tips Manager
         const CommunityTips = {
             tipsContainer: document.getElementById('tips-list'),
-            tipNameInput: document.getElementById('tip-name'),
             tipContentInput: document.getElementById('tip-content'),
             submitBtn: document.getElementById('submit-tip'),
             messageContainer: document.getElementById('tip-message'),
@@ -1408,11 +1595,16 @@ const PCOSChatbot = (function() {
                 const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
                 const replyCount = data.replyCount || 0;
 
+                // Generate avatar HTML - show user photo if available, otherwise default emoji
+                const avatarHtml = data.userPhoto
+                    ? `<img src="${this.escapeHtml(data.userPhoto)}" alt="${this.escapeHtml(data.name || 'User')}" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">`
+                    : '<div class="tip-avatar">💜</div>';
+
                 const tipCard = document.createElement('div');
                 tipCard.className = `tip-card ${isReported ? 'reported' : ''}`;
                 tipCard.innerHTML = `
                     <div class="tip-author">
-                        <div class="tip-avatar">💜</div>
+                        ${avatarHtml}
                         <div class="tip-author-info">
                             <div class="tip-author-name">${this.escapeHtml(data.name || 'Anonymous')}</div>
                             <div class="tip-date">${date}</div>
@@ -1434,7 +1626,6 @@ const PCOSChatbot = (function() {
                     <!-- Reply Form (hidden by default) -->
                     <div class="reply-form" id="reply-form-${id}">
                         <div class="reply-form-header">💬 Add a reply</div>
-                        <input type="text" class="reply-name-input" id="reply-name-${id}" placeholder="Your name" maxlength="30">
                         <textarea class="reply-input" id="reply-content-${id}" placeholder="Share your thoughts..." maxlength="300"></textarea>
                         <div class="reply-form-actions">
                             <button class="reply-submit-btn" data-tip-id="${id}">Reply 💜</button>
@@ -1472,15 +1663,13 @@ const PCOSChatbot = (function() {
             },
 
             async submitTip() {
-                const name = this.tipNameInput.value.trim() || 'Anonymous';
-                const content = this.tipContentInput.value.trim();
-
-                // Validate name
-                const nameCheck = ContentFilter.validate(name.length > 0 ? name : 'Anonymous');
-                if (ContentFilter.containsBadWords(name)) {
-                    this.showMessage("Please use a respectful name. 💜", true);
+                // Check if user is authenticated
+                if (!currentUser) {
+                    this.showMessage("Please sign in with Google to share a tip. 💜", true);
                     return;
                 }
+
+                const content = this.tipContentInput.value.trim();
 
                 // Validate content
                 const contentCheck = ContentFilter.validate(content);
@@ -1494,14 +1683,16 @@ const PCOSChatbot = (function() {
 
                 try {
                     await db.collection('tips').add({
-                        name: name,
+                        name: currentUser.displayName || 'Anonymous',
                         content: content,
+                        userId: currentUser.uid,
+                        userEmail: currentUser.email,
+                        userPhoto: currentUser.photoURL || null,
                         likes: 0,
                         reported: 0,
                         createdAt: firebase.firestore.FieldValue.serverTimestamp()
                     });
 
-                    this.tipNameInput.value = '';
                     this.tipContentInput.value = '';
                     this.showMessage("Thank you for sharing! Your tip has been added. 💜");
                     this.loadTips();
@@ -1560,24 +1751,22 @@ const PCOSChatbot = (function() {
                     form.classList.toggle('active', show);
                 }
 
-                // Focus on name input when opening
+                // Focus on content input when opening
                 if (form.classList.contains('active')) {
-                    document.getElementById(`reply-name-${tipId}`).focus();
+                    document.getElementById(`reply-content-${tipId}`).focus();
                 }
             },
 
             // Submit a reply
             async submitReply(tipId) {
-                const nameInput = document.getElementById(`reply-name-${tipId}`);
-                const contentInput = document.getElementById(`reply-content-${tipId}`);
-                const name = nameInput.value.trim() || 'Anonymous';
-                const content = contentInput.value.trim();
-
-                // Validate name
-                if (ContentFilter.containsBadWords(name)) {
-                    this.showMessage("Please use a respectful name. 💜", true);
+                // Check if user is authenticated
+                if (!currentUser) {
+                    this.showMessage("Please sign in with Google to reply. 💜", true);
                     return;
                 }
+
+                const contentInput = document.getElementById(`reply-content-${tipId}`);
+                const content = contentInput.value.trim();
 
                 // Validate content (shorter minimum for replies)
                 if (!content || content.length < 5) {
@@ -1600,8 +1789,11 @@ const PCOSChatbot = (function() {
                 try {
                     // Add reply to subcollection
                     await db.collection('tips').doc(tipId).collection('replies').add({
-                        name: name,
+                        name: currentUser.displayName || 'Anonymous',
                         content: content,
+                        userId: currentUser.uid,
+                        userEmail: currentUser.email,
+                        userPhoto: currentUser.photoURL || null,
                         likes: 0,
                         reported: 0,
                         createdAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -1612,7 +1804,6 @@ const PCOSChatbot = (function() {
                         replyCount: firebase.firestore.FieldValue.increment(1)
                     });
 
-                    nameInput.value = '';
                     contentInput.value = '';
                     this.toggleReplyForm(tipId, false);
                     this.showMessage("Reply added! 💜");
@@ -1674,11 +1865,16 @@ const PCOSChatbot = (function() {
                 const isReported = this.reportedTips.includes(`reply-${replyId}`);
                 const date = data.createdAt ? new Date(data.createdAt.toDate()).toLocaleDateString() : 'Recently';
 
+                // Generate avatar HTML - show user photo if available, otherwise default emoji
+                const avatarHtml = data.userPhoto
+                    ? `<img src="${this.escapeHtml(data.userPhoto)}" alt="${this.escapeHtml(data.name || 'User')}" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">`
+                    : '<div class="reply-avatar">💬</div>';
+
                 const replyCard = document.createElement('div');
                 replyCard.className = `reply-card ${isReported ? 'reported' : ''}`;
                 replyCard.innerHTML = `
                     <div class="reply-author">
-                        <div class="reply-avatar">💬</div>
+                        ${avatarHtml}
                         <div class="reply-author-info">
                             <span class="reply-author-name">${this.escapeHtml(data.name || 'Anonymous')}</span>
                             <span class="reply-date"> · ${date}</span>
