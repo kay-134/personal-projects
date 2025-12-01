@@ -1461,6 +1461,14 @@ const PCOSChatbot = (function() {
                     errorMessage += 'Pop-up was blocked by your browser. Please allow pop-ups for this site.';
                 } else if (error.code === 'auth/popup-closed-by-user') {
                     errorMessage += 'Sign-in cancelled.';
+                } else if (error.message && error.message.includes('invalid') || error.message && error.message.includes('Invalid')) {
+                    errorMessage += 'Google Sign-In is not properly configured.\n\n';
+                    errorMessage += 'Steps to fix:\n';
+                    errorMessage += '1. Go to https://console.firebase.google.com/\n';
+                    errorMessage += '2. Select your project: pcos-buddy-community\n';
+                    errorMessage += '3. Click Authentication → Sign-in method\n';
+                    errorMessage += '4. Enable Google provider\n';
+                    errorMessage += '5. Add your domain to Authorized domains';
                 } else {
                     errorMessage += `Error: ${error.message}`;
                 }
