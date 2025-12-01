@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipts - PCOS Journey</title>
+    <link rel="icon" type="image/svg+xml" href="button-favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* AAA Compliant Colors - Sewing Theme */
+            --primary: #4A4A32;
+            --primary-dark: #3D3D2B;
+            --primary-light: #A3A380;
+            --secondary: #5C3A3D;
+            --background: #EFEBCE;
+            --surface: #FFFFFF;
+            --text: #2D2D1F;
+            --text-light: #4A4A3A;
+            --border: #A3A380;
+            --accent-1: #D8A48F;
+            --accent-2: #BB8588;
+            --accent-3: #D7CE93;
+            --focus-ring: #2D2D1F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: "Playfair Display", serif;
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 2px solid var(--border);
+            background-color: var(--surface);
+            color: var(--primary);
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 15px;
+            font-family: "Playfair Display", serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary);
+            color: var(--surface);
+        }
+
+        .back-button:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+
+        h1 {
+            font-family: "Boldonse", system-ui;
+            font-size: 4em;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.3em;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        main {
+            flex: 1;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* Gallery Grid - Masonry-style layout */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-height: calc(100vh - 300px);
+            overflow-y: auto;
+            align-items: start;
+        }
+
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--border);
+            background-color: var(--surface);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-color: var(--primary);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Lightbox Overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(45, 45, 31, 0.92);
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .lightbox.active .lightbox-content {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .lightbox-image {
+            width: 60%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 3px solid var(--border);
+        }
+
+        .lightbox-caption {
+            width: 40%;
+            background-color: var(--background);
+            color: var(--text);
+            padding: 30px;
+            border-radius: 10px;
+            border: 3px solid var(--border);
+            overflow-y: auto;
+            font-family: "Playfair Display", serif;
+            font-size: 1.3em;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-button {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            border: 2px solid var(--border);
+            background-color: var(--secondary);
+            color: var(--surface);
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 15px;
+            font-family: "Playfair Display", serif;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .close-button:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .close-button:focus {
+            outline: 3px solid var(--surface);
+            outline-offset: 2px;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--background);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer h4 {
+            font-family: "Playfair Display", serif;
+            color: var(--background);
+            font-weight: 500;
+            font-size: 1em;
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            .back-button {
+                position: static;
+                transform: none;
+                margin-bottom: 15px;
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+
+            .lightbox-content {
+                flex-direction: column;
+                max-width: 95%;
+                gap: 15px;
+            }
+
+            .lightbox-image {
+                width: 100%;
+                max-height: 50vh;
+            }
+
+            .lightbox-caption {
+                width: 100%;
+                max-height: 30vh;
+                font-size: 1.1em;
+                padding: 20px;
+            }
+
+            .close-button {
+                top: -50px;
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+                padding: 15px;
+            }
+
+            header {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button" aria-label="Back to home">← home</a>
+        <h1>Receipts</h1>
+        <h3>Documentation of the PCOS journey</h3>
+    </header>
+
+    <main>
+        <div class="gallery-container" id="gallery">
+            <!-- Gallery items will be generated by JavaScript -->
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-button" onclick="closeLightbox()">← Back to Gallery</button>
+                <img class="lightbox-image" id="lightboxImage" src="" alt="">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h4>All from the mind and heart of Kayley Chery</h4>
+    </footer>
+
+    <script>
+        // Sample gallery data - replace with your actual images
+        // Images are sorted chronologically by date taken
+        const galleryData = [
+            {
+                id: 1,
+                src: 'images/1.png',
+                category: 'reasons',
+                date: '2024-11-13', // Date photo was taken (YYYY-MM-DD)
+                caption: 'On October 27th I admitted myself to the ER due to severe abdominal pain/intense menstrual cycle. They tested my blood, pee, regular vitals, gave me an ultrasound and diagnosed me with anovulatory bleeding. The doctors told me to basically "thug it out" in more professional terms ofc, was given a tuna sandwich and a $500 hospital bill...'
+            },
+        ].sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date, oldest first
+
+        let currentFilter = 'all';
+
+        // Initialize gallery
+        function initGallery() {
+            renderGallery();
+        }
+
+        // Render gallery - always show all images sorted by date
+        function renderGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            // Display all images (already sorted by date)
+            galleryData.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.onclick = () => openLightbox(item);
+
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = item.caption;
+
+                galleryItem.appendChild(img);
+                gallery.appendChild(galleryItem);
+            });
+        }
+
+        // Open lightbox
+        function openLightbox(item) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+
+            lightboxImage.src = item.src;
+            lightboxCaption.textContent = item.caption;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the content
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Initialize on page load
+        initGallery();
+    </script>
+</body>
+</html>
