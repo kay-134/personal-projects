@@ -1525,10 +1525,12 @@ const PCOSChatbot = (function() {
             // Check if text contains bad words
             containsBadWords(text) {
                 const lowerText = text.toLowerCase();
-                // Check for exact matches and common obfuscations
+                // Check for whole word matches only (not substrings)
                 for (const word of this.badWords) {
-                    // Check plain word
-                    if (lowerText.includes(word)) return true;
+                    // Use word boundaries to match whole words only
+                    const wholeWordRegex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+                    if (wholeWordRegex.test(lowerText)) return true;
+
                     // Check with common substitutions (1=i, 0=o, @=a, 3=e, $=s)
                     const obfuscated = word
                         .replace(/i/g, '[i1!]')
@@ -1536,8 +1538,8 @@ const PCOSChatbot = (function() {
                         .replace(/a/g, '[a@4]')
                         .replace(/e/g, '[e3]')
                         .replace(/s/g, '[s$5]');
-                    const regex = new RegExp(obfuscated, 'i');
-                    if (regex.test(lowerText)) return true;
+                    const obfuscatedRegex = new RegExp(`\\b${obfuscated}\\b`, 'i');
+                    if (obfuscatedRegex.test(lowerText)) return true;
                 }
                 return false;
             },
