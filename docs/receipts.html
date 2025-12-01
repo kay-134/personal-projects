@@ -158,6 +158,36 @@
 
         }
 
+
+
+        .cost-tracker {
+
+            position: absolute;
+
+            right: 20px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            border: 2px solid var(--border);
+
+            background-color: var(--surface);
+
+            color: var(--primary);
+
+            padding: 10px 20px;
+
+            font-size: 1.2em;
+
+            border-radius: 15px;
+
+            font-family: "Playfair Display", serif;
+
+            font-weight: 600;
+
+        }
+
  
 
         h1 {
@@ -518,6 +548,22 @@
 
             }
 
+
+
+            .cost-tracker {
+
+                position: static;
+
+                transform: none;
+
+                margin-bottom: 15px;
+
+                font-size: 1em;
+
+                padding: 8px 16px;
+
+            }
+
  
 
             .gallery-container {
@@ -620,6 +666,8 @@
 
         <a href="index.html" class="back-button" aria-label="Back to home">← home</a>
 
+        <div class="cost-tracker" id="cost-tracker" aria-live="polite">$0</div>
+
         <h1>Receipts</h1>
 
         <h3>Documentation of the PCOS journey</h3>
@@ -684,11 +732,31 @@
 
                 date: '2024-11-13', // Date photo was taken (YYYY-MM-DD)
 
+                cost: 500, // Cost in dollars
+
                 caption: 'On October 27th I admitted myself to the ER due to severe abdominal pain/intense menstrual cycle. They tested my blood, pee, regular vitals, gave me an ultrasound and diagnosed me with anovulatory bleeding. The doctors told me to basically "thug it out" in more professional terms ofc, was given a tuna sandwich and a $500 hospital bill...'
 
             },
 
         ].sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date, oldest first
+
+
+
+        // Track clicked receipts and total cost
+
+        let clickedReceipts = new Set();
+
+        let totalCost = 0;
+
+
+
+        function updateCostTracker() {
+
+            const tracker = document.getElementById('cost-tracker');
+
+            tracker.textContent = `$${totalCost.toLocaleString()}`;
+
+        }
 
  
 
@@ -756,13 +824,27 @@
 
             const lightboxCaption = document.getElementById('lightboxCaption');
 
- 
+
 
             lightboxImage.src = item.src;
 
             lightboxCaption.textContent = item.caption;
 
- 
+
+
+            // Track cost - only add if not already clicked
+
+            if (item.cost && !clickedReceipts.has(item.id)) {
+
+                clickedReceipts.add(item.id);
+
+                totalCost += item.cost;
+
+                updateCostTracker();
+
+            }
+
+
 
             lightbox.classList.add('active');
 
