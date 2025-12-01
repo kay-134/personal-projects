@@ -222,7 +222,7 @@
 
         }
 
- 
+
 
         .gallery-item {
 
@@ -230,37 +230,15 @@
 
             cursor: pointer;
 
-            
-
-            overflow: hidden;
-
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
             display: flex;
 
             align-items: center;
 
             justify-content: center;
 
-           
-
-            
-
         }
 
- 
 
-        .gallery-item:hover {
-
-            transform: translateY(-4px);
-
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-
-            
-
-        }
-
- 
 
         .gallery-item img {
 
@@ -269,6 +247,24 @@
             height: auto;
 
             display: block;
+
+            border-radius: 10px;
+
+            border: 3px solid var(--border);
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+        }
+
+
+
+        .gallery-item:hover img {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+
+            border-color: var(--primary);
 
         }
 
