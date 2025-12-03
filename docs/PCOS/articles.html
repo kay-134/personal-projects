@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         :root {
             --primary: #4A4A32;
@@ -283,18 +282,10 @@
             border-radius: 16px;
             padding: 20px;
             transition: border-color 0.2s;
-            position: relative;
-            overflow: hidden;
-            min-height: 120px;
         }
 
         .article-card:hover {
             border-color: var(--primary);
-        }
-
-        .article-header {
-            position: relative;
-            z-index: 2;
         }
 
         .article-title {
@@ -314,6 +305,19 @@
             text-decoration: underline;
         }
 
+        .article-meta {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .article-abstract {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
         .article-tags {
             display: flex;
             flex-wrap: wrap;
@@ -326,30 +330,6 @@
             border-radius: 12px;
             font-size: 11px;
             color: var(--text-light);
-        }
-
-        .article-details {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--primary-dark);
-            color: var(--background);
-            padding: 20px;
-            border-radius: 12px;
-            z-index: 1;
-        }
-
-        .article-meta {
-            font-size: 13px;
-            color: var(--primary-light);
-            margin-bottom: 12px;
-        }
-
-        .article-abstract {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--background);
         }
 
         .load-more {
@@ -622,51 +602,27 @@
 
             for (let i = start; i < end; i++) {
                 const article = this.filteredArticles[i];
-                const card = this.createArticleCard(article);
-                container.appendChild(card);
+                container.appendChild(this.createArticleCard(article));
             }
 
             this.displayedCount = end;
             resultsCount.textContent = `Showing ${this.displayedCount} of ${this.filteredArticles.length} articles`;
             loadMoreBtn.style.display = this.displayedCount < this.filteredArticles.length ? 'block' : 'none';
-
-            // Initialize GSAP animations for new cards
-            this.initializeCardAnimations();
-        },
-
-        initializeCardAnimations() {
-            gsap.set(".article-details", { yPercent: 100 });
-
-            gsap.utils.toArray(".article-card").forEach((card) => {
-                let details = card.querySelector(".article-details");
-                if (!details.dataset.animated) {
-                    details.dataset.animated = "true";
-                    let tl = gsap.timeline({ paused: true });
-                    tl.to(details, { yPercent: 0, duration: 0.4, ease: "power2.out" });
-
-                    card.addEventListener("mouseenter", () => tl.timeScale(1).play());
-                    card.addEventListener("mouseleave", () => tl.timeScale(2).reverse());
-                }
-            });
         },
 
         createArticleCard(article) {
             const card = document.createElement('article');
             card.className = 'article-card';
             card.innerHTML = `
-                <div class="article-header">
-                    <h2 class="article-title">
-                        <a href="${article.url}" target="_blank" rel="noopener noreferrer">${this.escapeHtml(article.title)}</a>
-                    </h2>
-                    <div class="article-tags">
-                        ${article.tags.map(tag => `<span class="article-tag">${this.formatTag(tag)}</span>`).join('')}
-                    </div>
+                <h2 class="article-title">
+                    <a href="${article.url}" target="_blank" rel="noopener noreferrer">${this.escapeHtml(article.title)}</a>
+                </h2>
+                <div class="article-meta">
+                    ${this.escapeHtml(article.authors)} • ${this.escapeHtml(article.journal)} • ${article.year}
                 </div>
-                <div class="article-details">
-                    <div class="article-meta">
-                        ${this.escapeHtml(article.authors)} • ${this.escapeHtml(article.journal)} • ${article.year}
-                    </div>
-                    <p class="article-abstract">${this.escapeHtml(article.abstract)}</p>
+                <p class="article-abstract">${this.escapeHtml(article.abstract)}</p>
+                <div class="article-tags">
+                    ${article.tags.map(tag => `<span class="article-tag">${this.formatTag(tag)}</span>`).join('')}
                 </div>
             `;
             return card;
