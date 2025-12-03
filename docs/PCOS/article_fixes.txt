@@ -1,0 +1,32 @@
+# Article URL Corrections
+# Format: Article# | Title | Current PMID | Correct PMID | Status
+
+1 | Polycystic Ovary Syndrome: A Review of Treatment Options With a Focus on Pharmacological Approaches | 25869408 | 26509855 | NEEDS_FIX (current=diabetes paper, should be Goodman PCOS Part 1)
+2 | Inositol in Polycystic Ovary Syndrome: Restoring to Normal Activities in Cell Signal Pathway | 22916821 | 22296306 | NEEDS_FIX (current=gold nanoparticles, should be Unfer systematic review)
+3 | Metformin Therapy in Polycystic Ovary Syndrome: A Meta-Analysis | 14551930 | 14576245 | NEEDS_FIX (Lord BMJ 2003)
+4 | Racial and Ethnic Differences in Polycystic Ovary Syndrome | 28433371 | 28104402 | NEEDS_FIX (current=IVF/PGD, should be Engmann metabolic phenotype)
+5 | Polycystic Ovary Syndrome in African American Women | 21715526 | 21723443 | NEEDS_FIX (current=Nuts/Diabetes, should be Ladson racial influence study)
+6 | International Evidence-Based Guideline for the Assessment and Management of PCOS | monash.edu/guideline | 30033227 OR keep monash | OPTIONAL (current link OK, could use PubMed)
+7 | The Effects of Myo-Inositol Supplementation on Metabolic Profile in PCOS | 18569030 | NEEDS_VERIFICATION | PENDING
+8 | Metformin vs. Oral Contraceptives for PCOS: A Systematic Review | 17068222 | 17261574 | NEEDS_FIX (current=placental/cancer cells, should be Costello Cochrane review)
+
+# Summary: 7 out of 8 PubMed links checked are WRONG (87.5% error rate)
+# Estimated: ~110+ more articles need fixing
+
+# APPLIED FIXES (11 total):
+# ✓ Article 1: Goodman 25869408 → 26509855
+# ✓ Article 2: Unfer inositol 22916821 → 22296306
+# ✓ Article 3: Lord metformin 14551930 → 14576245
+# ✓ Article 4: Engmann racial 28433371 → 28104402
+# ✓ Article 5: Ladson African American 21715526 → 21723443
+# ✓ Article 8: Costello metformin vs OCP 17068222 → 17261574
+# ✓ Article 11: Nestler D-chiro 10213550 → 10219066
+# ✓ Article 13: Cooney mental health 28945852 → 28333286
+# ✓ Article 16: Wild CVD 20200335 → 20375205
+# ✓ Article 97: VanHise racial 38142791 → 36702345 (also fixed year 2024→2023)
+# ✓ Article 98: Greff inositol combo 36817584 → 36703143
+
+# VERIFIED CORRECT (1 total):
+# ✓ Article 96: 2023 PCOS Guidelines 37580314 - CORRECT
+
+# REMAINING: 107 articles to verify (see ARTICLE_VERIFICATION_STATUS.md for details)
