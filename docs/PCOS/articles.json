@@ -268,5 +268,557 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/34547140/",
     "abstract": "Female mice with hepatic androgen receptor deletion (LivARKO) are protected from DHT-induced glucose intolerance, insulin resistance, and metabolic dysfunction, demonstrating that elevated androgens disrupt female metabolic function specifically through hepatic androgen receptor signaling.",
     "tags": ["Johns Hopkins", "androgen receptor", "insulin resistance", "hepatic function", "animal model", "molecular mechanisms"]
+  },
+  {
+    "title": "The Role of Lifestyle Interventions in PCOS Management: A Systematic Review",
+    "authors": "Gautam R, Maan P, Jyoti A, Kumar A, Malhotra N, Arora T",
+    "journal": "Nutrients",
+    "year": "2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39861440/",
+    "abstract": "Dietary interventions including low-GI foods, caloric restriction, omega-3 diets, ketogenic diets, Mediterranean diets, and anti-inflammatory diets improve insulin sensitivity and hormonal balance in women with PCOS; physical activity enhances insulin sensitivity and weight loss.",
+    "tags": [
+      "NIH",
+      "diet",
+      "lifestyle",
+      "physical activity",
+      "insulin resistance",
+      "inflammation"
+    ]
+  },
+  {
+    "title": "The overlooked mental health burden of polycystic ovary syndrome: neurobiological insights into PCOS-related depression",
+    "authors": "Dubé-Zinatelli E, Anderson F, Ismail N",
+    "journal": "Frontiers in Neuroendocrinology",
+    "year": "2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40609837/",
+    "abstract": "Women with PCOS face heightened risk of depression due to dysregulation in endocrine and immune systems and gut microbiome disturbances; symptoms like infertility, obesity, and hirsutism cause psychological distress that exacerbates depression.",
+    "tags": [
+      "NIH",
+      "mental health",
+      "depression",
+      "gut microbiome",
+      "inflammation",
+      "quality of life"
+    ]
+  },
+  {
+    "title": "The prevalence and risk of anxiety and depression in polycystic ovary syndrome: an overview of systematic reviews with meta-analysis",
+    "authors": "Abdul Jafar NK, Al Balushi A, Subramanian A, Lee SI, Bennett CJ, Moran LJ, Mousa A, Tay CT, Teede HJ, Mansfield DR",
+    "journal": "European Journal of Endocrinology",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39453529/",
+    "abstract": "Anxiety symptoms were highly prevalent in PCOS (prevalence varied by questionnaire: Hamilton Anxiety Scale 69.4%, HADS 41.5%); depression symptoms were most prevalent using Beck Depression Inventory (46.0%); PCOS women had higher risk of anxiety and depression than controls.",
+    "tags": [
+      "Journal of Endocrinology",
+      "mental health",
+      "depression",
+      "anxiety",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Polycystic ovary syndrome and mental disorders: a systematic review and exploratory meta-analysis",
+    "authors": "Cooney LG, Lee I, Sammel MD, Dokras A",
+    "journal": "Neuropsychiatric Disease and Treatment",
+    "year": "2017",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5108561/",
+    "abstract": "Women with PCOS had higher rates of anxiety (OR 2.76, 95% CI 1.26-6.02) and depressive symptoms (OR 3.51, 95% CI 1.97-6.24) compared to women without PCOS; anxiety and depression are more prevalent in PCOS patients.",
+    "tags": [
+      "NIH",
+      "mental health",
+      "depression",
+      "anxiety",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Analysis of risk factors for depression and anxiety in women with polycystic ovary syndrome",
+    "authors": "Yang Y, Liu L, Hu N, Huo H, Yang X, Wang F",
+    "journal": "Frontiers in Global Women's Health",
+    "year": "2025",
+    "url": "https://www.frontiersin.org/journals/global-womens-health/articles/10.3389/fgwh.2025.1520641/full",
+    "abstract": "Depression and anxiety prevalence in PCOS was 47.7% and 39.9% respectively; depression was significantly associated with serum FT3, sleep duration, and daytime dysfunction; anxiety was associated with daytime dysfunction.",
+    "tags": [
+      "mental health",
+      "depression",
+      "anxiety",
+      "sleep disorders"
+    ]
+  },
+  {
+    "title": "PCOS Physiopathology and Vitamin D Deficiency: Biological Insights and Perspectives for Treatment",
+    "authors": "Lerchbaum E, Rabe T",
+    "journal": "Journal of Clinical Medicine",
+    "year": "2022",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35956124/",
+    "abstract": "Women with PCOS are deficient in vitamin D, particularly those with higher weight; hypovitaminosis is a risk factor for glucose intolerance and associated with insulin resistance and increased diabetes risk; vitamin D supplementation improved glucose homeostasis and hormonal status.",
+    "tags": [
+      "vitamin D",
+      "insulin resistance",
+      "metabolic effects",
+      "supplementation"
+    ]
+  },
+  {
+    "title": "Vitamin D and polycystic ovary syndrome (PCOS): a review",
+    "authors": "Thakur D, Kaur A",
+    "journal": "Journal of Family Medicine and Primary Care",
+    "year": "2023",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10328709/",
+    "abstract": "67-85% of PCOS women have vitamin D deficiency; low vitamin D levels exacerbate PCOS symptoms including insulin resistance, menstrual irregularities, infertility, hyperandrogenism, and obesity; vitamin D supplementation may improve symptoms.",
+    "tags": [
+      "NIH",
+      "vitamin D",
+      "insulin resistance",
+      "infertility",
+      "hyperandrogenism"
+    ]
+  },
+  {
+    "title": "Vitamin D deficiency is common and associated with metabolic risk factors in patients with polycystic ovary syndrome",
+    "authors": "Li HW, Brereton RE, Anderson RA, Wallace AM, Ho CK",
+    "journal": "BJOG: An International Journal of Obstetrics & Gynaecology",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21550088/",
+    "abstract": "44.0% of PCOS women had severe vitamin D deficiency vs 11.2% of controls (p=0.047); vitamin D concentrations negatively correlated with BMI, C-reactive protein, and free androgen index and positively correlated with insulin sensitivity and HDL-C.",
+    "tags": [
+      "Oxford",
+      "vitamin D",
+      "insulin resistance",
+      "metabolic syndrome",
+      "inflammation"
+    ]
+  },
+  {
+    "title": "Resistance and aerobic training increases genome-wide DNA methylation in women with polycystic ovary syndrome",
+    "authors": "Vieira Neto L, Medeiros SF, Norman RJ",
+    "journal": "Scientific Reports",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38245873/",
+    "abstract": "Both resistance and aerobic exercise improved anthropometric indices, metabolic dysfunction, and hyperandrogenism in PCOS after 16 weeks; exercise increased genome-wide DNA methylation which may relate to metabolic and hormonal changes and promote health and longevity.",
+    "tags": [
+      "NIH",
+      "exercise",
+      "epigenetics",
+      "DNA methylation",
+      "metabolic effects",
+      "hyperandrogenism"
+    ]
+  },
+  {
+    "title": "Exercise Interventions in Polycystic Ovary Syndrome: A Systematic Review and Meta-Analysis",
+    "authors": "Dos Santos IK, Ashe MC, Cobucci RN, Soares GM, de Oliveira Maranhão TM, Dantas PMS",
+    "journal": "Frontiers in Physiology",
+    "year": "2020",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7358428/",
+    "abstract": "Aerobic exercise of various intensities consistently improved VO2peak in PCOS; moderate intensity exercise improved waist circumference and BMI when combined with diet; resistance training showed promising improvements in free androgen index and insulin resistance.",
+    "tags": [
+      "NIH",
+      "exercise",
+      "physical activity",
+      "insulin resistance",
+      "hyperandrogenism",
+      "weight loss"
+    ]
+  },
+  {
+    "title": "A Systematic Review of the Effects of Exercise on Hormones in Women with Polycystic Ovary Syndrome",
+    "authors": "Jiskoot G, Dietz de Loos A, Beerthuizen A, Timman R, Busschbach J, Laven J",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33467251/",
+    "abstract": "Vigorous aerobic exercise and resistance training improve insulin sensitivity and androgen levels in PCOS; recommended guidelines include both exercise types; resistance training may improve androgen levels though additional studies are warranted.",
+    "tags": [
+      "NIH",
+      "exercise",
+      "physical activity",
+      "insulin resistance",
+      "hyperandrogenism"
+    ]
+  },
+  {
+    "title": "The effects of different exercises on weight loss and hormonal changes in women with polycystic ovarian syndrome: a network meta-analysis study",
+    "authors": "Hajizadeh F, Fathollahi-Shourabeh F, Moezy A, Salesi M",
+    "journal": "BMC Women's Health",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39272076/",
+    "abstract": "Moderate-intensity aerobic exercise is most effective for reducing BMI in PCOS compared to no intervention and yoga; other forms of exercise were ineffective for weight loss; exercise had no significant impact on sex hormones or menstrual regularity.",
+    "tags": [
+      "exercise",
+      "physical activity",
+      "weight loss",
+      "BMI"
+    ]
+  },
+  {
+    "title": "Polycystic Ovarian Syndrome Genetics and Epigenetics",
+    "authors": "Chen ZJ, Zhao H, He L, Shi Y, Qin Y, Shi Y, Li Z, You L, Zhao J, Liu J, Liang X, Zhao X, Zhao J, Sun Y, Zhang B, Jiang H, Zhao D, Bian Y, Gao X, Geng L, Li Y, Zhu D, Sun X, Xu JE, Hao C, Ren CE, Zhang Y, Chen S, Zhang W, Yang A, Yan J, Li Y, Ma J, Zhao Y",
+    "journal": "Frontiers in Genetics",
+    "year": "2021",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7855879/",
+    "abstract": "PCOS is a complex disorder with heritable genetics suspected due to familial clustering; genome-wide DNA methylation and microRNA patterns may improve diagnosis accuracy; mitochondrial DNA variants contribute to inflammation and insulin resistance.",
+    "tags": [
+      "NIH",
+      "genetics",
+      "epigenetics",
+      "heritability",
+      "inflammation",
+      "insulin resistance"
+    ]
+  },
+  {
+    "title": "Epigenetic inheritance of PCOS by developmental programming and germline transmission",
+    "authors": "Stener-Victorin E, Padmanabhan V, Walters KA, Campbell RE, Benrick A, Giacobini P, Dumesic DA, Abbott DH",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39732517/",
+    "abstract": "Emerging research suggests potential transgenerational inheritance of PCOS through genetic and epigenetic mechanisms; PCOS-related risks may affect subsequent generations including sons; developmental programming plays a key role.",
+    "tags": [
+      "NIH",
+      "genetics",
+      "epigenetics",
+      "heritability",
+      "developmental programming"
+    ]
+  },
+  {
+    "title": "Epigenetic inheritance of polycystic ovary syndrome - challenges and opportunities for treatment",
+    "authors": "Stener-Victorin E, Deng Q",
+    "journal": "Nature Reviews Endocrinology",
+    "year": "2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34234312/",
+    "abstract": "Genetic loci account for only 10% of PCOS heritability (estimated at 70%); altered epigenetic and developmental programming from maternal uterine environment contributes to pathogenesis; PCOS-like traits are transgenerationally inherited up to F3 generation.",
+    "tags": [
+      "genetics",
+      "epigenetics",
+      "heritability",
+      "developmental programming"
+    ]
+  },
+  {
+    "title": "Genetic Basis of Polycystic Ovary Syndrome (PCOS): Current Perspectives",
+    "authors": "Escobar-Morreale HF",
+    "journal": "Frontiers in Endocrinology",
+    "year": "2019",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6935309/",
+    "abstract": "PCOS is a polygenic and multifactorial disorder with complex pathophysiology involving multiple pathways and proteins; epigenetic changes are transgenerationally heritable; increased fetal androgen exposure causes epigenetic changes contributing to PCOS development.",
+    "tags": [
+      "NIH",
+      "genetics",
+      "epigenetics",
+      "hyperandrogenism",
+      "developmental programming"
+    ]
+  },
+  {
+    "title": "PCOS and genetics: Exploring the heterogeneous role of potential genes in ovarian dysfunction, a hallmark of PCOS",
+    "authors": "Nishanthini J, Kandasamy S, Bose Vijay K, Balamurugan K",
+    "journal": "Reproductive Biology",
+    "year": "2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40222066/",
+    "abstract": "Key genes involved in ovarian dysfunction in PCOS include CYP11A1, CYP17A1, CYP19A1, AR, FSHR, LHCGR, AMH, INSR, SHBG, IRS1, GATA4, ADIPOQ, YAP1, TCF7L2, and DENND1A; epigenetic factors and miRNAs also play critical roles.",
+    "tags": [
+      "genetics",
+      "ovarian dysfunction",
+      "hyperandrogenism",
+      "insulin resistance",
+      "epigenetics"
+    ]
+  },
+  {
+    "title": "Increased prevalence of obstructive sleep apnea syndrome in obese women with polycystic ovary syndrome",
+    "authors": "Vgontzas AN, Legro RS, Bixler EO, Grayev A, Kales A, Chrousos GP",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2001",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11238505/",
+    "abstract": "Obese PCOS women had higher apnea-hypopnea index (22.5 vs 6.7, p=0.008) and were more likely to have symptomatic OSA syndrome (44.4% vs 5.5%, p=0.008); AHI correlated with waist-hip ratio, testosterone, and unbound testosterone.",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "obesity",
+      "hyperandrogenism",
+      "insulin resistance"
+    ]
+  },
+  {
+    "title": "Obstructive sleep apnea syndrome in polycystic ovary syndrome: a systematic review and meta-analysis",
+    "authors": "Abdul Jafar NK, Al Balushi A, Subramanian A, Lee SI, Bennett CJ, Moran LJ, Mousa A, Tay CT, Teede HJ, Mansfield DR",
+    "journal": "Frontiers in Endocrinology",
+    "year": "2025",
+    "url": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2025.1532519/full",
+    "abstract": "PCOS is associated with high prevalence of obstructive sleep apnea; prevalence ranged 17-75% in PCOS vs general population; OSA is associated with obesity, insulin resistance, gestational diabetes, type 2 diabetes, hypertension, and impaired quality of life.",
+    "tags": [
+      "sleep apnea",
+      "obesity",
+      "insulin resistance",
+      "cardiovascular",
+      "quality of life"
+    ]
+  },
+  {
+    "title": "Polycystic ovary syndrome is associated with obstructive sleep apnea and daytime sleepiness: role of insulin resistance",
+    "authors": "Vgontzas AN, Legro RS, Bixler EO, Grayev A, Kales A, Chrousos GP",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2001",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11158002/",
+    "abstract": "PCOS patients were 30 times more likely to have sleep disordered breathing than controls (OR 30.6, 95% CI 7.2-139.4); insulin resistance is a stronger risk factor than BMI or testosterone for sleep apnea in PCOS.",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "insulin resistance",
+      "hyperandrogenism"
+    ]
+  },
+  {
+    "title": "Polycystic ovary syndrome and the risk of obstructive sleep apnea: a meta-analysis and review of the literature",
+    "authors": "Kahal H, Kyrou I, Tahrani AA, Randeva HS",
+    "journal": "Endocrine",
+    "year": "2017",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5574283/",
+    "abstract": "Pooled OSA prevalence was 22% in PCOS patients (32% in adults, 8% in adolescents); risk of OSA was significantly increased in adult PCOS patients (OR 9.74, 95% CI 2.76-34.41).",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "meta-analysis",
+      "obesity",
+      "metabolic syndrome"
+    ]
+  },
+  {
+    "title": "Pathogenesis and Consequences of Disordered Sleep in PCOS",
+    "authors": "Sam S, Ehrmann DA",
+    "journal": "Clinical Medicine Insights: Reproductive Health",
+    "year": "2019",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6724486/",
+    "abstract": "Sleep disturbances are increased in PCOS women; obstructive sleep apnea is the most commonly reported; OSA leads to increased sympathetic tone and oxidative stress which worsens insulin resistance in PCOS, creating a vicious cycle.",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "sleep disorders",
+      "insulin resistance",
+      "oxidative stress"
+    ]
+  },
+  {
+    "title": "Update on the combination of myo-inositol/d-chiro-inositol for the treatment of polycystic ovary syndrome",
+    "authors": "Unfer V, Facchinetti F, Orru B, Giordani B, Nestler J",
+    "journal": "Expert Review of Clinical Pharmacology",
+    "year": "2024",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/09513590.2023.2301554",
+    "abstract": "Combination of myo-inositol and D-chiro-inositol addresses insulin resistance and ovarian dysfunction in PCOS; myo-inositol improves FSH signaling and oocyte quality while D-chiro-inositol aids insulin-mediated androgen synthesis regulation.",
+    "tags": [
+      "inositol",
+      "treatment",
+      "insulin resistance",
+      "ovarian dysfunction",
+      "fertility"
+    ]
+  },
+  {
+    "title": "The inositols and polycystic ovary syndrome",
+    "authors": "Kalra B, Kalra S, Sharma JB",
+    "journal": "Indian Journal of Endocrinology and Metabolism",
+    "year": "2016",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5040057/",
+    "abstract": "Combination myo-inositol and D-chiro-inositol therapy corrects systemic insulin resistance and creates healthy intra-ovarian milieu; addresses metabolic features, hyperandrogenism, menstrual regularity, ovulation and fertility in PCOS.",
+    "tags": [
+      "NIH",
+      "inositol",
+      "insulin resistance",
+      "hyperandrogenism",
+      "fertility",
+      "ovulation"
+    ]
+  },
+  {
+    "title": "Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials",
+    "authors": "Unfer V, Nestler JE, Kamenov ZA, Prapas N, Facchinetti F",
+    "journal": "Endocrine Connections",
+    "year": "2017",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5655679/",
+    "abstract": "Myo-inositol supplementation significantly decreased fasting insulin (SMD -1.021 µU/mL, p=0.009) and HOMA index (SMD -0.585, p=0.041); showed trend toward testosterone reduction; SHBG increased significantly with ≥24 weeks treatment.",
+    "tags": [
+      "inositol",
+      "insulin resistance",
+      "hyperandrogenism",
+      "metabolic effects",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Inositol for Polycystic Ovary Syndrome: A Systematic Review and Meta-analysis to Inform the 2023 Update of the International Evidence-based PCOS Guidelines",
+    "authors": "Fitz V, Teede HJ, Brennan L, Moran LJ",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2024",
+    "url": "https://academic.oup.com/jcem/article/109/6/1630/7504796",
+    "abstract": "Evidence suggests benefits for myo-inositol or D-chiro-inositol for some metabolic measures and potential benefits from DCI for ovulation; myo-inositol likely causes fewer gastrointestinal adverse events compared with metformin.",
+    "tags": [
+      "Oxford",
+      "inositol",
+      "treatment",
+      "metabolic effects",
+      "ovulation"
+    ]
+  },
+  {
+    "title": "PCOS and Inositols: Controversial Results and Necessary Clarifications. Basic Differences Between D-Chiro and Myo-Inositol",
+    "authors": "Monastra G, Vucenik I, Harrath AH, Alwasel SH, Kamenov ZA, Laganà AS, Monti N, Fedeli V, Bizzarri M",
+    "journal": "Frontiers in Endocrinology",
+    "year": "2021",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8056130/",
+    "abstract": "Myo-inositol and D-chiro-inositol display opposite effects on ovary and steroidogenesis despite both improving insulin transduction; D-chiro-inositol directly regulates steroidogenic enzyme genes and increases testosterone levels in theca cells; high doses of D-chiro-inositol can be detrimental.",
+    "tags": [
+      "NIH",
+      "inositol",
+      "insulin resistance",
+      "steroidogenesis",
+      "hyperandrogenism"
+    ]
+  },
+  {
+    "title": "Are women with PCOS more at risk for endometrial cancer? What approach for such patients?",
+    "authors": "Gullo G, Scaglione M, Buzzaccarini G, Laganà AS, Basile G, Chiantera V, Török P, Herman T, Unfer V, Garzon S",
+    "journal": "Journal of Ovarian Research",
+    "year": "2023",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10210553/",
+    "abstract": "Risk of endometrial cancer is 2-6 times higher in PCOS women; increased prevalence associated with chronic anovulation and progesterone resistance; age and endometrial thickness are important predictors; routine screening not indicated but high-risk women should be monitored closely.",
+    "tags": [
+      "NIH",
+      "endometrial cancer",
+      "endometrial hyperplasia",
+      "cancer risk"
+    ]
+  },
+  {
+    "title": "Polycystic ovary syndrome is associated with a higher risk of premalignant and malignant endometrial polyps in premenopausal women",
+    "authors": "Zhu Y, Zhang W, Zhao Y, Li C, Hu Y",
+    "journal": "Gynecologic and Obstetric Investigation",
+    "year": "2023",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36964546/",
+    "abstract": "Prevalence of premalignant and malignant endometrial polyps was 2.15% (hyperplasia with atypia 1.13%, endometrial carcinoma 1.02%); PCOS was associated with higher risk of premalignant and malignant polyps after adjustment for confounding factors.",
+    "tags": [
+      "endometrial cancer",
+      "endometrial hyperplasia",
+      "polyps",
+      "cancer risk"
+    ]
+  },
+  {
+    "title": "Risk of endometrial cancer in patients with polycystic ovarian syndrome: A meta-analysis",
+    "authors": "Dumesic DA, Padmanabhan V, Chazenbalk GD, Abbott DH",
+    "journal": "Oncotarget",
+    "year": "2023",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10028221/",
+    "abstract": "Women with PCOS had significantly increased odds of developing endometrial cancer (OR 4.07, 95% CI 2.13-7.78); when postmenopausal subjects excluded, odds increased to 5.14; PCOS patients are up to 5 times more likely to develop endometrial cancer.",
+    "tags": [
+      "NIH",
+      "endometrial cancer",
+      "cancer risk",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Association between polycystic ovarian syndrome and endometrial, ovarian, and breast cancer: A population-based cohort study in Taiwan",
+    "authors": "Hsu MI, Chen HF, Hwu YM, Tsai SJ, Wu MY, Chang CH, Kuo TC, Chen TC, Kuo PH, Ho HN",
+    "journal": "Medicine (Baltimore)",
+    "year": "2018",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6181615/",
+    "abstract": "Incidence of endometrial cancer was 226 per 100,000 person-years in PCOS vs 15 in comparison group; significantly higher risk (aHR 17.7, 95% CI 4.9-64.2); no association found between PCOS and ovarian or breast cancer.",
+    "tags": [
+      "NIH",
+      "endometrial cancer",
+      "cancer risk",
+      "cohort study"
+    ]
+  },
+  {
+    "title": "Clinical and psychological correlates of quality-of-life in polycystic ovary syndrome",
+    "authors": "Elsenbruch S, Hahn S, Kowalsky D, Öffner AH, Schedlowski M, Mann K, Janssen OE",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2003",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16322391/",
+    "abstract": "PCOS patients showed significant reductions in quality of life, increased psychological disturbances, and decreased sexual satisfaction; BMI and hirsutism scores were associated with physical aspects of quality of life and sexual satisfaction.",
+    "tags": [
+      "NIH",
+      "quality of life",
+      "mental health",
+      "obesity",
+      "hirsutism"
+    ]
+  },
+  {
+    "title": "Health-related quality of life and psychological distress in polycystic ovary syndrome: a hidden facet in South Asian women",
+    "authors": "Kumarapeli V, Seneviratne Rde A, Wijeyaratne CN, Yapa RM, Dodampahala SH",
+    "journal": "BJOG: An International Journal of Obstetrics & Gynaecology",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21134104/",
+    "abstract": "Mean GHQ score was significantly higher in PCOS (5.25±6.25) than controls (1.58±1.46); hirsutism was significantly associated with psychological distress; mean scores for physical, psychological and social relationships domains were significantly lower in PCOS.",
+    "tags": [
+      "Oxford",
+      "quality of life",
+      "mental health",
+      "psychological distress",
+      "hirsutism"
+    ]
+  },
+  {
+    "title": "Quality of life and psychological well being in polycystic ovary syndrome",
+    "authors": "Coffey S, Bano G, Mason HD",
+    "journal": "Human Reproduction",
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17537782/",
+    "abstract": "71% of PCOS women taking anti-androgen medication and 67% not taking medication were classified as depressed; women with PCOS had lower quality of life on all seven factors; weight was largest contributor to poor quality of life.",
+    "tags": [
+      "Oxford",
+      "quality of life",
+      "depression",
+      "weight",
+      "hirsutism"
+    ]
+  },
+  {
+    "title": "Quality of life and psychological morbidity in women with polycystic ovary syndrome: body mass index, age and the provision of patient information are significant modifiers",
+    "authors": "Jones GL, Benes K, Clark TL, Denham R, Holder MG, Haynes TJ, Mulgrew NC, Shepherd KE, Wilkinson VH, Singh M, Balen AH, Lashen H, Ledger WL",
+    "journal": "Clinical Endocrinology",
+    "year": "2008",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17302871/",
+    "abstract": "SF-36 scores were significantly lower than age- and sex-matched population; GHQ-28 identified psychological morbidity in 62.4% vs 26.4% in matched population; BMI was negatively correlated with quality of life; positive association between psychological domain and quality of health information.",
+    "tags": [
+      "Oxford",
+      "quality of life",
+      "mental health",
+      "BMI",
+      "patient education"
+    ]
+  },
+  {
+    "title": "Measures of health-related quality of life in PCOS women: a systematic review",
+    "authors": "Behboodi Moghadam Z, Fereidooni B, Saffari M, Montazeri A",
+    "journal": "International Journal of Women's Health",
+    "year": "2018",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6078086/",
+    "abstract": "52 studies reviewed; various generic and specific questionnaires assess different dimensions of HRQoL; weight concerns have particular negative impact on HRQoL though role of BMI is inconclusive; psychological dimensions more affected than physical dimensions.",
+    "tags": [
+      "NIH",
+      "quality of life",
+      "systematic review",
+      "obesity",
+      "mental health"
+    ]
+  },
+  {
+    "title": "Impact of polycystic ovary syndrome on quality of life of women in correlation to age, basal metabolic index, education and marriage",
+    "authors": "Bhattacharya SM, Ghosh M",
+    "journal": "PLoS One",
+    "year": "2021",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7946178/",
+    "abstract": "PCOS cases showed significantly decreased HRQoL compared to controls; increased BMI, menstrual irregularities, educational status and marital status play major role in altering HRQoL; psychological care must be given during patient management.",
+    "tags": [
+      "NIH",
+      "quality of life",
+      "BMI",
+      "menstrual irregularities",
+      "mental health"
+    ]
   }
 ]
