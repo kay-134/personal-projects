@@ -524,7 +524,7 @@
 
         async loadArticles() {
             try {
-                const response = await fetch('pcos_research_studies_2015-2025.json');
+                const response = await fetch('articles.json');
                 this.articles = await response.json();
                 // Sort by year descending (most recent first)
                 this.articles.sort((a, b) => parseInt(b.year) - parseInt(a.year));
