@@ -198,9 +198,9 @@
 
         .filters-section {
             margin-top: 16px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
         }
 
         .filter-group {
@@ -224,7 +224,7 @@
             color: var(--text);
             cursor: pointer;
             font-family: 'Playfair Display', serif;
-            min-width: 180px;
+            width: 100%;
             transition: all 0.2s;
         }
 
@@ -380,6 +380,12 @@
             margin-top: 24px;
         }
 
+        @media (max-width: 768px) {
+            .filters-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 640px) {
             .container { padding: 10px; }
             h1 { font-size: 24px; }
@@ -398,7 +404,7 @@
                 <div class="logo-icon" aria-hidden="true">🔍</div>
                 <h1>Uncovering the Lid</h1>
             </div>
-            <p class="tagline">UNDER CONSTRUCTION! Will soon have 120+ peer-reviewed studies and medical articles about PCOS</p>
+            <p class="tagline">30 peer-reviewed studies and medical articles about PCOS from NIH, WHO, Oxford, Johns Hopkins & more</p>
         </header>
 
         <a href="research.html" class="back-link" aria-label="Back to Stitching PCOS Literacy">
@@ -415,21 +421,49 @@
                 </div>
                 <div class="filters-section">
                     <div class="filter-group">
-                        <label for="treatment-filter" class="filter-label">Treatment:</label>
-                        <select id="treatment-filter" class="filter-select" aria-label="Filter by treatment">
-                            <option value="">All Treatments</option>
-                            <option value="metformin">Metformin</option>
-                            <option value="inositol">Inositol</option>
-                            <option value="black-women">Black Women</option>
+                        <label for="source-filter" class="filter-label">Source:</label>
+                        <select id="source-filter" class="filter-select" aria-label="Filter by source">
+                            <option value="">All Sources</option>
+                            <option value="NIH">NIH/PubMed</option>
+                            <option value="WHO">WHO</option>
+                            <option value="Oxford">Oxford Academic</option>
+                            <option value="Journal of Endocrinology">Journal of Endocrinology</option>
+                            <option value="Johns Hopkins">Johns Hopkins</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="topic-filter" class="filter-label">Topic:</label>
+                        <select id="topic-filter" class="filter-select" aria-label="Filter by topic">
+                            <option value="">All Topics</option>
+                            <option value="fertility">Fertility</option>
+                            <option value="infertility">Infertility</option>
+                            <option value="ovulation">Ovulation</option>
+                            <option value="pregnancy">Pregnancy</option>
+                            <option value="insulin resistance">Insulin Resistance</option>
+                            <option value="inflammation">Inflammation</option>
+                            <option value="obesity">Obesity/Weight Loss</option>
+                            <option value="cardiovascular">Cardiovascular</option>
+                            <option value="gut microbiome">Gut Microbiome</option>
+                            <option value="hyperandrogenism">Hyperandrogenism</option>
+                            <option value="metabolic">Metabolic Effects</option>
+                            <option value="diagnosis">Diagnosis</option>
+                            <option value="phenotypes">Phenotypes</option>
                         </select>
                     </div>
                     <div class="filter-group">
                         <label for="treatment-filter" class="filter-label">Treatment:</label>
                         <select id="treatment-filter" class="filter-select" aria-label="Filter by treatment">
-                            <option value="">Publication</option>
+                            <option value="">All Treatments</option>
                             <option value="metformin">Metformin</option>
-                            <option value="inositol">Inositol</option>
-                            <option value="black-women">Black Women</option>
+                            <option value="letrozole">Letrozole</option>
+                            <option value="clomiphene">Clomiphene Citrate</option>
+                            <option value="oral contraceptive">Birth Control/OCPs</option>
+                            <option value="spironolactone">Spironolactone</option>
+                            <option value="pioglitazone">Pioglitazone</option>
+                            <option value="rosiglitazone">Rosiglitazone</option>
+                            <option value="lifestyle">Lifestyle Intervention</option>
+                            <option value="physical activity">Physical Activity</option>
+                            <option value="combination therapy">Combination Therapy</option>
                         </select>
                     </div>
                     <div class="filter-group">
@@ -446,23 +480,6 @@
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
                             <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                            <option value="2013">2013</option>
-                            <option value="2012">2012</option>
-                            <option value="2011">2011</option>
-                            <option value="2010">2010</option>
-                            <option value="2009">2009</option>
-                            <option value="2008">2008</option>
-                            <option value="2007">2007</option>
-                            <option value="2006">2006</option>
-                            <option value="2005">2005</option>
-                            <option value="2004">2004</option>
-                            <option value="2003">2003</option>
-                            <option value="2002">2002</option>
-                            <option value="2001">2001</option>
-                            <option value="2000">2000</option>
-                            <option value="1999">1999</option>
-                            <option value="1997">1997</option>
                         </select>
                     </div>
                 </div>
@@ -494,6 +511,8 @@
         displayedCount: 0,
         perPage: 20,
         currentSearch: '',
+        selectedSource: '',
+        selectedTopic: '',
         selectedTreatment: '',
         selectedYear: '',
 
@@ -505,7 +524,7 @@
 
         async loadArticles() {
             try {
-                const response = await fetch('articles.json');
+                const response = await fetch('pcos_research_studies_2015-2025.json');
                 this.articles = await response.json();
                 // Sort by year descending (most recent first)
                 this.articles.sort((a, b) => parseInt(b.year) - parseInt(a.year));
@@ -529,6 +548,16 @@
 
             document.getElementById('search-btn').addEventListener('click', () => this.filterArticles());
 
+            document.getElementById('source-filter').addEventListener('change', (e) => {
+                this.selectedSource = e.target.value;
+                this.filterArticles();
+            });
+
+            document.getElementById('topic-filter').addEventListener('change', (e) => {
+                this.selectedTopic = e.target.value;
+                this.filterArticles();
+            });
+
             document.getElementById('treatment-filter').addEventListener('change', (e) => {
                 this.selectedTreatment = e.target.value;
                 this.filterArticles();
@@ -541,9 +570,13 @@
 
             document.getElementById('clear-filters').addEventListener('click', () => {
                 this.currentSearch = '';
+                this.selectedSource = '';
+                this.selectedTopic = '';
                 this.selectedTreatment = '';
                 this.selectedYear = '';
                 document.getElementById('search-input').value = '';
+                document.getElementById('source-filter').value = '';
+                document.getElementById('topic-filter').value = '';
                 document.getElementById('treatment-filter').value = '';
                 document.getElementById('year-filter').value = '';
                 this.filterArticles();
@@ -565,13 +598,19 @@
                     article.authors.toLowerCase().includes(search) ||
                     article.journal.toLowerCase().includes(search);
 
+                const matchesSource = !this.selectedSource ||
+                    article.tags.some(tag => tag.toLowerCase() === this.selectedSource.toLowerCase());
+
+                const matchesTopic = !this.selectedTopic ||
+                    article.tags.some(tag => tag.toLowerCase().includes(this.selectedTopic.toLowerCase()));
+
                 const matchesTreatment = !this.selectedTreatment ||
-                    article.tags.includes(this.selectedTreatment);
+                    article.tags.some(tag => tag.toLowerCase().includes(this.selectedTreatment.toLowerCase()));
 
                 const matchesYear = !this.selectedYear ||
                     article.year === this.selectedYear;
 
-                return matchesSearch && matchesTreatment && matchesYear;
+                return matchesSearch && matchesSource && matchesTopic && matchesTreatment && matchesYear;
             });
 
             // Sort by year descending (most recent first)
@@ -581,7 +620,7 @@
             this.renderArticles();
 
             const clearBtn = document.getElementById('clear-filters');
-            clearBtn.style.display = (this.currentSearch || this.selectedTreatment || this.selectedYear) ? 'block' : 'none';
+            clearBtn.style.display = (this.currentSearch || this.selectedSource || this.selectedTopic || this.selectedTreatment || this.selectedYear) ? 'block' : 'none';
         },
 
         renderArticles(append = false) {
