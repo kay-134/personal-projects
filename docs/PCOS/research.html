@@ -1861,8 +1861,6 @@ const PCOSChatbot = (function() {
 
                 try {
                     const snapshot = await db.collection('tips').doc(tipId).collection('replies')
-                        .where('reported', '<', 3)
-                        .orderBy('reported')
                         .orderBy('createdAt', 'asc')
                         .limit(20)
                         .get();
@@ -1875,7 +1873,11 @@ const PCOSChatbot = (function() {
                     }
 
                     snapshot.forEach(doc => {
-                        this.renderReply(container, tipId, doc.id, doc.data());
+                        const data = doc.data();
+                        // Only show replies with fewer than 3 reports
+                        if (!data.reported || data.reported < 3) {
+                            this.renderReply(container, tipId, doc.id, data);
+                        }
                     });
                 } catch (error) {
                     console.error('Error loading replies:', error);
