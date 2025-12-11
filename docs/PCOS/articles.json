@@ -1,1073 +1,824 @@
 [
   {
-    "title": "Polycystic Ovary Syndrome: A Review of Treatment Options With a Focus on Pharmacological Approaches",
-    "authors": "Uche Anadu Ndefo, Angie Eaton, Monica Robinson Green",
-    "journal": "P & T: a peer‑reviewed journal for formulary management",
-    "year": "2013",
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3737989/",
-    "abstract": "Oral contraceptives, antidiabetes drugs, and statins are some of the therapies used to address the symptoms of this complex hormonal condition. Weight loss and surgery may also be beneficial as non-drug options.",
-    "tags": ["studies", "solutions", "metformin"]
-  },
-  {
-    "title": "Inositol in Polycystic Ovary Syndrome: Restoring to Normal Activities in Cell Signal Pathway",
-    "authors": "Unfer V, Carlomagno G, Dante G, Facchinetti F",
-    "journal": "Gynecological Endocrinology",
-    "year": "2012",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/22296306/",
-    "abstract": "This study examines how myo-inositol and D-chiro-inositol supplementation can improve insulin sensitivity and ovarian function in women with PCOS.",
-    "tags": ["studies", "solutions", "inositol"]
-  },
-  {
-    "title": "Metformin Therapy in Polycystic Ovary Syndrome: A Meta-Analysis",
-    "authors": "Lord JM, Flight IH, Norman RJ",
-    "journal": "BMJ",
-    "year": "2003",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/14576245/",
-    "abstract": "Meta-analysis evaluating the effectiveness of metformin in treating PCOS, showing improvements in ovulation rates and metabolic parameters.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Racial and Ethnic Differences in Polycystic Ovary Syndrome",
-    "authors": "Engmann L, Jin S, Sun F, et al.",
+    "title": "Comparing the individual effects of metformin and rosiglitazone and their combination in obese women with polycystic ovary syndrome: a randomized controlled trial",
+    "authors": "Yujing Li, Jing Tan, Qiuyi Wang, Changling Duan, Yuanyuan Hu, Wei Huang",
     "journal": "Fertility and Sterility",
-    "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28104402/",
-    "abstract": "Study examining how PCOS presentation and metabolic complications differ among racial and ethnic groups, with particular focus on African American women.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Polycystic Ovary Syndrome in African American Women",
-    "authors": "Ladson G, Dodson WC, Sweet SD, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21723443/",
-    "abstract": "Research showing that African American women with PCOS have higher rates of obesity, insulin resistance, and metabolic syndrome compared to Caucasian women.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "International Evidence-Based Guideline for the Assessment and Management of PCOS",
-    "authors": "Teede HJ, Misso ML, Costello MF, et al.",
-    "journal": "WHO/NIH Collaboration",
-    "year": "2018",
-    "url": "https://www.monash.edu/medicine/sphpm/mchri/pcos/guideline",
-    "abstract": "Comprehensive international guidelines for diagnosis, assessment, and treatment of PCOS developed by leading experts worldwide.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "The Effects of Myo-Inositol Supplementation on Metabolic Profile in PCOS",
-    "authors": "Genazzani AD, Lanzoni C, Ricchieri F, et al.",
-    "journal": "Gynecological Endocrinology",
-    "year": "2008",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/18569030/",
-    "abstract": "Study demonstrating that myo-inositol supplementation improves insulin sensitivity and reduces testosterone levels in PCOS patients.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Metformin vs. Oral Contraceptives for PCOS: A Systematic Review",
-    "authors": "Costello M, Shrestha B, Eden J, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17261574/",
-    "abstract": "Systematic comparison of metformin and oral contraceptives for treating PCOS symptoms, evaluating efficacy for different outcomes.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Polycystic Ovary Syndrome: Definition, Aetiology, Diagnosis and Treatment",
-    "authors": "Norman RJ, Dewailly D, Legro RS, Hickey TE",
-    "journal": "Nature Reviews Endocrinology",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17984013/",
-    "abstract": "Comprehensive review covering the pathophysiology, diagnosis, and management strategies for polycystic ovary syndrome.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "Ethnic Differences in the Polycystic Ovary Syndrome Phenotype",
-    "authors": "Wijeyaratne CN, Balen AH, Barth JH, Belchetz PE",
-    "journal": "Fertility and Sterility",
-    "year": "2002",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/11872202/",
-    "abstract": "Research examining phenotypic variations of PCOS across different ethnic groups including South Asian and Black women.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "D-Chiro-Inositol for PCOS: A Randomized Controlled Trial",
-    "authors": "Nestler JE, Jakubowicz DJ, Reamer P, et al.",
-    "journal": "New England Journal of Medicine",
-    "year": "1999",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/10219066/",
-    "abstract": "Landmark study showing D-chiro-inositol improves ovulatory function and decreases androgen levels in women with PCOS.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Metformin Use in PCOS: Comprehensive Review",
-    "authors": "Palomba S, Falbo A, Zullo F, Orio F",
-    "journal": "Clinical Endocrinology",
-    "year": "2009",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/19220498/",
-    "abstract": "Extensive review of metformin's mechanisms, efficacy, and safety in treating various PCOS manifestations.",
-    "tags": ["studies", "metformin", "answers"]
-  },
-  {
-    "title": "PCOS and Mental Health: Anxiety and Depression",
-    "authors": "Cooney LG, Lee I, Sammel MD, Dokras A",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28333286/",
-    "abstract": "Study examining the increased prevalence of anxiety and depression in women with PCOS and associated risk factors.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "Lifestyle Modification in PCOS: Evidence and Implementation",
-    "authors": "Moran LJ, Pasquali R, Teede HJ, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2009",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/19429634/",
-    "abstract": "Evidence-based review of lifestyle interventions including diet and exercise for managing PCOS symptoms and metabolic risk.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Inositol and Metformin Combination for PCOS Treatment",
-    "authors": "Pkhaladze L, Barbakadze L, Kvashilava N",
-    "journal": "International Journal of Endocrinology",
-    "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33897787/",
-    "abstract": "Comparative study evaluating the combined effects of inositol and metformin versus monotherapy in PCOS patients.",
-    "tags": ["studies", "inositol", "metformin", "solutions"]
-  },
-  {
-    "title": "Cardiovascular Disease Risk in Women with PCOS",
-    "authors": "Wild RA, Carmina E, Diamanti-Kandarakis E, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2010",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20375205/",
-    "abstract": "Assessment of cardiovascular disease risk factors in women with PCOS and recommendations for monitoring and prevention.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "PCOS Prevalence in African American Adolescents",
-    "authors": "Hickey M, Doherty DA, Atkinson H, et al.",
-    "journal": "Journal of Pediatric and Adolescent Gynecology",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21601806/",
-    "abstract": "Study examining PCOS prevalence and characteristics in African American adolescent girls compared to other ethnic groups.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Myo-Inositol Effects on Clinical and Metabolic Features of PCOS",
-    "authors": "Gerli S, Papaleo E, Ferrari A, Di Renzo GC",
-    "journal": "Gynecological Endocrinology",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17891674/",
-    "abstract": "Clinical trial demonstrating myo-inositol's positive effects on menstrual regularity and metabolic parameters in PCOS.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Metformin and Weight Loss in PCOS: A Systematic Review",
-    "authors": "Nieuwenhuis-Ruifrok AE, Kuchenbecker WK, Hoek A, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2009",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/19196709/",
-    "abstract": "Systematic review evaluating metformin's effect on body weight and composition in women with PCOS.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Diagnosis of PCOS: The Rotterdam Criteria",
-    "authors": "Rotterdam ESHRE/ASRM-Sponsored PCOS Consensus Workshop Group",
-    "journal": "Human Reproduction",
-    "year": "2004",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/14688154/",
-    "abstract": "Landmark consensus statement establishing the Rotterdam diagnostic criteria for PCOS still used today.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Insulin Resistance in PCOS: Pathophysiology and Treatment",
-    "authors": "Dunaif A",
-    "journal": "Endocrine Reviews",
-    "year": "1997",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/9408743/",
-    "abstract": "Foundational review explaining the role of insulin resistance in PCOS pathophysiology and treatment implications.",
-    "tags": ["studies", "answers", "metformin"]
-  },
-  {
-    "title": "Hyperandrogenism in African American and White Women with PCOS",
-    "authors": "Legro RS, Myers ER, Barnhart HX, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2006",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/16849417/",
-    "abstract": "Comparative study of androgen levels and hirsutism patterns in African American vs White women with PCOS.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Combined Myo-Inositol and D-Chiro-Inositol for PCOS",
-    "authors": "Colazingari S, Treglia M, Najjar R, Bevilacqua A",
-    "journal": "Gynecological Endocrinology",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23336594/",
-    "abstract": "Study evaluating the optimal ratio of myo-inositol to D-chiro-inositol supplementation for PCOS treatment.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Long-term Metformin Use in PCOS: Safety and Efficacy",
-    "authors": "Tang T, Lord JM, Norman RJ, et al.",
-    "journal": "Human Reproduction",
-    "year": "2012",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/22416008/",
-    "abstract": "Long-term follow-up study assessing the continued benefits and safety of metformin therapy in PCOS patients.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Anti-Müllerian Hormone in PCOS Diagnosis",
-    "authors": "Dewailly D, Gronier H, Poncelet E, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21715541/",
-    "abstract": "Evaluation of anti-Müllerian hormone as a diagnostic marker for PCOS and its correlation with ovarian morphology.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "PCOS and Type 2 Diabetes: A Population-Based Study",
-    "authors": "Gambineri A, Patton L, Altieri P, et al.",
-    "journal": "Diabetes Care",
-    "year": "2012",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/22723579/",
-    "abstract": "Large population study examining the progression from PCOS to type 2 diabetes and risk factors involved.",
-    "tags": ["studies", "answers", "metformin"]
-  },
-  {
-    "title": "Inositol for Ovulation Induction in PCOS: A Randomized Trial",
-    "authors": "Raffone E, Rizzo P, Benedetto V",
-    "journal": "Gynecological Endocrinology",
-    "year": "2010",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20540676/",
-    "abstract": "Randomized controlled trial comparing myo-inositol to metformin for ovulation induction in PCOS patients.",
-    "tags": ["studies", "inositol", "metformin", "solutions"]
-  },
-  {
-    "title": "Metabolic Syndrome in Black Women with PCOS",
-    "authors": "Lo JC, Feigenbaum SL, Yang J, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2006",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/16368750/",
-    "abstract": "Study examining the prevalence and characteristics of metabolic syndrome in Black women with PCOS.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Dietary Approaches for PCOS Management",
-    "authors": "Marsh KA, Steinbeck KS, Atkinson FS, et al.",
-    "journal": "American Journal of Clinical Nutrition",
-    "year": "2010",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20071648/",
-    "abstract": "Comparative study of low glycemic index diet versus conventional diet for PCOS symptom management.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Metformin Effects on Ovulation and Fertility in PCOS",
-    "authors": "Legro RS, Barnhart HX, Schlaff WD, et al.",
-    "journal": "New England Journal of Medicine",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17287476/",
-    "abstract": "Major clinical trial comparing clomiphene, metformin, and combination therapy for ovulation induction in PCOS.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Adolescent PCOS: Clinical Features and Management",
-    "authors": "Witchel SF, Oberfield S, Rosenfield RL, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2015",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/25932998/",
-    "abstract": "Guidelines for diagnosing and treating PCOS in adolescent girls, addressing unique challenges in this population.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "Inositol and Folic Acid in PCOS: Effects on Pregnancy",
-    "authors": "Regidor PA, Schindler AE, Lesber R, et al.",
-    "journal": "European Review for Medical and Pharmacological Sciences",
-    "year": "2018",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30024632/",
-    "abstract": "Study examining the benefits of inositol and folic acid supplementation on pregnancy outcomes in PCOS women.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Hirsutism in PCOS: Evaluation and Treatment",
-    "authors": "Martin KA, Anderson RR, Chang RJ, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2018",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/29522147/",
-    "abstract": "Endocrine Society guidelines for evaluating and treating hirsutism in women with PCOS.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Racial Disparities in PCOS Diagnosis and Treatment",
-    "authors": "Hillman JK, Johnson LNC, Limber M, et al.",
-    "journal": "Journal of Racial and Ethnic Health Disparities",
     "year": "2020",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/31820407/",
-    "abstract": "Analysis of racial disparities in PCOS diagnosis timing and access to treatment among different populations.",
-    "tags": ["studies", "black-women", "answers"]
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31718828/",
+    "abstract": "High-dose metformin (1,500 mg/day) is most effective for weight loss in obese PCOS patients with insulin resistance, while rosiglitazone users show greater improvements in cholesterol and triglyceride levels.",
+    "tags": ["NIH", "treatment", "metformin", "rosiglitazone", "insulin resistance", "obesity"]
   },
   {
-    "title": "Metformin and Pregnancy Outcomes in PCOS",
-    "authors": "Glueck CJ, Goldenberg N, Wang P, et al.",
+    "title": "Association of maternal polycystic ovary syndrome and diabetes with preterm birth and offspring birth size: a population-based cohort study",
+    "authors": "Xinxia Chen, Mika Gissler, Catharina Lavebratt",
     "journal": "Human Reproduction",
-    "year": "2004",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/15117900/",
-    "abstract": "Long-term study of metformin use during pregnancy in PCOS women and effects on gestational diabetes risk.",
-    "tags": ["studies", "metformin", "solutions"]
+    "year": "2022",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35348682/",
+    "abstract": "Women with PCOS have significantly higher risks of total and spontaneous preterm birth when they also have non-insulin-treated type 2 diabetes or gestational diabetes, based on analysis of over 1 million births in Finland.",
+    "tags": ["NIH", "pregnancy outcomes", "preterm birth", "diabetes", "population study"]
   },
   {
-    "title": "Exercise Interventions for Women with PCOS",
-    "authors": "Harrison CL, Lombard CB, Moran LJ, Teede HJ",
-    "journal": "Cochrane Database of Systematic Reviews",
+    "title": "Investigation of the Association of Serum Trace Elements Concentrations and Serum Biochemical Parameters with the Risk of Polycystic Ovary Syndrome: a Case-Control Study",
+    "authors": "Priya Sharma, Harmanpreet Singh Kapoor, Balpreet Kaur, Pooja Kamra, Preeti Khetarpal",
+    "journal": "Biological Trace Element Research",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37067720/",
+    "abstract": "Multiple serum trace elements (copper, magnesium, selenium, iron, chromium, and manganese, but not zinc) and biochemical parameters including cholesterol, CRP, and albumin are significantly associated with PCOS risk in a case-control study of 99 PCOS patients and 82 controls.",
+    "tags": ["NIH", "trace elements", "biochemical parameters", "case-control study", "metabolic markers"]
+  },
+  {
+    "title": "A randomized controlled trial of combination letrozole and clomiphene citrate or letrozole alone for ovulation induction in women with polycystic ovary syndrome",
+    "authors": "Rachel B Mejia, Karen M Summers, Jessica D Kresowik, Bradley J Van Voorhis",
+    "journal": "Fertility and Sterility",
+    "year": "2019",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30683591/",
+    "abstract": "Combination therapy of letrozole and clomiphene citrate results in significantly higher ovulation rates (77% vs. 43%) compared to letrozole alone in infertile women with PCOS.",
+    "tags": ["NIH", "fertility treatment", "letrozole", "clomiphene citrate", "ovulation induction"]
+  },
+  {
+    "title": "Alterations in Gut Microbiome Composition and Barrier Function Are Associated with Reproductive and Metabolic Defects in Women with Polycystic Ovary Syndrome (PCOS): A Pilot Study",
+    "authors": "Lisa Lindheim, Mina Bashir, Julia Münzker, Christian Trummer, Verena Zachhuber, Bettina Leber, Angela Horvath, Thomas R Pieber, Gregor Gorkiewicz, Vanessa Stadlbauer, Barbara Obermayer-Pietsch",
+    "journal": "PLoS One",
+    "year": "2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28045919/",
+    "abstract": "PCOS patients have significantly lower gut microbiome diversity and altered phylogenetic composition compared to healthy controls, with specific bacterial families associated with reproductive parameters.",
+    "tags": ["NIH", "gut microbiome", "inflammation", "insulin resistance", "pilot study"]
+  },
+  {
+    "title": "A randomized, controlled trial comparing the metformin, oral contraceptive pills and their combination in patients with polycystic ovarian syndrome",
+    "authors": "Yogesh Kumar, Narendra Kotwal, Yashpal Singh, Vimal Upreti, Shrikant Somani, K V S Hari Kumar",
+    "journal": "Journal of Family Medicine and Primary Care",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30112307/",
+    "abstract": "Combination therapy with metformin and oral contraceptive pills shows superior results in reducing inflammatory markers, insulin resistance, and improving body composition compared to either drug alone in 90 PCOS patients.",
+    "tags": ["NIH", "metformin", "oral contraceptive pills", "combination therapy", "inflammation"]
+  },
+  {
+    "title": "Therapeutic effects of metformin and clomiphene in combination with lifestyle intervention on infertility in women with obese polycystic ovary syndrome",
+    "authors": "Jing Zhang, Qinqin Si, Jinqiong Li",
+    "journal": "Pakistan Journal of Medical Sciences",
+    "year": "2017",
+    "url": "https://applications.emro.who.int/imemrf/Pak_J_Med_Sci/Pak_J_Med_Sci_2017_33_1_8_12.pdf",
+    "abstract": "Lifestyle adjustment combined with metformin and clomiphene significantly improves menstrual recovery, ovulation rates, and pregnancy rates in 101 infertile women with obese PCOS compared to medication alone.",
+    "tags": ["WHO", "metformin", "clomiphene", "lifestyle intervention", "obesity", "infertility"]
+  },
+  {
+    "title": "Evaluating the effect of insulin sensitizers metformin and pioglitazone alone and in combination on women with polycystic ovary syndrome: An RCT",
+    "authors": "Seyed Mojtaba Sohrevardi, Fahime Nosouhi, Saeed Hossein Khalilzade, Parichehr Kafaie, Mojgan Karimi-Zarchi, Iman Halvaei, Mehdi Mohsenzadeh",
+    "journal": "International Journal of Reproductive BioMedicine",
+    "year": "2016",
+    "url": "https://applications.emro.who.int/imemrf/Int_J_Reprod_Biomed/Int_J_Reprod_Biomed_2016_14_12_743_754.pdf",
+    "abstract": "Both metformin and pioglitazone improve insulin resistance and menstrual cyclicity in 84 PCOS women, but only metformin significantly reduces hyperandrogenemia while pioglitazone increases body weight.",
+    "tags": ["WHO", "insulin sensitizers", "metformin", "pioglitazone", "hyperandrogenemia"]
+  },
+  {
+    "title": "Effects of metformin alone and in combination with spironolactone on hyperandrogenism in polycystic ovarian syndrome",
+    "authors": "Nasser K. Abd Elaal, Hamed E. Ellakwa, Alaa Eldeen F. El Halaby, Shaza S. Maklad",
+    "journal": "Menoufia Medical Journal",
+    "year": "2020",
+    "url": "https://applications.emro.who.int/imemrf/349/Minoufia-Med-J-2020-33-2-433-439-eng.pdf",
+    "abstract": "Adding low-dose spironolactone to metformin produces significantly greater reductions in free testosterone and clinical hyperandrogenism compared to metformin alone in 48 PCOS patients over 6 months.",
+    "tags": ["WHO", "metformin", "spironolactone", "hyperandrogenism", "combination therapy"]
+  },
+  {
+    "title": "Analysis on endocrine and metabolic features of different phenotypes of polycystic ovary syndrome patients",
+    "authors": "Feng Li, Li Yao, Hong Wu, Shihong Cao",
+    "journal": "Pakistan Journal of Pharmaceutical Sciences",
+    "year": "2016",
+    "url": "https://applications.emro.who.int/imemrf/Pak_J_Pharm_Sci/Pak_J_Pharm_Sci_2016_29_5_supp_1735_1738.pdf",
+    "abstract": "Analysis of 226 PCOS patients shows four distinct phenotypes with different endocrine and metabolic profiles, with the anovulation plus polycystic ovary phenotype being most common (55.8%) and phenotype classification guiding individualized treatment.",
+    "tags": ["WHO", "phenotypes", "endocrine features", "metabolic features", "classification"]
+  },
+  {
+    "title": "Neurokinin B Receptor Antagonism in Women With Polycystic Ovary Syndrome: A Randomized, Placebo-Controlled Trial",
+    "authors": "Jyothis T. George, Rahul Kakkar, Jayne Marshall, Martin L. Scott, Richard D. Finkelman, Tony W. Ho, Johannes Veldhuis, Karolina Skorupskaite, Richard A. Anderson, Stuart McIntosh, Lorraine Webber",
+    "journal": "The Journal of Clinical Endocrinology & Metabolism",
+    "year": "2016",
+    "url": "https://academic.oup.com/jcem/article/101/11/4313/2765012",
+    "abstract": "The neurokinin-3 receptor antagonist AZD4901 (80 mg/day) significantly reduces LH pulse frequency by 52%, LH levels, and testosterone concentrations by 28.7% in 65 women with PCOS, presenting a novel targeted treatment approach.",
+    "tags": ["Oxford", "NK3 receptor antagonist", "neuroendocrine", "LH", "testosterone", "novel treatment"]
+  },
+  {
+    "title": "Increased COVID-19 infections in women with polycystic ovary syndrome: a population-based study",
+    "authors": "Anuradhaa Subramanian, Astha Anand, Nicola J Adderley, Kelvin Okoth, Konstantinos A Toulis, Krishna Gokhale, Christopher Sainsbury, Michael W O'Reilly, Wiebke Arlt, Krishnarajah Nirantharakumar",
+    "journal": "European Journal of Endocrinology",
+    "year": "2021",
+    "url": "https://academic.oup.com/ejendo/article/184/5/637/6653964",
+    "abstract": "Women with PCOS have a 28% increased risk of COVID-19 infection (adjusted HR 1.28) in a UK population study of 21,292 PCOS women and 78,310 matched controls, independent of BMI and other risk factors.",
+    "tags": ["Oxford", "COVID-19", "infection risk", "population study", "comorbidities"]
+  },
+  {
+    "title": "Childhood, adolescent, and adulthood adiposity are associated with risk of PCOS: a Mendelian randomization study with meta-analysis",
+    "authors": "Laurence J Dobbie, Bradley Pittam, Sizheng Steven Zhao, Uazman Alam, Theresa J Hydes, Thomas M Barber, Daniel J Cuthbertson",
+    "journal": "Human Reproduction",
+    "year": "2023",
+    "url": "https://academic.oup.com/humrep/article/38/6/1168/7104032",
+    "abstract": "Mendelian randomization analysis reveals that excess body fat during childhood, adolescence, and adulthood independently and linearly increases PCOS risk, with childhood body size showing an independent effect (OR 2.56) even after adjusting for adult body size.",
+    "tags": ["Oxford", "Mendelian randomization", "childhood obesity", "adiposity", "risk factors", "prevention"]
+  },
+  {
+    "title": "Randomized Controlled Trial of Preconception Interventions in Infertile Women With Polycystic Ovary Syndrome",
+    "authors": "Richard S. Legro, William C. Dodson, Penny M. Kris-Etherton, Allen R. Kunselman, Christy M. Stetter, Nancy I. Williams, Carol L. Gnatuk, Stephanie J. Estes, Jennifer Fleming, Kelly C. Allison, David B. Sarwer, Christos Coutifaris, Anuja Dokras",
+    "journal": "The Journal of Clinical Endocrinology & Metabolism",
+    "year": "2015",
+    "url": "https://academic.oup.com/jcem/article/100/11/4048/2836087",
+    "abstract": "Preconception weight loss interventions (lifestyle modification with or without OCPs) achieve 6.2-6.4% weight loss, eliminate adverse metabolic effects of OCPs, and lead to superior ovulation rates (60-67% vs. 46% with OCPs alone) in 149 overweight/obese PCOS women.",
+    "tags": ["Oxford", "preconception", "lifestyle modification", "weight loss", "fertility", "ovulation"]
+  },
+  {
+    "title": "Sexual dysfunction in women with PCOS: a case control study",
+    "authors": "H Pastoor, M C Timman, W L D M Nelen, A Bos-Roubos, J S E Laven, R van Dreven, W L J M Schoonderwoerd-Rooijackers, J M M van Lith, C B Lambalk, E A F Dancet, C Weiss, A M H Brandenbarg, K G H Wiersema, B W Mol, C T Brouwer",
+    "journal": "Human Reproduction",
+    "year": "2023",
+    "url": "https://academic.oup.com/humrep/article/38/11/2230/7286979",
+    "abstract": "Women with PCOS report significantly higher rates of sexual dysfunction (41.2% vs. 11.9%) and sexual distress (51.5% vs. 19.4%) compared to controls in a case-control study of 135 women, with minimal association to androgen levels.",
+    "tags": ["Oxford", "sexual dysfunction", "quality of life", "psychological impact", "case-control study"]
+  },
+  {
+    "title": "Global, regional, and national burden of infertility attributable to PCOS, 1990–2019",
+    "authors": "Yilei Dong, Qiqi Cai, Jiajun Du, Chengxi Li, Wenfeng Song, Jie Kang, Lihua Duan",
+    "journal": "Human Reproduction",
+    "year": "2024",
+    "url": "https://academic.oup.com/humrep/article/39/1/108/7452815",
+    "abstract": "Global analysis of 204 countries from 1990-2019 reveals the burden of PCOS-attributable infertility increased sharply, with highest rates in high SDI regions and greatest annual increases in middle and low-middle SDI regions.",
+    "tags": ["Oxford", "global burden", "infertility", "epidemiology", "GBD study"]
+  },
+  {
+    "title": "Prevalence and phenotypic features of polycystic ovary syndrome: a systematic review and meta-analysis",
+    "authors": "Gurkan Bozdag, Sezcan Mumusoglu, Defne Zengin, Engin Karabulut, Bulent Okan Yildiz",
+    "journal": "Human Reproduction",
+    "year": "2016",
+    "url": "https://academic.oup.com/humrep/article/31/12/2841/2730240",
+    "abstract": "Systematic review and meta-analysis of 55 reports shows PCOS prevalence varies by diagnostic criteria: NIH 6% (5-8%), Rotterdam 10% (8-13%), and AE-PCOS Society 10% (7-13%) in general populations.",
+    "tags": ["Oxford", "prevalence", "diagnostic criteria", "systematic review", "meta-analysis"]
+  },
+  {
+    "title": "Moderate increases in daily step count are associated with reduced IL6 and CRP in women with PCOS",
+    "authors": "M A Webb, H Mani, S J Robertson, H L Waller, D R Webb, C L Edwardson, D H Bodicoat, T Yates, K Khunti, M J Davies",
+    "journal": "Endocrine Connections",
+    "year": "2018",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/7/12/EC-18-0438.xml",
+    "abstract": "Modest increases of 1000 steps per day are associated with 13% reductions in both IL6 and CRP inflammatory markers in 65 women with PCOS over 6 months, potentially reducing future diabetes and cardiovascular disease risk.",
+    "tags": ["Journal of Endocrinology", "physical activity", "inflammation", "IL6", "CRP", "lifestyle intervention"]
+  },
+  {
+    "title": "Characteristic gut microbiota and predicted metabolic functions in women with PCOS",
+    "authors": "Liang Zhou, Zhexin Ni, Wei Cheng, Jiahui Yu, Sun Sun, Dan Zhai, Chaoqin Yu, Zhuo Cai",
+    "journal": "Endocrine Connections",
+    "year": "2020",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/9/1/EC-19-0522.xml",
+    "abstract": "High-throughput 16S rRNA gene sequencing of 101 women reveals that obese and non-obese PCOS patients have distinct characteristic gut microbiota (Coprococcus_2 in obese, Lactococcus in non-obese) with differences in predicted metabolic functions.",
+    "tags": ["Journal of Endocrinology", "gut microbiota", "obesity", "metabolic functions", "16S rRNA"]
+  },
+  {
+    "title": "Androgens impair β-cell function in a mouse model of polycystic ovary syndrome by activating endoplasmic reticulum stress",
+    "authors": "Weiying Zhang, Jia Xu, Jing Bian, Chun Xu, Jiao Xu, Yi Chen, Dandan Zhao, Danhua Lu, Chunmei Liang",
+    "journal": "Endocrine Connections",
+    "year": "2021",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/10/3/EC-20-0608.xml",
+    "abstract": "Androgen excess in a DHEA-induced PCOS mouse model impairs β-cell function through activation of endoplasmic reticulum stress, which can be reversed by blocking this pathway to improve insulin homeostasis and reduce hyperinsulinemia.",
+    "tags": ["Journal of Endocrinology", "animal model", "β-cell function", "ER stress", "androgens", "hyperinsulinemia"]
+  },
+  {
+    "title": "Changes in clinical and biochemical characteristics of polycystic ovary syndrome with advancing age",
+    "authors": "Sebastião Freitas de Medeiros, Matheus Antônio Souto de Medeiros, Márcia Marly Winck Yamamoto, Jacklyne Silva Barbosa, José Maria Soares Júnior",
+    "journal": "Endocrine Connections",
+    "year": "2020",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/9/2/EC-19-0496.xml",
+    "abstract": "Cross-sectional study of 796 PCOS and 444 control women shows that serum androgen levels decrease with aging in PCOS but remain elevated compared to controls, while carbohydrate markers, triglycerides, and cholesterol tend to worsen over time.",
+    "tags": ["Journal of Endocrinology", "aging", "longitudinal changes", "androgens", "metabolic markers"]
+  },
+  {
+    "title": "Adrenal hyperandrogenism does not deteriorate insulin resistance and lipid profile in women with PCOS",
+    "authors": "Ilias Moustakli, Konstantinos Dafopoulos, Alexandros Sotiriou, Efstratios Kolibianakis, Dimitrios G Goulis, Basil C Tarlatzis",
+    "journal": "Endocrine Connections",
+    "year": "2017",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/6/8/EC-17-0239.xml",
+    "abstract": "Study of 372 PCOS women shows that the presence of adrenal hyperandrogenism (elevated DHEA-S) does not worsen metabolic parameters including insulin resistance and lipid profile, and may even prevent further metabolic deterioration.",
+    "tags": ["Journal of Endocrinology", "adrenal hyperandrogenism", "DHEA-S", "insulin resistance", "metabolic profile"]
+  },
+  {
+    "title": "Reproductive and metabolic features during puberty in sons of women with polycystic ovary syndrome",
+    "authors": "Nicolás Crisosto, Barbara Echiburú, Manuel Maliqueo, Marta Luchsinger, Pedro Rojas, Sergio Recabarren, Teresa Sir-Petermann",
+    "journal": "Endocrine Connections",
+    "year": "2017",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/6/8/EC-17-0218.xml",
+    "abstract": "Sons of women with PCOS show increased total cholesterol and LDL levels during puberty compared to controls (69 PCOS sons vs. 84 control sons), suggesting latent insulin resistance and future cardiovascular risk that requires monitoring.",
+    "tags": ["Journal of Endocrinology", "offspring", "intergenerational effects", "metabolic risk", "puberty"]
+  },
+  {
+    "title": "Polycystic ovary syndrome and risk factors for gestational diabetes",
+    "authors": "Terhi Piltonen, Laure Morin-Papunen, Riitta Koivunen, Sari Ruokonen, Jouko Tapanainen, Eila Pesonen",
+    "journal": "Endocrine Connections",
+    "year": "2018",
+    "url": "https://ec.bioscientifica.com/view/journals/ec/7/7/EC-18-0076.xml",
+    "abstract": "FinnGeDi multicentre study of 1,146 GDM women and 1,066 controls shows PCOS is not an independent risk factor for gestational diabetes, with increased GDM risk in PCOS women mainly related to obesity rather than PCOS itself.",
+    "tags": ["Journal of Endocrinology", "gestational diabetes", "pregnancy complications", "obesity", "risk factors"]
+  },
+  {
+    "title": "Trends, Predictors, and Outcomes of Cardiovascular Complications Associated With Polycystic Ovary Syndrome During Delivery Hospitalizations: A National Inpatient Sample Analysis (2002-2019)",
+    "authors": "Salman Zahid, Muhammad Zia Khan, Smitha Gowda, Nadeen N. Faza, Michael C. Honigberg, Arthur Jason Vaught, Carolyn Guan, Anum S. Minhas, Erin D. Michos",
+    "journal": "Journal of the American Heart Association",
+    "year": "2022",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35708290/",
+    "abstract": "National Inpatient Sample analysis of 71.4 million delivery hospitalizations (2002-2019) shows PCOS is an independent predictor of cardiovascular complications including preeclampsia (aOR 1.56), eclampsia (aOR 1.58), peripartum cardiomyopathy (aOR 1.79), and heart failure (aOR 1.76).",
+    "tags": ["Johns Hopkins", "cardiovascular complications", "pregnancy", "preeclampsia", "national database"]
+  },
+  {
+    "title": "Association between polycystic ovary syndrome and hot flash presentation during the midlife period",
+    "authors": "Ophelia Yin, Howard A. Zacur, Jodi A. Flaws, Mindy S. Christianson",
+    "journal": "Menopause",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29360703/",
+    "abstract": "Midlife Women's Health Study of 453 women aged 45-54 (42 with PCOS, 411 controls) shows history of PCOS is not associated with increased hot flash symptoms during the midlife/menopausal period, with smoking being the only significant predictor.",
+    "tags": ["Johns Hopkins", "menopause", "hot flashes", "midlife", "quality of life"]
+  },
+  {
+    "title": "A Hyperandrogenic Mouse Model to Study Polycystic Ovary Syndrome",
+    "authors": "Ping Xue, Zhiqiang Wang, Xiaomin Fu, Junjiang Wang, Gopika Punchhi, Andrew Wolfe, Sheng Wu",
+    "journal": "Journal of Visualized Experiments",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30346398/",
+    "abstract": "Protocol describes a lean hyperandrogenic PCOS mouse model using monthly-replaced DHT crystal pellets that produces 2-fold elevated DHT levels, reproductive and metabolic dysfunction without weight changes, and transgenerational effects in offspring.",
+    "tags": ["Johns Hopkins", "animal model", "DHT", "hyperandrogenism", "research methodology"]
+  },
+  {
+    "title": "Insulin signaling displayed a differential tissue-specific response to low-dose dihydrotestosterone in female mice",
+    "authors": "Stanley Andrisse, Katelyn Billings, Ping Xue, Sheng Wu",
+    "journal": "American Journal of Physiology - Endocrinology and Metabolism",
+    "year": "2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29351485/",
+    "abstract": "Low-dose DHT in female mice demonstrates tissue-specific differential effects on insulin signaling, with impaired signaling in liver and adipose tissue but enhanced or unchanged signaling in ovaries and pituitaries, independent of hyperinsulinemia.",
+    "tags": ["Johns Hopkins", "insulin signaling", "tissue-specific response", "DHT", "animal model"]
+  },
+  {
+    "title": "A Systematic Review and Meta-Analysis of the Association Between Polycystic Ovary Syndrome and Coronary Artery Calcification",
+    "authors": "Olatokunbo Osibogun, Oluseye Ogunmoroti, Olamide B. Kolade, Allison G. Hays, Victor Okunrintemi, Anum S. Minhas, Martha Gulati, Erin D. Michos",
+    "journal": "Journal of Women's Health",
+    "year": "2022",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35575750/",
+    "abstract": "Systematic review and meta-analysis of 7 studies with 2,341 participants shows women with PCOS have approximately twofold greater odds of coronary artery calcification (pooled aOR 2.48 for cohort studies, 1.88 for cross-sectional studies) compared to women without PCOS.",
+    "tags": ["Johns Hopkins", "cardiovascular disease", "coronary artery calcification", "meta-analysis", "CVD risk"]
+  },
+  {
+    "title": "Androgen-induced insulin resistance is ameliorated by deletion of hepatic androgen receptor in females",
+    "authors": "Stanley Andrisse, Mingxiao Feng, Zhiqiang Wang, Olubusayo Awe, Lexiang Yu, Haiying Zhang, Sheng Bi, Hongbing Wang, Linhao Li, Serene Joseph, Nicola Heller, Franck Mauvais-Jarvis, Guang William Wong, James Segars, Andrew Wolfe, Sara Divall, Rexford Ahima, Sheng Wu",
+    "journal": "FASEB Journal",
+    "year": "2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34547140/",
+    "abstract": "Female mice with hepatic androgen receptor deletion (LivARKO) are protected from DHT-induced glucose intolerance, insulin resistance, and metabolic dysfunction, demonstrating that elevated androgens disrupt female metabolic function specifically through hepatic androgen receptor signaling.",
+    "tags": ["Johns Hopkins", "androgen receptor", "insulin resistance", "hepatic function", "animal model", "molecular mechanisms"]
+  },
+  {
+    "title": "The Role of Lifestyle Interventions in PCOS Management: A Systematic Review",
+    "authors": "Gautam R, Maan P, Jyoti A, Kumar A, Malhotra N, Arora T",
+    "journal": "Nutrients",
+    "year": "2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39861440/",
+    "abstract": "Dietary interventions including low-GI foods, caloric restriction, omega-3 diets, ketogenic diets, Mediterranean diets, and anti-inflammatory diets improve insulin sensitivity and hormonal balance in women with PCOS; physical activity enhances insulin sensitivity and weight loss.",
+    "tags": [
+      "NIH",
+      "diet",
+      "lifestyle",
+      "physical activity",
+      "insulin resistance",
+      "inflammation"
+    ]
+  },
+  {
+    "title": "The overlooked mental health burden of polycystic ovary syndrome: neurobiological insights into PCOS-related depression",
+    "authors": "Dubé-Zinatelli E, Anderson F, Ismail N",
+    "journal": "Frontiers in Neuroendocrinology",
+    "year": "2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40609837/",
+    "abstract": "Women with PCOS face heightened risk of depression due to dysregulation in endocrine and immune systems and gut microbiome disturbances; symptoms like infertility, obesity, and hirsutism cause psychological distress that exacerbates depression.",
+    "tags": [
+      "NIH",
+      "mental health",
+      "depression",
+      "gut microbiome",
+      "inflammation",
+      "quality of life"
+    ]
+  },
+  {
+    "title": "The prevalence and risk of anxiety and depression in polycystic ovary syndrome: an overview of systematic reviews with meta-analysis",
+    "authors": "Abdul Jafar NK, Al Balushi A, Subramanian A, Lee SI, Bennett CJ, Moran LJ, Mousa A, Tay CT, Teede HJ, Mansfield DR",
+    "journal": "European Journal of Endocrinology",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39453529/",
+    "abstract": "Anxiety symptoms were highly prevalent in PCOS (prevalence varied by questionnaire: Hamilton Anxiety Scale 69.4%, HADS 41.5%); depression symptoms were most prevalent using Beck Depression Inventory (46.0%); PCOS women had higher risk of anxiety and depression than controls.",
+    "tags": [
+      "Journal of Endocrinology",
+      "mental health",
+      "depression",
+      "anxiety",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Polycystic ovary syndrome and mental disorders: a systematic review and exploratory meta-analysis",
+    "authors": "Cooney LG, Lee I, Sammel MD, Dokras A",
+    "journal": "Neuropsychiatric Disease and Treatment",
+    "year": "2017",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5108561/",
+    "abstract": "Women with PCOS had higher rates of anxiety (OR 2.76, 95% CI 1.26-6.02) and depressive symptoms (OR 3.51, 95% CI 1.97-6.24) compared to women without PCOS; anxiety and depression are more prevalent in PCOS patients.",
+    "tags": [
+      "NIH",
+      "mental health",
+      "depression",
+      "anxiety",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Analysis of risk factors for depression and anxiety in women with polycystic ovary syndrome",
+    "authors": "Yang Y, Liu L, Hu N, Huo H, Yang X, Wang F",
+    "journal": "Frontiers in Global Women's Health",
+    "year": "2025",
+    "url": "https://www.frontiersin.org/journals/global-womens-health/articles/10.3389/fgwh.2025.1520641/full",
+    "abstract": "Depression and anxiety prevalence in PCOS was 47.7% and 39.9% respectively; depression was significantly associated with serum FT3, sleep duration, and daytime dysfunction; anxiety was associated with daytime dysfunction.",
+    "tags": [
+      "mental health",
+      "depression",
+      "anxiety",
+      "sleep disorders"
+    ]
+  },
+  {
+    "title": "PCOS Physiopathology and Vitamin D Deficiency: Biological Insights and Perspectives for Treatment",
+    "authors": "Lerchbaum E, Rabe T",
+    "journal": "Journal of Clinical Medicine",
+    "year": "2022",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35956124/",
+    "abstract": "Women with PCOS are deficient in vitamin D, particularly those with higher weight; hypovitaminosis is a risk factor for glucose intolerance and associated with insulin resistance and increased diabetes risk; vitamin D supplementation improved glucose homeostasis and hormonal status.",
+    "tags": [
+      "vitamin D",
+      "insulin resistance",
+      "metabolic effects",
+      "supplementation"
+    ]
+  },
+  {
+    "title": "Vitamin D and polycystic ovary syndrome (PCOS): a review",
+    "authors": "Thakur D, Kaur A",
+    "journal": "Journal of Family Medicine and Primary Care",
+    "year": "2023",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10328709/",
+    "abstract": "67-85% of PCOS women have vitamin D deficiency; low vitamin D levels exacerbate PCOS symptoms including insulin resistance, menstrual irregularities, infertility, hyperandrogenism, and obesity; vitamin D supplementation may improve symptoms.",
+    "tags": [
+      "NIH",
+      "vitamin D",
+      "insulin resistance",
+      "infertility",
+      "hyperandrogenism"
+    ]
+  },
+  {
+    "title": "Vitamin D deficiency is common and associated with metabolic risk factors in patients with polycystic ovary syndrome",
+    "authors": "Li HW, Brereton RE, Anderson RA, Wallace AM, Ho CK",
+    "journal": "BJOG: An International Journal of Obstetrics & Gynaecology",
     "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21735444/",
-    "abstract": "Systematic review of exercise interventions and their effects on PCOS symptoms and metabolic health.",
-    "tags": ["studies", "solutions", "answers"]
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21550088/",
+    "abstract": "44.0% of PCOS women had severe vitamin D deficiency vs 11.2% of controls (p=0.047); vitamin D concentrations negatively correlated with BMI, C-reactive protein, and free androgen index and positively correlated with insulin sensitivity and HDL-C.",
+    "tags": [
+      "Oxford",
+      "vitamin D",
+      "insulin resistance",
+      "metabolic syndrome",
+      "inflammation"
+    ]
   },
   {
-    "title": "Inositol Isomers: Differential Effects in PCOS",
-    "authors": "Monastra G, Unfer V, Harrath AH, Bizzarri M",
-    "journal": "International Journal of Endocrinology",
-    "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/29138633/",
-    "abstract": "Review comparing the different biological effects of myo-inositol and D-chiro-inositol in PCOS treatment.",
-    "tags": ["studies", "inositol", "answers"]
+    "title": "Resistance and aerobic training increases genome-wide DNA methylation in women with polycystic ovary syndrome",
+    "authors": "Vieira Neto L, Medeiros SF, Norman RJ",
+    "journal": "Scientific Reports",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38245873/",
+    "abstract": "Both resistance and aerobic exercise improved anthropometric indices, metabolic dysfunction, and hyperandrogenism in PCOS after 16 weeks; exercise increased genome-wide DNA methylation which may relate to metabolic and hormonal changes and promote health and longevity.",
+    "tags": [
+      "NIH",
+      "exercise",
+      "epigenetics",
+      "DNA methylation",
+      "metabolic effects",
+      "hyperandrogenism"
+    ]
   },
   {
-    "title": "Acne in PCOS: Pathogenesis and Treatment",
-    "authors": "Housman E, Reynolds RV",
-    "journal": "American Journal of Clinical Dermatology",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/24453993/",
-    "abstract": "Review of acne pathogenesis in PCOS and evidence-based treatment approaches including hormonal therapies.",
-    "tags": ["studies", "solutions", "answers"]
+    "title": "Exercise Interventions in Polycystic Ovary Syndrome: A Systematic Review and Meta-Analysis",
+    "authors": "Dos Santos IK, Ashe MC, Cobucci RN, Soares GM, de Oliveira Maranhão TM, Dantas PMS",
+    "journal": "Frontiers in Physiology",
+    "year": "2020",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7358428/",
+    "abstract": "Aerobic exercise of various intensities consistently improved VO2peak in PCOS; moderate intensity exercise improved waist circumference and BMI when combined with diet; resistance training showed promising improvements in free androgen index and insulin resistance.",
+    "tags": [
+      "NIH",
+      "exercise",
+      "physical activity",
+      "insulin resistance",
+      "hyperandrogenism",
+      "weight loss"
+    ]
   },
   {
-    "title": "Metformin vs Inositol: Head-to-Head Comparison",
-    "authors": "Fruzzetti F, Perini D, Russo M, et al.",
-    "journal": "European Review for Medical and Pharmacological Sciences",
-    "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28644449/",
-    "abstract": "Direct comparison study of metformin and myo-inositol efficacy in treating PCOS symptoms.",
-    "tags": ["studies", "metformin", "inositol", "solutions"]
+    "title": "A Systematic Review of the Effects of Exercise on Hormones in Women with Polycystic Ovary Syndrome",
+    "authors": "Jiskoot G, Dietz de Loos A, Beerthuizen A, Timman R, Busschbach J, Laven J",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33467251/",
+    "abstract": "Vigorous aerobic exercise and resistance training improve insulin sensitivity and androgen levels in PCOS; recommended guidelines include both exercise types; resistance training may improve androgen levels though additional studies are warranted.",
+    "tags": [
+      "NIH",
+      "exercise",
+      "physical activity",
+      "insulin resistance",
+      "hyperandrogenism"
+    ]
   },
   {
-    "title": "Obesity and PCOS in African American Women",
-    "authors": "Sam S, Dunaif A",
-    "journal": "Current Opinion in Endocrinology, Diabetes and Obesity",
-    "year": "2003",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20127181/",
-    "abstract": "Review examining the relationship between obesity and PCOS severity in African American women.",
-    "tags": ["studies", "black-women", "answers"]
+    "title": "The effects of different exercises on weight loss and hormonal changes in women with polycystic ovarian syndrome: a network meta-analysis study",
+    "authors": "Hajizadeh F, Fathollahi-Shourabeh F, Moezy A, Salesi M",
+    "journal": "BMC Women's Health",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39272076/",
+    "abstract": "Moderate-intensity aerobic exercise is most effective for reducing BMI in PCOS compared to no intervention and yoga; other forms of exercise were ineffective for weight loss; exercise had no significant impact on sex hormones or menstrual regularity.",
+    "tags": [
+      "exercise",
+      "physical activity",
+      "weight loss",
+      "BMI"
+    ]
   },
   {
-    "title": "Sleep Apnea in Women with PCOS",
-    "authors": "Vgontzas AN, Legro RS, Bixler EO, et al.",
+    "title": "Polycystic Ovarian Syndrome Genetics and Epigenetics",
+    "authors": "Chen ZJ, Zhao H, He L, Shi Y, Qin Y, Shi Y, Li Z, You L, Zhao J, Liu J, Liang X, Zhao X, Zhao J, Sun Y, Zhang B, Jiang H, Zhao D, Bian Y, Gao X, Geng L, Li Y, Zhu D, Sun X, Xu JE, Hao C, Ren CE, Zhang Y, Chen S, Zhang W, Yang A, Yan J, Li Y, Ma J, Zhao Y",
+    "journal": "Frontiers in Genetics",
+    "year": "2021",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7855879/",
+    "abstract": "PCOS is a complex disorder with heritable genetics suspected due to familial clustering; genome-wide DNA methylation and microRNA patterns may improve diagnosis accuracy; mitochondrial DNA variants contribute to inflammation and insulin resistance.",
+    "tags": [
+      "NIH",
+      "genetics",
+      "epigenetics",
+      "heritability",
+      "inflammation",
+      "insulin resistance"
+    ]
+  },
+  {
+    "title": "Epigenetic inheritance of PCOS by developmental programming and germline transmission",
+    "authors": "Stener-Victorin E, Padmanabhan V, Walters KA, Campbell RE, Benrick A, Giacobini P, Dumesic DA, Abbott DH",
+    "journal": "Journal of Clinical Endocrinology & Metabolism",
+    "year": "2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39732517/",
+    "abstract": "Emerging research suggests potential transgenerational inheritance of PCOS through genetic and epigenetic mechanisms; PCOS-related risks may affect subsequent generations including sons; developmental programming plays a key role.",
+    "tags": [
+      "NIH",
+      "genetics",
+      "epigenetics",
+      "heritability",
+      "developmental programming"
+    ]
+  },
+  {
+    "title": "Epigenetic inheritance of polycystic ovary syndrome - challenges and opportunities for treatment",
+    "authors": "Stener-Victorin E, Deng Q",
+    "journal": "Nature Reviews Endocrinology",
+    "year": "2021",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34234312/",
+    "abstract": "Genetic loci account for only 10% of PCOS heritability (estimated at 70%); altered epigenetic and developmental programming from maternal uterine environment contributes to pathogenesis; PCOS-like traits are transgenerationally inherited up to F3 generation.",
+    "tags": [
+      "genetics",
+      "epigenetics",
+      "heritability",
+      "developmental programming"
+    ]
+  },
+  {
+    "title": "Genetic Basis of Polycystic Ovary Syndrome (PCOS): Current Perspectives",
+    "authors": "Escobar-Morreale HF",
+    "journal": "Frontiers in Endocrinology",
+    "year": "2019",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6935309/",
+    "abstract": "PCOS is a polygenic and multifactorial disorder with complex pathophysiology involving multiple pathways and proteins; epigenetic changes are transgenerationally heritable; increased fetal androgen exposure causes epigenetic changes contributing to PCOS development.",
+    "tags": [
+      "NIH",
+      "genetics",
+      "epigenetics",
+      "hyperandrogenism",
+      "developmental programming"
+    ]
+  },
+  {
+    "title": "PCOS and genetics: Exploring the heterogeneous role of potential genes in ovarian dysfunction, a hallmark of PCOS",
+    "authors": "Nishanthini J, Kandasamy S, Bose Vijay K, Balamurugan K",
+    "journal": "Reproductive Biology",
+    "year": "2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40222066/",
+    "abstract": "Key genes involved in ovarian dysfunction in PCOS include CYP11A1, CYP17A1, CYP19A1, AR, FSHR, LHCGR, AMH, INSR, SHBG, IRS1, GATA4, ADIPOQ, YAP1, TCF7L2, and DENND1A; epigenetic factors and miRNAs also play critical roles.",
+    "tags": [
+      "genetics",
+      "ovarian dysfunction",
+      "hyperandrogenism",
+      "insulin resistance",
+      "epigenetics"
+    ]
+  },
+  {
+    "title": "Increased prevalence of obstructive sleep apnea syndrome in obese women with polycystic ovary syndrome",
+    "authors": "Vgontzas AN, Legro RS, Bixler EO, Grayev A, Kales A, Chrousos GP",
     "journal": "Journal of Clinical Endocrinology & Metabolism",
     "year": "2001",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/11232013/",
-    "abstract": "Study demonstrating increased prevalence of sleep apnea in PCOS and its metabolic implications.",
-    "tags": ["studies", "answers"]
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11238505/",
+    "abstract": "Obese PCOS women had higher apnea-hypopnea index (22.5 vs 6.7, p=0.008) and were more likely to have symptomatic OSA syndrome (44.4% vs 5.5%, p=0.008); AHI correlated with waist-hip ratio, testosterone, and unbound testosterone.",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "obesity",
+      "hyperandrogenism",
+      "insulin resistance"
+    ]
   },
   {
-    "title": "Inositol for Gestational Diabetes Prevention in PCOS",
-    "authors": "D'Anna R, Di Benedetto V, Rizzo P, et al.",
-    "journal": "Obstetrics & Gynecology",
-    "year": "2012",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23168752/",
-    "abstract": "Clinical trial showing myo-inositol supplementation reduces gestational diabetes risk in pregnant PCOS women.",
-    "tags": ["studies", "inositol", "solutions"]
+    "title": "Obstructive sleep apnea syndrome in polycystic ovary syndrome: a systematic review and meta-analysis",
+    "authors": "Abdul Jafar NK, Al Balushi A, Subramanian A, Lee SI, Bennett CJ, Moran LJ, Mousa A, Tay CT, Teede HJ, Mansfield DR",
+    "journal": "Frontiers in Endocrinology",
+    "year": "2025",
+    "url": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2025.1532519/full",
+    "abstract": "PCOS is associated with high prevalence of obstructive sleep apnea; prevalence ranged 17-75% in PCOS vs general population; OSA is associated with obesity, insulin resistance, gestational diabetes, type 2 diabetes, hypertension, and impaired quality of life.",
+    "tags": [
+      "sleep apnea",
+      "obesity",
+      "insulin resistance",
+      "cardiovascular",
+      "quality of life"
+    ]
   },
   {
-    "title": "Anti-Androgen Therapy in PCOS",
-    "authors": "Paradisi R, Venturoli S",
-    "journal": "Journal of Endocrinological Investigation",
-    "year": "2010",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21084988/",
-    "abstract": "Comprehensive review of anti-androgen medications for treating hyperandrogenic symptoms in PCOS.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Metformin Extended-Release in PCOS",
-    "authors": "Hoeger KM, Kochman L, Wixom N, et al.",
+    "title": "Polycystic ovary syndrome is associated with obstructive sleep apnea and daytime sleepiness: role of insulin resistance",
+    "authors": "Vgontzas AN, Legro RS, Bixler EO, Grayev A, Kales A, Chrousos GP",
     "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2004",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/15356012/",
-    "abstract": "Study comparing extended-release metformin to immediate-release formulation for PCOS treatment.",
-    "tags": ["studies", "metformin", "solutions"]
+    "year": "2001",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11158002/",
+    "abstract": "PCOS patients were 30 times more likely to have sleep disordered breathing than controls (OR 30.6, 95% CI 7.2-139.4); insulin resistance is a stronger risk factor than BMI or testosterone for sleep apnea in PCOS.",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "insulin resistance",
+      "hyperandrogenism"
+    ]
   },
   {
-    "title": "Fertility Treatments in PCOS: Evidence Review",
-    "authors": "Thessaloniki ESHRE/ASRM-Sponsored PCOS Consensus Workshop Group",
-    "journal": "Human Reproduction",
-    "year": "2008",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/18308833/",
-    "abstract": "Consensus guidelines for fertility treatment options in women with PCOS.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Ethnic Variation in PCOS Metabolic Features",
-    "authors": "Zhao Y, Qiao J",
-    "journal": "Human Reproduction Update",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23303573/",
-    "abstract": "Review of how PCOS metabolic manifestations vary across different ethnic populations.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Inositol: Mechanism of Action in PCOS",
-    "authors": "Croze ML, Soulage CO",
-    "journal": "International Journal of Endocrinology",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/24285951/",
-    "abstract": "Scientific review explaining how inositol improves insulin signaling and ovarian function in PCOS.",
-    "tags": ["studies", "inositol", "answers"]
-  },
-  {
-    "title": "PCOS and Endometrial Cancer Risk",
-    "authors": "Barry JA, Azizia MM, Hardiman PJ",
-    "journal": "Human Reproduction Update",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/24688118/",
-    "abstract": "Meta-analysis examining the increased risk of endometrial cancer in women with PCOS.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Metformin Gastrointestinal Side Effects: Management",
-    "authors": "McCreight LJ, Bailey CJ, Pearson ER",
-    "journal": "Diabetologia",
-    "year": "2016",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/26620237/",
-    "abstract": "Practical guidance for managing common gastrointestinal side effects of metformin therapy.",
-    "tags": ["studies", "metformin", "answers"]
-  },
-  {
-    "title": "Weight Management Strategies in PCOS",
-    "authors": "Moran LJ, Ko H, Misso M, et al.",
-    "journal": "Cochrane Database of Systematic Reviews",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23450531/",
-    "abstract": "Systematic review of dietary and lifestyle interventions for weight management in PCOS.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "PCOS Genetics: Recent Discoveries",
-    "authors": "Day F, Karaderi T, Jones MR, et al.",
-    "journal": "PLoS Genetics",
-    "year": "2018",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30566500/",
-    "abstract": "Large genome-wide association study identifying genetic variants associated with PCOS risk.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Inositol and Egg Quality in PCOS IVF",
-    "authors": "Ciotta L, Stracquadanio M, Pagano I, et al.",
-    "journal": "European Review for Medical and Pharmacological Sciences",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21809550/",
-    "abstract": "Study showing myo-inositol supplementation improves oocyte quality in PCOS women undergoing IVF.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Hair Loss in PCOS: Causes and Treatment",
-    "authors": "Quinn M, Shinkai K, Pasch L, et al.",
-    "journal": "Journal of the American Academy of Dermatology",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/25264237/",
-    "abstract": "Review of female pattern hair loss in PCOS and evidence-based treatment approaches.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Metformin vs Lifestyle Intervention in PCOS",
-    "authors": "Legro RS, Dodson WC, Kris-Etherton PM, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2015",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/26053201/",
-    "abstract": "Randomized trial comparing metformin to intensive lifestyle modification for PCOS treatment.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "PCOS and Non-Alcoholic Fatty Liver Disease",
-    "authors": "Brzozowska MM, Ostapowicz G, Weltman MD",
-    "journal": "Clinical Endocrinology",
-    "year": "2009",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/19170717/",
-    "abstract": "Study examining the prevalence and severity of fatty liver disease in women with PCOS.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Cultural Factors in PCOS Management",
-    "authors": "Crete J, Adamshick P",
-    "journal": "Journal of Midwifery & Women's Health",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21884488/",
-    "abstract": "Review of cultural considerations when treating PCOS in diverse patient populations.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Inositol Safety Profile: Long-term Data",
-    "authors": "Dinicola S, Chiu TTY, Unfer V, et al.",
-    "journal": "Expert Opinion on Drug Safety",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/24673096/",
-    "abstract": "Comprehensive safety review of long-term inositol supplementation in PCOS patients.",
-    "tags": ["studies", "inositol", "answers"]
-  },
-  {
-    "title": "Ovarian Drilling for PCOS: Efficacy Review",
-    "authors": "Fernandez H, Morin-Surruca M, Torre A, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21511712/",
-    "abstract": "Evidence review of laparoscopic ovarian drilling as a treatment option for PCOS-related infertility.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Metformin and Vitamin B12 Deficiency",
-    "authors": "de Jager J, Kooy A, Lehert P, et al.",
-    "journal": "BMJ",
-    "year": "2010",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20488910/",
-    "abstract": "Study demonstrating the association between long-term metformin use and vitamin B12 deficiency.",
-    "tags": ["studies", "metformin", "answers"]
-  },
-  {
-    "title": "Psychological Well-being in PCOS",
-    "authors": "Dokras A, Clifton S, Futterweit W, Wild R",
-    "journal": "Fertility and Sterility",
-    "year": "2012",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/22192352/",
-    "abstract": "Assessment of quality of life and psychological distress in women diagnosed with PCOS.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "Inflammation in PCOS: Role and Treatment",
-    "authors": "Escobar-Morreale HF, Luque-Ramírez M, González F",
-    "journal": "Molecular and Cellular Endocrinology",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/22760084/",
-    "abstract": "Review of chronic low-grade inflammation in PCOS and potential anti-inflammatory treatment approaches.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "Inositol for Menstrual Regularity in PCOS",
-    "authors": "Papaleo E, Unfer V, Baillargeon JP, et al.",
-    "journal": "Fertility and Sterility",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17498711/",
-    "abstract": "Study showing myo-inositol supplementation improves menstrual cyclicity in anovulatory PCOS women.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "PCOS in Lean Women: Characteristics and Treatment",
-    "authors": "Yildiz BO, Knochenhauer ES, Azziz R",
-    "journal": "Clinical Endocrinology",
-    "year": "2008",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17892498/",
-    "abstract": "Analysis of PCOS characteristics and optimal treatment approaches in normal-weight women.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "Metformin and Clomiphene Combination for PCOS",
-    "authors": "Johnson NP",
-    "journal": "Cochrane Database of Systematic Reviews",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/25502517/",
-    "abstract": "Systematic review of combined metformin and clomiphene therapy for ovulation induction in PCOS.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "PCOS Diagnosis Challenges in Black Women",
-    "authors": "Ezeh U, Yildiz BO, Azziz R",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23616148/",
-    "abstract": "Review of diagnostic challenges and considerations when evaluating Black women for PCOS.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Gut Microbiome and PCOS",
-    "authors": "Lindheim L, Bashir M, Münzker J, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28957454/",
-    "abstract": "Study examining alterations in gut microbiota composition in women with PCOS.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Inositol and Testosterone Levels in PCOS",
-    "authors": "Artini PG, Di Berardino OM, Papini F, et al.",
-    "journal": "Gynecological Endocrinology",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23418854/",
-    "abstract": "Clinical study demonstrating myo-inositol's effect on reducing androgen levels in PCOS.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Spironolactone for Hirsutism in PCOS",
-    "authors": "Brown J, Farquhar C",
-    "journal": "Cochrane Database of Systematic Reviews",
-    "year": "2009",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/19370698/",
-    "abstract": "Systematic review of spironolactone effectiveness for treating hirsutism in PCOS patients.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Pregnancy Complications in PCOS Women",
-    "authors": "Boomsma CM, Eijkemans MJ, Hughes EG, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2006",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/16982667/",
-    "abstract": "Meta-analysis of pregnancy and neonatal complications in women with polycystic ovary syndrome.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Metformin Reduces Androgen Levels in PCOS",
-    "authors": "Pasquali R, Gambineri A, Biscotti D, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2000",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/10634385/",
-    "abstract": "Study demonstrating metformin's direct effect on reducing hyperandrogenemia in PCOS women.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Low-Carbohydrate Diet for PCOS",
-    "authors": "Mavropoulos JC, Yancy WS, Hepburn J, Westman EC",
-    "journal": "Nutrition & Metabolism",
-    "year": "2005",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/16359551/",
-    "abstract": "Pilot study examining the effects of a low-carbohydrate, ketogenic diet on PCOS symptoms.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "PCOS and Breast Cancer Risk",
-    "authors": "Harris HR, Terry KL",
-    "journal": "Human Reproduction",
-    "year": "2016",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/26869474/",
-    "abstract": "Population-based study examining the relationship between PCOS and breast cancer risk.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Inositol Phosphoglycans in PCOS",
-    "authors": "Baillargeon JP, Nestler JE",
-    "journal": "Best Practice & Research Clinical Endocrinology & Metabolism",
-    "year": "2006",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/16890100/",
-    "abstract": "Review of inositol phosphoglycan mediators and their role in insulin signaling defects in PCOS.",
-    "tags": ["studies", "inositol", "answers"]
-  },
-  {
-    "title": "Thiazolidinediones for PCOS Treatment",
-    "authors": "Du Q, Yang S, Wang YJ, et al.",
-    "journal": "Medicine (Baltimore)",
-    "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28030833/",
-    "abstract": "Meta-analysis evaluating thiazolidinediones as insulin sensitizers for PCOS treatment.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Health Literacy and PCOS Self-Management",
-    "authors": "Pramodh S",
-    "journal": "International Journal of Women's Health",
-    "year": "2020",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/32021540/",
-    "abstract": "Study examining the role of health literacy in PCOS self-management across different populations.",
-    "tags": ["studies", "black-women", "solutions"]
-  },
-  {
-    "title": "GLP-1 Agonists for PCOS: Emerging Evidence",
-    "authors": "Jensterle M, Kravos NA, Pfeifer M, et al.",
+    "title": "Polycystic ovary syndrome and the risk of obstructive sleep apnea: a meta-analysis and review of the literature",
+    "authors": "Kahal H, Kyrou I, Tahrani AA, Randeva HS",
     "journal": "Endocrine",
-    "year": "2019",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/31124042/",
-    "abstract": "Review of glucagon-like peptide-1 receptor agonists as emerging treatment options for PCOS.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Inositol Supplementation During IVF",
-    "authors": "Caprio F, D'Eufemia MD, Trotta C, et al.",
-    "journal": "Reproductive Biology and Endocrinology",
-    "year": "2015",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/26012246/",
-    "abstract": "Clinical trial of myo-inositol supplementation effects on IVF outcomes in PCOS patients.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Metformin and Ovarian Hyperstimulation Syndrome",
-    "authors": "Palomba S, Falbo A, Carrillo L, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23146866/",
-    "abstract": "Meta-analysis showing metformin reduces OHSS risk in PCOS women undergoing fertility treatment.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "Ethnic Differences in PCOS Lipid Profiles",
-    "authors": "Merkin SS, Phy JL, Sites CK, Yang D",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17327384/",
-    "abstract": "Comparative study of lipid abnormalities in PCOS women of different ethnic backgrounds.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "PCOS and Quality of Life: Systematic Review",
-    "authors": "Colwell K, Lujan ME, Engmann L, Pierson RA",
-    "journal": "Reproductive Biology and Endocrinology",
-    "year": "2010",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20932360/",
-    "abstract": "Systematic review examining factors affecting quality of life in women with PCOS.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Inositol and Insulin Resistance: Molecular Mechanisms",
-    "authors": "Larner J, Brautigan DL, Thorner MO",
-    "journal": "International Journal of Experimental Diabetes Research",
-    "year": "2002",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/12028548/",
-    "abstract": "Scientific review explaining the molecular mechanisms by which inositol improves insulin sensitivity.",
-    "tags": ["studies", "inositol", "answers"]
-  },
-  {
-    "title": "PCOS Treatment in Adolescents: Special Considerations",
-    "authors": "Rosenfield RL",
-    "journal": "Journal of Pediatric Endocrinology and Metabolism",
-    "year": "2002",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/12507854/",
-    "abstract": "Guidelines for managing PCOS in adolescent patients with attention to developmental considerations.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Metformin Pharmacokinetics and PCOS",
-    "authors": "Graham GG, Punt J, Arber M, et al.",
-    "journal": "Clinical Pharmacokinetics",
-    "year": "2011",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/21142293/",
-    "abstract": "Review of metformin pharmacokinetics and optimal dosing strategies for PCOS treatment.",
-    "tags": ["studies", "metformin", "answers"]
-  },
-  {
-    "title": "Complementary Therapies for PCOS",
-    "authors": "Arentz S, Abbott JA, Smith CA, Bensoussan A",
-    "journal": "BMC Complementary and Alternative Medicine",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/25475125/",
-    "abstract": "Systematic review of complementary medicine approaches including herbs and acupuncture for PCOS.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "PCOS Diagnosis: NIH vs Rotterdam Criteria",
-    "authors": "Azziz R, Carmina E, Dewailly D, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2006",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/16403814/",
-    "abstract": "Position statement comparing NIH and Rotterdam diagnostic criteria for PCOS.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Inositol and Reproductive Outcomes Meta-Analysis",
-    "authors": "Pundir J, Psaroudakis D, Savnur P, et al.",
-    "journal": "European Journal of Obstetrics & Gynecology and Reproductive Biology",
-    "year": "2018",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/29175128/",
-    "abstract": "Meta-analysis of inositol supplementation effects on reproductive outcomes in PCOS.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Bariatric Surgery for Obese PCOS Women",
-    "authors": "Escobar-Morreale HF, Santacruz E, Luque-Ramírez M, Botella Carretero JI",
-    "journal": "Human Reproduction Update",
     "year": "2017",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28486593/",
-    "abstract": "Review of bariatric surgery outcomes and effects on PCOS symptoms in severely obese women.",
-    "tags": ["studies", "solutions"]
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5574283/",
+    "abstract": "Pooled OSA prevalence was 22% in PCOS patients (32% in adults, 8% in adolescents); risk of OSA was significantly increased in adult PCOS patients (OR 9.74, 95% CI 2.76-34.41).",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "meta-analysis",
+      "obesity",
+      "metabolic syndrome"
+    ]
   },
   {
-    "title": "Metformin Use During Pregnancy: Safety Data",
-    "authors": "Given JE, Loane M, Garne E, et al.",
-    "journal": "Diabetic Medicine",
-    "year": "2018",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/29280209/",
-    "abstract": "Large cohort study examining safety of metformin use during pregnancy for congenital anomalies.",
-    "tags": ["studies", "metformin", "answers"]
+    "title": "Pathogenesis and Consequences of Disordered Sleep in PCOS",
+    "authors": "Sam S, Ehrmann DA",
+    "journal": "Clinical Medicine Insights: Reproductive Health",
+    "year": "2019",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6724486/",
+    "abstract": "Sleep disturbances are increased in PCOS women; obstructive sleep apnea is the most commonly reported; OSA leads to increased sympathetic tone and oxidative stress which worsens insulin resistance in PCOS, creating a vicious cycle.",
+    "tags": [
+      "NIH",
+      "sleep apnea",
+      "sleep disorders",
+      "insulin resistance",
+      "oxidative stress"
+    ]
   },
   {
-    "title": "PCOS and Autoimmune Thyroid Disease",
-    "authors": "Janssen OE, Mehlmauer N, Hahn S, et al.",
-    "journal": "European Journal of Endocrinology",
-    "year": "2004",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/15374807/",
-    "abstract": "Study examining the relationship between PCOS and autoimmune thyroiditis prevalence.",
-    "tags": ["studies", "answers"]
+    "title": "Update on the combination of myo-inositol/d-chiro-inositol for the treatment of polycystic ovary syndrome",
+    "authors": "Unfer V, Facchinetti F, Orru B, Giordani B, Nestler J",
+    "journal": "Expert Review of Clinical Pharmacology",
+    "year": "2024",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/09513590.2023.2301554",
+    "abstract": "Combination of myo-inositol and D-chiro-inositol addresses insulin resistance and ovarian dysfunction in PCOS; myo-inositol improves FSH signaling and oocyte quality while D-chiro-inositol aids insulin-mediated androgen synthesis regulation.",
+    "tags": [
+      "inositol",
+      "treatment",
+      "insulin resistance",
+      "ovarian dysfunction",
+      "fertility"
+    ]
   },
   {
-    "title": "Social Support and PCOS Management",
-    "authors": "Snyder BS",
-    "journal": "Journal of Obstetric, Gynecologic & Neonatal Nursing",
-    "year": "2006",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17049011/",
-    "abstract": "Qualitative study exploring the role of social support in PCOS symptom management and well-being.",
-    "tags": ["studies", "solutions", "answers"]
+    "title": "The inositols and polycystic ovary syndrome",
+    "authors": "Kalra B, Kalra S, Sharma JB",
+    "journal": "Indian Journal of Endocrinology and Metabolism",
+    "year": "2016",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5040057/",
+    "abstract": "Combination myo-inositol and D-chiro-inositol therapy corrects systemic insulin resistance and creates healthy intra-ovarian milieu; addresses metabolic features, hyperandrogenism, menstrual regularity, ovulation and fertility in PCOS.",
+    "tags": [
+      "NIH",
+      "inositol",
+      "insulin resistance",
+      "hyperandrogenism",
+      "fertility",
+      "ovulation"
+    ]
   },
   {
-    "title": "Inositol vs Metformin: Cost-Effectiveness Analysis",
-    "authors": "Minozzi M, Nordio M, Pajalich R",
-    "journal": "International Journal of Endocrinology",
-    "year": "2013",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/24089612/",
-    "abstract": "Economic analysis comparing costs and outcomes of inositol versus metformin treatment for PCOS.",
-    "tags": ["studies", "inositol", "metformin", "solutions"]
+    "title": "Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials",
+    "authors": "Unfer V, Nestler JE, Kamenov ZA, Prapas N, Facchinetti F",
+    "journal": "Endocrine Connections",
+    "year": "2017",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5655679/",
+    "abstract": "Myo-inositol supplementation significantly decreased fasting insulin (SMD -1.021 µU/mL, p=0.009) and HOMA index (SMD -0.585, p=0.041); showed trend toward testosterone reduction; SHBG increased significantly with ≥24 weeks treatment.",
+    "tags": [
+      "inositol",
+      "insulin resistance",
+      "hyperandrogenism",
+      "metabolic effects",
+      "meta-analysis"
+    ]
   },
   {
-    "title": "PCOS Awareness and Knowledge Among Women",
-    "authors": "Patel S",
-    "journal": "Clinical Epidemiology and Global Health",
-    "year": "2018",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30633851/",
-    "abstract": "Survey assessing PCOS awareness and knowledge levels among reproductive-age women.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Letrozole vs Clomiphene for PCOS Ovulation",
-    "authors": "Legro RS, Brzyski RG, Diamond MP, et al.",
-    "journal": "New England Journal of Medicine",
-    "year": "2014",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/25006718/",
-    "abstract": "Major trial showing letrozole superiority to clomiphene for ovulation induction in PCOS.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Vitamin D and PCOS: Systematic Review",
-    "authors": "He C, Lin Z, Robb SW, Ezeamama AE",
-    "journal": "Nutrients",
-    "year": "2015",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/26213963/",
-    "abstract": "Systematic review examining vitamin D status and supplementation effects in PCOS women.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "PCOS Biomarkers: Current and Emerging",
-    "authors": "Lujan ME, Chizen DR, Pierson RA",
-    "journal": "Expert Opinion on Medical Diagnostics",
-    "year": "2007",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23489296/",
-    "abstract": "Review of established and emerging biomarkers for PCOS diagnosis and monitoring.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "International Evidence-based Guideline for the Assessment and Management of Polycystic Ovary Syndrome 2023",
-    "authors": "Teede HJ, Tay CT, Laven JJE, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2023",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/37580314/",
-    "abstract": "Updated international guideline providing comprehensive evidence-based recommendations for PCOS diagnosis, assessment, and treatment across all life stages.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Racial and Ethnic Disparities in Polycystic Ovary Syndrome",
-    "authors": "VanHise K, Wang ET, Norris K, et al.",
-    "journal": "Fertility and Sterility",
-    "year": "2023",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36702345/",
-    "abstract": "Comprehensive review examining disparities in PCOS diagnosis, treatment access, and outcomes among different racial and ethnic groups, with focus on Black and Hispanic women.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Myo-inositol and D-chiro-inositol Combined Treatment for PCOS: A Systematic Review and Meta-Analysis",
-    "authors": "Greff D, Juhász AE, Gál K, et al.",
-    "journal": "Frontiers in Endocrinology",
-    "year": "2023",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36703143/",
-    "abstract": "Meta-analysis evaluating combined inositol supplementation effects on hormonal profiles, metabolic parameters, and fertility outcomes in PCOS.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Metformin for Polycystic Ovary Syndrome: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
-    "authors": "Sharpe A, Morley LC, Tang T, et al.",
-    "journal": "Human Reproduction Update",
-    "year": "2022",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/34982157/",
-    "abstract": "Updated systematic review analyzing metformin's efficacy for PCOS symptoms including menstrual regularity, weight, and androgen levels.",
-    "tags": ["studies", "metformin", "solutions"]
-  },
-  {
-    "title": "PCOS and Mental Health: Depression, Anxiety, and Eating Disorders",
-    "authors": "Cooney LG, Dokras A",
-    "journal": "Current Psychiatry Reports",
-    "year": "2022",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/35731529/",
-    "abstract": "Review examining the bidirectional relationship between PCOS and mental health disorders, with treatment recommendations.",
-    "tags": ["studies", "answers", "solutions"]
-  },
-  {
-    "title": "GLP-1 Receptor Agonists in PCOS: A New Therapeutic Frontier",
-    "authors": "Elkind-Hirsch KE, Paterson MS, Seidemann EL, Gutowski HC",
+    "title": "Inositol for Polycystic Ovary Syndrome: A Systematic Review and Meta-analysis to Inform the 2023 Update of the International Evidence-based PCOS Guidelines",
+    "authors": "Fitz V, Teede HJ, Brennan L, Moran LJ",
     "journal": "Journal of Clinical Endocrinology & Metabolism",
     "year": "2024",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/38156789/",
-    "abstract": "Clinical trial evaluating semaglutide and other GLP-1 agonists for weight loss and metabolic improvement in obese PCOS women.",
-    "tags": ["studies", "solutions"]
+    "url": "https://academic.oup.com/jcem/article/109/6/1630/7504796",
+    "abstract": "Evidence suggests benefits for myo-inositol or D-chiro-inositol for some metabolic measures and potential benefits from DCI for ovulation; myo-inositol likely causes fewer gastrointestinal adverse events compared with metformin.",
+    "tags": [
+      "Oxford",
+      "inositol",
+      "treatment",
+      "metabolic effects",
+      "ovulation"
+    ]
   },
   {
-    "title": "Black Women with PCOS: Unique Phenotypic and Metabolic Characteristics",
-    "authors": "Jaswa EG, Cedars MI, Engmann L",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33631012/",
-    "abstract": "Study characterizing distinct PCOS presentations in Black women including differences in insulin resistance, body composition, and androgen profiles.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Inositol Supplementation and Pregnancy Outcomes in PCOS: Updated Meta-Analysis",
-    "authors": "Formuso C, Stracquadanio M, Ciotta L",
-    "journal": "Archives of Gynecology and Obstetrics",
-    "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33655336/",
-    "abstract": "Meta-analysis of inositol effects on conception rates, miscarriage risk, and gestational diabetes in PCOS women.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Metformin in Pregnancy for Women with PCOS: The PregMet2 Trial",
-    "authors": "Løvvik TS, Carlsen SM, Salvesen Ø, et al.",
-    "journal": "Lancet Diabetes & Endocrinology",
-    "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/34051168/",
-    "abstract": "Major randomized trial examining metformin use throughout pregnancy in PCOS women and effects on offspring outcomes.",
-    "tags": ["studies", "metformin", "solutions", "answers"]
-  },
-  {
-    "title": "Gut Microbiome Alterations in PCOS: Therapeutic Implications",
-    "authors": "He FF, Li YM",
+    "title": "PCOS and Inositols: Controversial Results and Necessary Clarifications. Basic Differences Between D-Chiro and Myo-Inositol",
+    "authors": "Monastra G, Vucenik I, Harrath AH, Alwasel SH, Kamenov ZA, Laganà AS, Monti N, Fedeli V, Bizzarri M",
     "journal": "Frontiers in Endocrinology",
-    "year": "2023",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36777347/",
-    "abstract": "Review of gut dysbiosis in PCOS and potential probiotic and prebiotic interventions for symptom management.",
-    "tags": ["studies", "solutions", "answers"]
-  },
-  {
-    "title": "Anti-Müllerian Hormone as a Diagnostic Tool for PCOS: 2023 Update",
-    "authors": "Dewailly D, Pigny P",
-    "journal": "Best Practice & Research Clinical Endocrinology & Metabolism",
-    "year": "2023",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/37455185/",
-    "abstract": "Updated review on AMH testing for PCOS diagnosis, including age-specific cutoffs and clinical applications.",
-    "tags": ["studies", "answers"]
-  },
-  {
-    "title": "Lifestyle Interventions for PCOS: A Systematic Review of RCTs",
-    "authors": "Lim SS, Hutchison SK, Van Ryswyk E, et al.",
-    "journal": "Obesity Reviews",
-    "year": "2022",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/34888989/",
-    "abstract": "Systematic review of diet, exercise, and behavioral interventions for weight and metabolic outcomes in PCOS.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Disparities in PCOS Diagnosis Among Black Women in the United States",
-    "authors": "Okoroh EM, Hooper WC, Atrash HK, et al.",
-    "journal": "Journal of Women's Health",
-    "year": "2020",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/31971474/",
-    "abstract": "Population-based study examining delayed diagnosis and healthcare disparities in Black women with PCOS.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Inositol and Alpha-Lactalbumin Combined Treatment in PCOS",
-    "authors": "Monastra G, Vucenik I, Montelione N, et al.",
-    "journal": "International Journal of Endocrinology",
     "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33936186/",
-    "abstract": "Study showing enhanced inositol absorption when combined with alpha-lactalbumin in PCOS patients.",
-    "tags": ["studies", "inositol", "solutions"]
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8056130/",
+    "abstract": "Myo-inositol and D-chiro-inositol display opposite effects on ovary and steroidogenesis despite both improving insulin transduction; D-chiro-inositol directly regulates steroidogenic enzyme genes and increases testosterone levels in theca cells; high doses of D-chiro-inositol can be detrimental.",
+    "tags": [
+      "NIH",
+      "inositol",
+      "insulin resistance",
+      "steroidogenesis",
+      "hyperandrogenism"
+    ]
   },
   {
-    "title": "Cardiovascular Risk Assessment in PCOS: 2022 AHA Scientific Statement",
-    "authors": "Wild RA, Rizzo M, Clifton S, Carmina E",
-    "journal": "Circulation",
-    "year": "2022",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/35475353/",
-    "abstract": "American Heart Association statement on cardiovascular disease prevention and risk assessment in women with PCOS.",
-    "tags": ["studies", "answers", "solutions"]
+    "title": "Are women with PCOS more at risk for endometrial cancer? What approach for such patients?",
+    "authors": "Gullo G, Scaglione M, Buzzaccarini G, Laganà AS, Basile G, Chiantera V, Török P, Herman T, Unfer V, Garzon S",
+    "journal": "Journal of Ovarian Research",
+    "year": "2023",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10210553/",
+    "abstract": "Risk of endometrial cancer is 2-6 times higher in PCOS women; increased prevalence associated with chronic anovulation and progesterone resistance; age and endometrial thickness are important predictors; routine screening not indicated but high-risk women should be monitored closely.",
+    "tags": [
+      "NIH",
+      "endometrial cancer",
+      "endometrial hyperplasia",
+      "cancer risk"
+    ]
   },
   {
-    "title": "PCOS in Adolescents: 2023 Guidelines Update",
-    "authors": "Ibáñez L, Oberfield SE, Witchel S, et al.",
+    "title": "Polycystic ovary syndrome is associated with a higher risk of premalignant and malignant endometrial polyps in premenopausal women",
+    "authors": "Zhu Y, Zhang W, Zhao Y, Li C, Hu Y",
+    "journal": "Gynecologic and Obstetric Investigation",
+    "year": "2023",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36964546/",
+    "abstract": "Prevalence of premalignant and malignant endometrial polyps was 2.15% (hyperplasia with atypia 1.13%, endometrial carcinoma 1.02%); PCOS was associated with higher risk of premalignant and malignant polyps after adjustment for confounding factors.",
+    "tags": [
+      "endometrial cancer",
+      "endometrial hyperplasia",
+      "polyps",
+      "cancer risk"
+    ]
+  },
+  {
+    "title": "Risk of endometrial cancer in patients with polycystic ovarian syndrome: A meta-analysis",
+    "authors": "Dumesic DA, Padmanabhan V, Chazenbalk GD, Abbott DH",
+    "journal": "Oncotarget",
+    "year": "2023",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10028221/",
+    "abstract": "Women with PCOS had significantly increased odds of developing endometrial cancer (OR 4.07, 95% CI 2.13-7.78); when postmenopausal subjects excluded, odds increased to 5.14; PCOS patients are up to 5 times more likely to develop endometrial cancer.",
+    "tags": [
+      "NIH",
+      "endometrial cancer",
+      "cancer risk",
+      "meta-analysis"
+    ]
+  },
+  {
+    "title": "Association between polycystic ovarian syndrome and endometrial, ovarian, and breast cancer: A population-based cohort study in Taiwan",
+    "authors": "Hsu MI, Chen HF, Hwu YM, Tsai SJ, Wu MY, Chang CH, Kuo TC, Chen TC, Kuo PH, Ho HN",
+    "journal": "Medicine (Baltimore)",
+    "year": "2018",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6181615/",
+    "abstract": "Incidence of endometrial cancer was 226 per 100,000 person-years in PCOS vs 15 in comparison group; significantly higher risk (aHR 17.7, 95% CI 4.9-64.2); no association found between PCOS and ovarian or breast cancer.",
+    "tags": [
+      "NIH",
+      "endometrial cancer",
+      "cancer risk",
+      "cohort study"
+    ]
+  },
+  {
+    "title": "Clinical and psychological correlates of quality-of-life in polycystic ovary syndrome",
+    "authors": "Elsenbruch S, Hahn S, Kowalsky D, Öffner AH, Schedlowski M, Mann K, Janssen OE",
     "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2023",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36961855/",
-    "abstract": "Updated international guidelines for diagnosing and managing PCOS in adolescent girls.",
-    "tags": ["studies", "solutions", "answers"]
+    "year": "2003",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16322391/",
+    "abstract": "PCOS patients showed significant reductions in quality of life, increased psychological disturbances, and decreased sexual satisfaction; BMI and hirsutism scores were associated with physical aspects of quality of life and sexual satisfaction.",
+    "tags": [
+      "NIH",
+      "quality of life",
+      "mental health",
+      "obesity",
+      "hirsutism"
+    ]
   },
   {
-    "title": "Metformin Extended-Release Tolerance and Efficacy in PCOS",
-    "authors": "Penzias AS, Bendikson K, Falcone T, et al.",
-    "journal": "Fertility and Sterility",
-    "year": "2020",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/32741537/",
-    "abstract": "ASRM committee opinion on metformin formulations and dosing strategies to improve tolerance in PCOS.",
-    "tags": ["studies", "metformin", "answers"]
+    "title": "Health-related quality of life and psychological distress in polycystic ovary syndrome: a hidden facet in South Asian women",
+    "authors": "Kumarapeli V, Seneviratne Rde A, Wijeyaratne CN, Yapa RM, Dodampahala SH",
+    "journal": "BJOG: An International Journal of Obstetrics & Gynaecology",
+    "year": "2011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21134104/",
+    "abstract": "Mean GHQ score was significantly higher in PCOS (5.25±6.25) than controls (1.58±1.46); hirsutism was significantly associated with psychological distress; mean scores for physical, psychological and social relationships domains were significantly lower in PCOS.",
+    "tags": [
+      "Oxford",
+      "quality of life",
+      "mental health",
+      "psychological distress",
+      "hirsutism"
+    ]
   },
   {
-    "title": "Time-Restricted Eating for PCOS: A Pilot Study",
-    "authors": "Li C, Xing C, Zhang J, et al.",
-    "journal": "Journal of Translational Medicine",
-    "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33849574/",
-    "abstract": "Pilot study examining intermittent fasting effects on hormonal and metabolic parameters in PCOS women.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "PCOS Phenotypes and Fertility Outcomes: A Prospective Study",
-    "authors": "Tal R, Seifer DB, Arici A",
+    "title": "Quality of life and psychological well being in polycystic ovary syndrome",
+    "authors": "Coffey S, Bano G, Mason HD",
     "journal": "Human Reproduction",
-    "year": "2020",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/32647869/",
-    "abstract": "Prospective cohort study comparing fertility treatment outcomes across different PCOS phenotypes.",
-    "tags": ["studies", "answers", "solutions"]
+    "year": "2006",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17537782/",
+    "abstract": "71% of PCOS women taking anti-androgen medication and 67% not taking medication were classified as depressed; women with PCOS had lower quality of life on all seven factors; weight was largest contributor to poor quality of life.",
+    "tags": [
+      "Oxford",
+      "quality of life",
+      "depression",
+      "weight",
+      "hirsutism"
+    ]
   },
   {
-    "title": "Myo-Inositol for Ovulation Induction: A Cochrane Review Update",
-    "authors": "Showell MG, Mackenzie-Proctor R, Jordan V, et al.",
-    "journal": "Cochrane Database of Systematic Reviews",
-    "year": "2020",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/32969079/",
-    "abstract": "Updated Cochrane review on inositol supplementation for fertility improvement in PCOS women.",
-    "tags": ["studies", "inositol", "solutions"]
-  },
-  {
-    "title": "Telehealth for PCOS Management: Outcomes and Patient Satisfaction",
-    "authors": "Greenwood EA, Pasch LA, Cedars MI, et al.",
-    "journal": "Journal of Women's Health",
-    "year": "2022",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/35049401/",
-    "abstract": "Study evaluating telemedicine effectiveness for PCOS diagnosis and treatment compared to in-person care.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Black and Hispanic Women with PCOS: Cardiometabolic Risk Profiles",
-    "authors": "Ezeh U, Pall M, Engmann L, et al.",
-    "journal": "Journal of Clinical Endocrinology & Metabolism",
-    "year": "2022",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/34850881/",
-    "abstract": "Comparative analysis of cardiovascular and metabolic risk factors in Black and Hispanic PCOS women.",
-    "tags": ["studies", "black-women", "answers"]
-  },
-  {
-    "title": "Ozempic and Wegovy for PCOS-Related Obesity: Real-World Evidence",
-    "authors": "Jensterle M, Herman R, Goricar K, et al.",
-    "journal": "Diabetes, Obesity and Metabolism",
-    "year": "2024",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/38234567/",
-    "abstract": "Real-world study of GLP-1 agonists for weight management and hormonal improvement in obese PCOS patients.",
-    "tags": ["studies", "solutions"]
-  },
-  {
-    "title": "Combined Oral Contraceptives vs Metformin for PCOS: Updated Network Meta-Analysis",
-    "authors": "Abdalla MA, Deshmukh H, Atkin SL, Sathyapalan T",
+    "title": "Quality of life and psychological morbidity in women with polycystic ovary syndrome: body mass index, age and the provision of patient information are significant modifiers",
+    "authors": "Jones GL, Benes K, Clark TL, Denham R, Holder MG, Haynes TJ, Mulgrew NC, Shepherd KE, Wilkinson VH, Singh M, Balen AH, Lashen H, Ledger WL",
     "journal": "Clinical Endocrinology",
+    "year": "2008",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17302871/",
+    "abstract": "SF-36 scores were significantly lower than age- and sex-matched population; GHQ-28 identified psychological morbidity in 62.4% vs 26.4% in matched population; BMI was negatively correlated with quality of life; positive association between psychological domain and quality of health information.",
+    "tags": [
+      "Oxford",
+      "quality of life",
+      "mental health",
+      "BMI",
+      "patient education"
+    ]
+  },
+  {
+    "title": "Measures of health-related quality of life in PCOS women: a systematic review",
+    "authors": "Behboodi Moghadam Z, Fereidooni B, Saffari M, Montazeri A",
+    "journal": "International Journal of Women's Health",
+    "year": "2018",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6078086/",
+    "abstract": "52 studies reviewed; various generic and specific questionnaires assess different dimensions of HRQoL; weight concerns have particular negative impact on HRQoL though role of BMI is inconclusive; psychological dimensions more affected than physical dimensions.",
+    "tags": [
+      "NIH",
+      "quality of life",
+      "systematic review",
+      "obesity",
+      "mental health"
+    ]
+  },
+  {
+    "title": "Impact of polycystic ovary syndrome on quality of life of women in correlation to age, basal metabolic index, education and marriage",
+    "authors": "Bhattacharya SM, Ghosh M",
+    "journal": "PLoS One",
     "year": "2021",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33476437/",
-    "abstract": "Network meta-analysis comparing efficacy of different treatments for hirsutism, acne, and metabolic outcomes in PCOS.",
-    "tags": ["studies", "metformin", "solutions"]
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7946178/",
+    "abstract": "PCOS cases showed significantly decreased HRQoL compared to controls; increased BMI, menstrual irregularities, educational status and marital status play major role in altering HRQoL; psychological care must be given during patient management.",
+    "tags": [
+      "NIH",
+      "quality of life",
+      "BMI",
+      "menstrual irregularities",
+      "mental health"
+    ]
   }
 ]
